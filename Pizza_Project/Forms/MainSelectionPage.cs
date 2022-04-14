@@ -36,5 +36,10 @@ namespace Pizza_Project.Forms
         {
 
         }
+
+        private void TakeOrderText_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

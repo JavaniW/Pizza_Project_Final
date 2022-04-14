@@ -58,6 +58,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.DimGray;
             this.pictureBox2.Location = new System.Drawing.Point(3, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(160, 180);
@@ -68,6 +69,7 @@
             // 
             this.tableLayoutPanel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel3.AutoSize = true;
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.Orange;
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Controls.Add(this.TakeOrderText, 0, 1);
@@ -98,6 +100,7 @@
             // 
             this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel1.AutoSize = true;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Orange;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.ViewOrderText, 0, 1);
@@ -112,6 +115,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.DimGray;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(160, 180);
@@ -122,6 +126,7 @@
             // 
             this.tableLayoutPanel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel2.AutoSize = true;
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Orange;
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.ViewCustomerInfoText, 0, 1);
@@ -136,6 +141,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.DimGray;
             this.pictureBox3.Location = new System.Drawing.Point(3, 3);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(160, 180);
@@ -146,31 +152,41 @@
             // 
             this.TakeOrderText.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TakeOrderText.AutoSize = true;
-            this.TakeOrderText.Location = new System.Drawing.Point(40, 207);
+            this.TakeOrderText.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TakeOrderText.ForeColor = System.Drawing.Color.White;
+            this.TakeOrderText.Location = new System.Drawing.Point(23, 203);
             this.TakeOrderText.Name = "TakeOrderText";
-            this.TakeOrderText.Size = new System.Drawing.Size(86, 20);
+            this.TakeOrderText.Size = new System.Drawing.Size(120, 28);
             this.TakeOrderText.TabIndex = 16;
             this.TakeOrderText.Text = "Take Orders";
+            this.TakeOrderText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TakeOrderText.Click += new System.EventHandler(this.TakeOrderText_Click);
             // 
             // ViewCustomerInfoText
             // 
             this.ViewCustomerInfoText.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ViewCustomerInfoText.AutoSize = true;
-            this.ViewCustomerInfoText.Location = new System.Drawing.Point(14, 207);
+            this.ViewCustomerInfoText.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ViewCustomerInfoText.ForeColor = System.Drawing.Color.White;
+            this.ViewCustomerInfoText.Location = new System.Drawing.Point(4, 189);
             this.ViewCustomerInfoText.Name = "ViewCustomerInfoText";
-            this.ViewCustomerInfoText.Size = new System.Drawing.Size(138, 20);
+            this.ViewCustomerInfoText.Size = new System.Drawing.Size(157, 56);
             this.ViewCustomerInfoText.TabIndex = 17;
-            this.ViewCustomerInfoText.Text = "View Customer Info";
+            this.ViewCustomerInfoText.Text = "View Customer \r\nInfo";
+            this.ViewCustomerInfoText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ViewOrderText
             // 
             this.ViewOrderText.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ViewOrderText.AutoSize = true;
-            this.ViewOrderText.Location = new System.Drawing.Point(38, 207);
+            this.ViewOrderText.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ViewOrderText.ForeColor = System.Drawing.Color.White;
+            this.ViewOrderText.Location = new System.Drawing.Point(20, 203);
             this.ViewOrderText.Name = "ViewOrderText";
-            this.ViewOrderText.Size = new System.Drawing.Size(89, 20);
+            this.ViewOrderText.Size = new System.Drawing.Size(125, 28);
             this.ViewOrderText.TabIndex = 18;
             this.ViewOrderText.Text = "View Orders";
+            this.ViewOrderText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ViewOrderText.Click += new System.EventHandler(this.ViewOrderText_Click);
             // 
             // MainSelectionPage
