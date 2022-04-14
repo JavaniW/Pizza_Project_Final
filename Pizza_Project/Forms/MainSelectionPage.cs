@@ -16,5 +16,25 @@ namespace Pizza_Project.Forms
         {
             InitializeComponent();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void MainSelectionPage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ViewOrderText_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
