@@ -10,14 +10,8 @@ namespace Pizza_Project.database.controllers.file_handler
 {
     public static class DatabaseHandler
     {
-        //private static string path = @"database/data-storage/business-data.json";
-        //private static string path = Application.StartupPath + @"\\database\data-storage\business-data.json";
-         private static string path = Application.StartupPath + "\\database\\data-storage\\business-data.json";
-         //private static string path = @"C:/Users/whard/source/repos/Pizza_Project4-13-22/database/data-storage/business-data.json";
-        //private static string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
-        //private static string exeDir = Path.GetDirectoryName(exeFile);
-        //private static string path = Path.Combine(exeDir, "..\\..\\data-storage\\business-data.json");
-
+        private static string path = System.IO.Path.GetDirectoryName(
+         System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).Substring(6) + @"\\database\\data-storage\\business-data.json";
 
         public static async void Write(PizzaDatabase payload) {
             File.WriteAllText(path, "");

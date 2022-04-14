@@ -4,7 +4,7 @@ namespace Pizza_Project.database.controllers.interfaces
 {
     public interface ICRUD<T>
     {
-        void Create(T item);
+        T Create(T item);
         List<T> Read();
         void Update(List<T> list);
         void UpdateById(string id, T data);

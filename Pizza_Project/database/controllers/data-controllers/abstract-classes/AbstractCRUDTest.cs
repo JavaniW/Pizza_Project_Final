@@ -11,11 +11,12 @@ namespace Pizza_Project.database.controllers.data_controllers.abstract_classes
 {
     public abstract class AbstractCRUDTest<T> : ICRUD<T>
     {
-                public void Create(T item)
+        public T Create(T item)
         {
             var items = Read();
             items.Add(item);
             Update(items);
+            return item;
         }
 
         ///<summary>
