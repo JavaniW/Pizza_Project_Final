@@ -9,13 +9,13 @@ namespace Pizza_Project.database.controllers.data_controllers.person_controllers
 {
     public class CustomerController : AbstractCRUD<Customer>
     {
-        public override List<Customer> Read() {
-            var data = GetAllData().People.Customers;
+        public override  List<Customer> Read() {
+            var data =  GetAllData().People.Customers;
             if (data.Count == 0) return new List<Customer>();
             return new List<Customer>(data);
         }
 
-        public override async void Update(List<Customer> updatedList)
+        public override void Update(List<Customer> updatedList)
         {
             var data = GetAllData();
             data.People.Customers = updatedList;

@@ -70,17 +70,22 @@ namespace Pizza_Project.Forms
 
         private void name_TextChanged(object sender, EventArgs e)
         {
-            this.Name = e.ToString();
+            this.Name = this.name.Text;
         }
 
         private void email_TextChanged(object sender, EventArgs e)
         {
-            this.Email = e.ToString();
+            this.Email = this.email.Text;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            this.PhoneNumber = e.ToString();
+            this.PhoneNumber = this.phoneNumber1.Text;
+        }
+
+        private void phoneNumber2_TextChanged(object sender, EventArgs e)
+        {
+            this.PhoneNumber = this.phoneNumber2.Text;
         }
 
         /// <summary>
@@ -90,24 +95,36 @@ namespace Pizza_Project.Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            ButtonsClicked();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ButtonsClicked();
+        }
+
+        private void ButtonsClicked()
         {
             try
             {
                 if (this.CurrentView.Equals("Find Customer"))
                 {
                     this.FindCustomer();
-                }else
+                }
+                else
                 {
                     this.CreateCustomer();
                 }
 
-            }catch(Exception error)
+            }
+            catch (Exception error)
             {
                 this.errorText.Text = this.ErrorMsg;
             }
         }
-
+        
         /// <summary>
         /// Creates a customer.
         /// </summary>
@@ -117,21 +134,26 @@ namespace Pizza_Project.Forms
             {
                 Name = this.Name,
                 Email = this.Email,
-                PhoneNumber = this.PhoneNumber
+                PhoneNumber = this.PhoneNumber,
+                Id = Identifier.CreateIdentifier()
             });
 
             this.CustomerId = cust.Id;
             this.ErrorMsg = "Could not create customer.";
         }
 
+        
         /// <summary>
         /// Finds a customer.
         /// </summary>
         private void FindCustomer()
         {
+            System.Diagnostics.Debug.WriteLine(this.PhoneNumber);
             var cust = _customerController.GetByPhone(this.PhoneNumber);
             this.CustomerId = cust.Id;
             this.ErrorMsg = "Could not find customer";
+            this.errorText.Text = cust.Id;
         }
+
     }
 }

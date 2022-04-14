@@ -41,13 +41,13 @@ namespace Pizza_Project.Forms
             this.email = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.phoneNumber1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.createCustomerTable = new System.Windows.Forms.TableLayoutPanel();
             this.findCustomerTable = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.phoneNumber2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -109,7 +109,7 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.11258F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.88742F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 232F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 234F));
             this.tableLayoutPanel2.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 6);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -124,7 +124,7 @@ namespace Pizza_Project.Forms
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(211, 12);
+            this.label1.Location = new System.Drawing.Point(209, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(301, 36);
             this.label1.TabIndex = 0;
@@ -198,7 +198,7 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 400F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 192F));
             this.tableLayoutPanel4.Controls.Add(this.label4, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.textBox1, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.phoneNumber1, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.button1, 1, 2);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 68);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -221,14 +221,14 @@ namespace Pizza_Project.Forms
             this.label4.TabIndex = 1;
             this.label4.Text = "Phone Number";
             // 
-            // textBox1
+            // phoneNumber1
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(181, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(394, 23);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.phoneNumber1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.phoneNumber1.Location = new System.Drawing.Point(181, 30);
+            this.phoneNumber1.Name = "phoneNumber1";
+            this.phoneNumber1.Size = new System.Drawing.Size(394, 23);
+            this.phoneNumber1.TabIndex = 5;
+            this.phoneNumber1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
@@ -283,7 +283,7 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 400F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 192F));
             this.tableLayoutPanel7.Controls.Add(this.label7, 1, 0);
-            this.tableLayoutPanel7.Controls.Add(this.textBox4, 1, 1);
+            this.tableLayoutPanel7.Controls.Add(this.phoneNumber2, 1, 1);
             this.tableLayoutPanel7.Controls.Add(this.button2, 1, 2);
             this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 11);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
@@ -306,13 +306,14 @@ namespace Pizza_Project.Forms
             this.label7.TabIndex = 1;
             this.label7.Text = "Phone Number";
             // 
-            // textBox4
+            // phoneNumber2
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Location = new System.Drawing.Point(181, 30);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(394, 23);
-            this.textBox4.TabIndex = 5;
+            this.phoneNumber2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.phoneNumber2.Location = new System.Drawing.Point(181, 30);
+            this.phoneNumber2.Name = "phoneNumber2";
+            this.phoneNumber2.Size = new System.Drawing.Size(394, 23);
+            this.phoneNumber2.TabIndex = 5;
+            this.phoneNumber2.TextChanged += new System.EventHandler(this.phoneNumber2_TextChanged);
             // 
             // button2
             // 
@@ -327,6 +328,7 @@ namespace Pizza_Project.Forms
             this.button2.TabIndex = 6;
             this.button2.Text = "Find Customer";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // CustomerCreateSelectForm
             // 
@@ -379,5 +381,7 @@ namespace Pizza_Project.Forms
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox phoneNumber2;
+        private System.Windows.Forms.TextBox phoneNumber1;
     }
 }
