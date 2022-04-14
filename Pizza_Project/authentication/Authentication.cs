@@ -9,43 +9,30 @@ namespace Pizza_Project.authentication
 {
     public class Authentication
     {
-        private readonly IAuthService _authService;
-        private readonly UserController _userController;
+        private readonly UserController _userController = new UserController();
 
-        public Authentication(IAuthService authService, UserController userController)
+        public bool Login(string email, string password)
         {
-            _authService = authService;
-            _userController = userController;
-        }
-        
-        public void Login(string email, string password)
-        {
-
-            if (_authService.GetAuthStatus())
-            {
-                return;
-            }
-
             try
             {
                 var user = _userController.GetByEmail(email);
                 if (user.Password == password)
                 {
-                    _authService.UpdateAuthStatus(true);
                     Console.WriteLine("User logged in");
+                    return true;
                 }
-                
+                return false;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Email or password is incorrect.");
+                return false;
             }
             
         }
 
-        public void Logout() {
-            _authService.UpdateAuthStatus(false);
-            Console.WriteLine("User logged out.");
+        public bool Logout() {
+            return false;
         }
 
         public void CreateUser(string name,
