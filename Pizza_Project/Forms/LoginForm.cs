@@ -36,13 +36,14 @@ namespace Pizza_Project.Forms
             if(auth.Login(this.Email, this.Password))
             {
                 // Load form 2 here.
-
                 System.Diagnostics.Debug.WriteLine("Logged in");
+                var mainSelectionForm = new MainSelectionPage();
+                mainSelectionForm.Show();
             }
             else
             {
                 // show error message here
-                System.Diagnostics.Debug.WriteLine("Could not login");
+                this.errorMsgLabel.Visible = true;
 
             }
         }
@@ -59,7 +60,6 @@ namespace Pizza_Project.Forms
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
