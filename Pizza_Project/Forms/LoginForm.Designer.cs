@@ -1,4 +1,3 @@
-﻿
 namespace Pizza_Project.Forms
 {
     partial class LoginForm
