@@ -27,7 +27,7 @@ namespace Pizza_Project.database.controllers.data_controllers.person_controllers
         public User GetByEmail(string email)
         {
             var users = Read();
-            return FindItemByProperty(users, email, "email");
+            return FindItemByProperty(users, email, "Email");
         }
     }
 }

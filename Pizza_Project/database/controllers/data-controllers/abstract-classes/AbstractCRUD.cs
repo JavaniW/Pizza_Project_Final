@@ -10,11 +10,12 @@ namespace Pizza_Project.database.controllers.data_controllers.abstract_classes
     public abstract class AbstractCRUD<T> : ICRUD<T>
     {
 
-        public void Create(T item)
+        public T Create(T item)
         {
             var items = Read();
             items.Add(item);
             Update(items);
+            return item;
         }
 
         ///<summary>
@@ -58,7 +59,7 @@ namespace Pizza_Project.database.controllers.data_controllers.abstract_classes
 
         public T GetByPhone(string phoneNumber)
         {
-            return FindItemByProperty(Read(), phoneNumber, "phoneNumber");
+            return FindItemByProperty(Read(), phoneNumber, "PhoneNumber");
         }
 
         ///<summary>
@@ -75,7 +76,7 @@ namespace Pizza_Project.database.controllers.data_controllers.abstract_classes
         public int GetIndex(string id)
         {
             var list = Read();
-            return list.IndexOf(FindItemByProperty(list, id, "id"));
+            return list.IndexOf(FindItemByProperty(list, id, "Id"));
         }
 
         public T? FindItemByProperty(List<T> list, string compareString, string property)

@@ -22,12 +22,12 @@ namespace Pizza_Project.Forms
         }
         private void username_TextChanged(object sender, EventArgs e)
         {
-            this.Email = e.ToString();
+            this.Email = this.username.Text;
         }
 
         private void Password_TextChanged(object sender, EventArgs e)
         {
-            this.Password = e.ToString();
+            this.Password = this.password.Text;
         }
 
         private void login_Click(object sender, EventArgs e)
@@ -37,9 +37,13 @@ namespace Pizza_Project.Forms
             {
                 // Load form 2 here.
 
-            }else
+                System.Diagnostics.Debug.WriteLine("Logged in");
+            }
+            else
             {
                 // show error message here
+                System.Diagnostics.Debug.WriteLine("Could not login");
+
             }
         }
 
