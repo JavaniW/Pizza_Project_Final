@@ -10,24 +10,14 @@ using System.Windows.Forms;
 
 namespace Pizza_Project.Forms
 {
-    public partial class OrderCreationPage : Form
+    public partial class CustomerInfoPage : Form
     {
-        public OrderCreationPage()
+        public CustomerInfoPage()
         {
             InitializeComponent();
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

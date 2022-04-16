@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Pizza_Project.database.Models.order_info;
 using Pizza_Project.Forms;
 
 namespace Pizza_Project
