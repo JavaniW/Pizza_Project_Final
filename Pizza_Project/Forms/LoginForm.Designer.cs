@@ -1,4 +1,3 @@
-﻿
 namespace Pizza_Project.Forms
 {
     partial class LoginForm
@@ -45,6 +44,7 @@ namespace Pizza_Project.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.username = new System.Windows.Forms.TextBox();
             this.login = new System.Windows.Forms.Button();
+            this.errorMsgLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -59,7 +59,7 @@ namespace Pizza_Project.Forms
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(253, 17);
+            this.label1.Location = new System.Drawing.Point(226, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(324, 45);
             this.label1.TabIndex = 0;
@@ -72,7 +72,8 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.11258F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.88742F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 262F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 302F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 227F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(14, 119);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -155,14 +156,16 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel6, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.login, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.errorMsgLabel, 0, 3);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(14, 207);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 85F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 81F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 132F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 77F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 113F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(887, 377);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
@@ -210,7 +213,7 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.username, 0, 1);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(238, 7);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(238, 9);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
@@ -248,14 +251,27 @@ namespace Pizza_Project.Forms
             this.login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.login.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.login.ForeColor = System.Drawing.Color.White;
-            this.login.Location = new System.Drawing.Point(242, 168);
+            this.login.Location = new System.Drawing.Point(242, 164);
             this.login.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(403, 73);
+            this.login.Size = new System.Drawing.Size(403, 59);
             this.login.TabIndex = 2;
             this.login.Text = "Login";
             this.login.UseVisualStyleBackColor = false;
             this.login.Click += new System.EventHandler(this.login_Click);
+            // 
+            // errorMsgLabel
+            // 
+            this.errorMsgLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.errorMsgLabel.AutoSize = true;
+            this.errorMsgLabel.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.errorMsgLabel.ForeColor = System.Drawing.Color.Red;
+            this.errorMsgLabel.Location = new System.Drawing.Point(148, 234);
+            this.errorMsgLabel.Name = "errorMsgLabel";
+            this.errorMsgLabel.Size = new System.Drawing.Size(590, 23);
+            this.errorMsgLabel.TabIndex = 3;
+            this.errorMsgLabel.Text = "Could not authenticate user. The email or password provided was incorrect.";
+            this.errorMsgLabel.Visible = false;
             // 
             // LoginForm
             // 
@@ -276,6 +292,7 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -302,5 +319,6 @@ namespace Pizza_Project.Forms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox username;
         private System.Windows.Forms.Button login;
+        public System.Windows.Forms.Label errorMsgLabel;
     }
 }

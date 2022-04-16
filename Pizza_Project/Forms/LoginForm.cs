@@ -22,12 +22,12 @@ namespace Pizza_Project.Forms
         }
         private void username_TextChanged(object sender, EventArgs e)
         {
-            this.Email = e.ToString();
+            this.Email = this.username.Text;
         }
 
         private void Password_TextChanged(object sender, EventArgs e)
         {
-            this.Password = e.ToString();
+            this.Password = this.password.Text;
         }
 
         private void login_Click(object sender, EventArgs e)
@@ -36,10 +36,15 @@ namespace Pizza_Project.Forms
             if(auth.Login(this.Email, this.Password))
             {
                 // Load form 2 here.
-
-            }else
+                System.Diagnostics.Debug.WriteLine("Logged in");
+                var mainSelectionForm = new MainSelectionPage();
+                mainSelectionForm.Show();
+            }
+            else
             {
                 // show error message here
+                this.errorMsgLabel.Visible = true;
+
             }
         }
 
@@ -55,7 +60,6 @@ namespace Pizza_Project.Forms
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
