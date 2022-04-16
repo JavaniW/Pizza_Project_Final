@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Pizza_Project.Forms
 {
-    public partial class RecieptForm : Form
+    public partial class CustomerInfoPage : Form
     {
-        public RecieptForm()
+        public CustomerInfoPage()
         {
             InitializeComponent();
         }
 
-        private void RecieptForm_Load(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
