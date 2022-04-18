@@ -205,6 +205,7 @@
             this.Controls.Add(this.MenuText);
             this.Name = "OrderCreationPage";
             this.Text = "OrderCreationPage";
+            this.Load += new System.EventHandler(this.OrderCreationPage_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
