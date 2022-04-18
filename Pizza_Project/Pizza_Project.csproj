@@ -22,7 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="database\.DS_Store" />
+    <None Update="database\data-storage\business-data.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
