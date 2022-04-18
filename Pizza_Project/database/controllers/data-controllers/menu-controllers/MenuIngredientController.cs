@@ -5,13 +5,12 @@ using Pizza_Project.database.Models.menu_item;
 
 namespace Pizza_Project.database.controllers.data_controllers.menu_controllers
 {
-    public class MenuIngredientController : AbstractCRUD<MenuIngredient>
+    public class MenuIngredientController : AbstractMenu<MenuIngredient>
     {
         public override List<MenuIngredient> Read()
         {
             var data = GetAllData();
             return new List<MenuIngredient>(data.Menu.Ingredients);
-
         }
 
         public override void Update(List<MenuIngredient> list)

@@ -10,6 +10,7 @@ namespace Pizza_Project.database.Models
     {
         [JsonPropertyName("people")]
         public People People {get; set;}
+        
         [JsonPropertyName("menu")]
         public Menu Menu {get; set;}
     }

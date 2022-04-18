@@ -2,47 +2,206 @@
   "people": {
     "customers": [
       {
-        "Orders": [],
-        "PaymentInfo": [],
+        "orders": null,
+        "paymentInfo": null,
+        "email": "wyatt2@wyatt.com",
+        "phoneNumber": "4236642964",
+        "userAddress": [],
         "id": "HIPa1b0nkUKZSQ1SdDqlhQ",
-        "name": "wyatt2",
-        "email": "wyatt2@wyatt.com",
-        "phoneNumber": "4236642964",
-        "userAddress": []
+        "name": "wyatt2"
       },
       {
-        "Orders": [],
-        "PaymentInfo": [],
+        "orders": null,
+        "paymentInfo": null,
+        "email": "wyatt2@wyatt.com",
+        "phoneNumber": "4236642964",
+        "userAddress": [],
         "id": "z5fDB0x2kuNAQYt7SOKJQ",
-        "name": "wyatt2",
-        "email": "wyatt2@wyatt.com",
-        "phoneNumber": "4236642964",
-        "userAddress": []
+        "name": "wyatt2"
       },
       {
-        "Orders": [],
-        "PaymentInfo": [],
-        "id": "2tfO5jIiYUqffRe33Ceyug",
-        "name": "wyatt3",
+        "orders": null,
+        "paymentInfo": null,
         "email": "wyatt2@wyatt.com",
         "phoneNumber": "4236642964",
-        "userAddress": []
+        "userAddress": [],
+        "id": "2tfO5jIiYUqffRe33Ceyug",
+        "name": "wyatt3"
       }
     ],
     "users": [
       {
         "password": "1234",
         "role": "manager",
-        "id": "wNodjfcqkkz6OCLIqCaYA",
-        "name": "wyatt2",
         "email": "wyatt2@wyatt.com",
         "phoneNumber": "4236642964",
-        "userAddress": []
+        "userAddress": [],
+        "id": "wNodjfcqkkz6OCLIqCaYA",
+        "name": "wyatt2"
       }
     ]
   },
   "menu": {
-    "MenuItems": [],
-    "Ingredients": []
+    "menuItems": [
+      {
+        "price": 0,
+        "category": "food",
+        "instructions": "",
+        "ingredientIds": [
+          "e5KUYZTDe0O4WU6fHvb7w",
+          "9tWucSGwSkGVp111TemjMw",
+          "KdKQEnVkzEia77njC5rfA",
+          "bckD5rtUU06L1RCyVtu1jQ"
+        ],
+        "id": "inrunA7mU0aZWECXdAozzA",
+        "name": "Cheese Pizza"
+      },
+      {
+        "price": 7,
+        "category": "food",
+        "instructions": "",
+        "ingredientIds": [
+          "e5KUYZTDe0O4WU6fHvb7w",
+          "9tWucSGwSkGVp111TemjMw",
+          "KdKQEnVkzEia77njC5rfA"
+        ],
+        "id": "jQwESw2e0iUSpLEoiZMdw",
+        "name": "Build Your Own"
+      }
+    ],
+    "ingredients": [
+      {
+        "category": "base",
+        "price": 1.5,
+        "id": "e5KUYZTDe0O4WU6fHvb7w",
+        "name": "Cheese"
+      },
+      {
+        "category": "base",
+        "price": 0.5,
+        "id": "9tWucSGwSkGVp111TemjMw",
+        "name": "Sauce"
+      },
+      {
+        "category": "size",
+        "price": 5,
+        "id": "KdKQEnVkzEia77njC5rfA",
+        "name": "Small"
+      },
+      {
+        "category": "size",
+        "price": 7,
+        "id": "Nz/1Vp2/OEmQ1vyAU4iXOw",
+        "name": "Medium"
+      },
+      {
+        "category": "size",
+        "price": 12,
+        "id": "Q4SaVZMq60WxHm4m9pj3Ig",
+        "name": "Large"
+      },
+      {
+        "category": "size",
+        "price": 15,
+        "id": "w8Pxu9R6PUuq1GLlKERDZA",
+        "name": "Extra Large"
+      },
+      {
+        "category": "meat",
+        "price": 2.5,
+        "id": "3SyHtmqELkCetLMuqhp9fg",
+        "name": "Pepperoni"
+      },
+      {
+        "category": "meat",
+        "price": 2.5,
+        "id": "wAZEik3MXkqUK9QdAd7FLQ",
+        "name": "Sausage"
+      },
+      {
+        "category": "vegetable",
+        "price": 1.5,
+        "id": "5G78b95dXkuwBtANWmJCA",
+        "name": "Onion"
+      },
+      {
+        "category": "vegetable",
+        "price": 1.5,
+        "id": "J23ejf13B0ywJUqrzdnaBA",
+        "name": "Mushroom"
+      },
+      {
+        "category": "vegetable",
+        "price": 1.5,
+        "id": "r3OflV7fmkWjkawjYPwRUQ",
+        "name": "Black Olive"
+      },
+      {
+        "category": "vegetable",
+        "price": 1.5,
+        "id": "LnmbuPsRk60xxLUB2jeNg",
+        "name": "Green Olive"
+      },
+      {
+        "category": "vegetable",
+        "price": 1.5,
+        "id": "9XYW2n7jGkSj1s5YTa0Rgg",
+        "name": "Bell Pepper"
+      },
+      {
+        "category": "vegetable",
+        "price": 1.5,
+        "id": "jcAo4HIIE0aun2JxdZJdOA",
+        "name": "Red Pepper"
+      },
+      {
+        "category": "fruit",
+        "price": 1.5,
+        "id": "kHyey9ry/EO/GY3EmlK0cA",
+        "name": "Pineapple"
+      },
+      {
+        "category": "vegetable",
+        "price": 0.75,
+        "id": "oVQAtXXlOEy2lafYukglKQ",
+        "name": "Spinach"
+      },
+      {
+        "category": "crust",
+        "price": 0,
+        "id": "0nn8PAKIYke5fBFFZ/D1pw",
+        "name": "Thin"
+      },
+      {
+        "category": "crust",
+        "price": 0,
+        "id": "bckD5rtUU06L1RCyVtu1jQ",
+        "name": "Hand Tossed"
+      },
+      {
+        "category": "crust",
+        "price": 0,
+        "id": "yXkaZ81ZKUG9e0oCzROJYQ",
+        "name": "Brooklyn Style"
+      },
+      {
+        "category": "beverage",
+        "price": 2,
+        "id": "AbyqBwpgbE29GPzSCYaBdQ",
+        "name": "Small"
+      },
+      {
+        "category": "beverage",
+        "price": 3,
+        "id": "iurAVzkEuMDo2jKg42bw",
+        "name": "Medium"
+      },
+      {
+        "category": "beverage",
+        "price": 4,
+        "id": "B1O4TRUTx0CXQXBTk8Hx0w",
+        "name": "Large"
+      }
+    ]
   }
 }

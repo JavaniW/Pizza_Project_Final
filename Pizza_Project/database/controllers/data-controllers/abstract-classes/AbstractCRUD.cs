@@ -54,7 +54,7 @@ namespace Pizza_Project.database.controllers.data_controllers.abstract_classes
         ///</summary>
         public T GetById(string id)
         {
-            return FindItemByProperty(Read(), id, "id");
+            return FindItemByProperty(Read(), id, "Id");
         }
 
         public T GetByPhone(string phoneNumber)
