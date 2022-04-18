@@ -26,10 +26,5 @@ namespace Pizza_Project.Forms
         {
 
         }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
