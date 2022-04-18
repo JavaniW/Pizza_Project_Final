@@ -1,7 +1,7 @@
 using System;
-using Pizza_Project.Kiosk.Checkout;
+using Pizza_Project.kiosk.Checkout;
 
-namespace Pizza_Project.Kiosk
+namespace Pizza_Project.kiosk
 {
     public class Kiosk
     {

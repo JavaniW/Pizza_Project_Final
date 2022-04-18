@@ -25,5 +25,10 @@ namespace Pizza_Project.database.controllers.data_controllers.abstract_classes
             return newList;
 
         }
+
+        public T GetItemByName(string name)
+        {
+            return FindItemByProperty(this.Read(), name, "Name");
+        }
     }
 }

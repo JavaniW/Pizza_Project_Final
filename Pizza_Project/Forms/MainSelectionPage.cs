@@ -32,7 +32,19 @@ namespace Pizza_Project.Forms
 
         private void TakeOrderText_Click(object sender, EventArgs e)
         {
+            this.TakeOrderPage();
+        }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.TakeOrderPage();
+        }
+
+        private void TakeOrderPage()
+        {
+            var customerCreateSelectForm = new CustomerCreateSelectForm();
+            this.Hide();
+            customerCreateSelectForm.Show();
         }
     }
 }

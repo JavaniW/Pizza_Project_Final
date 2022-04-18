@@ -4,7 +4,7 @@ using Pizza_Project;
 using Pizza_Project.database.Models.order_info;
 using Pizza_Project.database.controllers.data_controllers.menu_controllers;
 
-namespace Pizza_Project.Kiosk
+namespace Pizza_Project.kiosk
 {
     public class Cart
     {

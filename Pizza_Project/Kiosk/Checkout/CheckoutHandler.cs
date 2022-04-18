@@ -4,7 +4,7 @@ using Pizza_Project.database.controllers.data_controllers.order_controllers;
 using Pizza_Project.database.controllers.data_controllers.person_controllers;
 using Pizza_Project.database.Models.order_info;
 
-namespace Pizza_Project.Kiosk.Checkout
+namespace Pizza_Project.kiosk.Checkout
 {
     public class CheckoutHandler
     {
