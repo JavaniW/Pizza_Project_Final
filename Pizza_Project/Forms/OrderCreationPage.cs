@@ -31,5 +31,10 @@ namespace Pizza_Project.Forms
         {
 
         }
+
+        private void OrderCreationPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
