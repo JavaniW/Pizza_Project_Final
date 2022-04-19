@@ -218,7 +218,7 @@
             this.Controls.Add(this.MenuText);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "OrderCreationPage";
-            this.Text = "OrderCreationPage";
+            this.Text = "Take Order";
             this.Load += new System.EventHandler(this.OrderCreationPage_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

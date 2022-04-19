@@ -19,5 +19,24 @@ namespace Pizza_Project.database.controllers.data_controllers.menu_controllers
             data.Menu.Ingredients = list;
             DatabaseHandler.Write(data);
         }
+
+        public double GetIngredientPrice(List<string> ingredientIds)
+        {
+            double finalPrice = 0;
+            var ingredientList = this.Read();
+
+            foreach (var ingredient in ingredientIds)
+            {
+                foreach (var listIngredient in ingredientList)
+                {
+                    if (ingredient.Equals(listIngredient.Id))
+                    {
+                        finalPrice += listIngredient.Price;
+                    }
+                }
+            }
+
+            return finalPrice;
+        }
     }
 }

@@ -28,21 +28,25 @@ namespace Pizza_Project.kiosk
         /// <param name="ingredients">List of ingredients added by user.</param>
         /// <param name="quantity">Total number of item to be ordered.</param>
         /// <returns>true if item added, false if item could not be added.</returns>
-        public bool AddItem(string itemId, List<string> ingredients, int quantity)
+        public bool AddItem(List<string> ingredients, int quantity, string itemType)
         {
-            var menuItem = _menuItemController.GetById(itemId);
-            menuItem.IngredientIds = ingredients;
+            //var menuItem = _menuItemController.GetById(itemId);
+            //menuItem.IngredientIds = ingredients;
+
+
+            /* var orderItem = new OrderItems
+             {
+                 Id = Identifier.CreateIdentifier(),
+                 Name = "Pizza" + this._cartItems.Count,
+                 //MenuItem = menuItem,
+                 ItemTotal = _menuIngredientController.GetIngredientPrice(ingredients),
+                 //ItemTotal = _menuItemController.GetFinalPrice(menuItem.Price, menuItem.IngredientIds),
+                 Quantity = quantity
+             };
+            */
 
             if (GetToppingAmount(ingredients) > 4) return false;
-            
-            var orderItem = new OrderItems
-            {
-                Id = Identifier.CreateIdentifier(),
-                Name = menuItem.Name,
-                MenuItem = menuItem,
-                ItemTotal = _menuItemController.GetFinalPrice(menuItem.Price, menuItem.IngredientIds),
-                Quantity = quantity
-            };
+            var orderItem = this.CreateItem(ingredients, quantity, itemType);
             
             this._cartItems.Add(orderItem);
             this.CalculateCartTotal();
@@ -76,7 +80,7 @@ namespace Pizza_Project.kiosk
         /// <param name="ingredients">list of ingredient ids</param>
         /// <param name="quantity">number of item</param>
         /// <returns>true if updated, false if could not update</returns>
-        public bool UpdateItem(string id, List<string> ingredients, int quantity)
+        public bool UpdateItem(string id, List<string> ingredients, int quantity, string itemType)
         {
             if (GetToppingAmount(ingredients) > 4) return false;
 
@@ -84,7 +88,7 @@ namespace Pizza_Project.kiosk
             {
                 if (item.Id.Equals(id))
                 {
-                    var newItem = this.CreateItem(item.MenuItem.Id, ingredients, quantity);
+                    var newItem = this.CreateItem(ingredients, quantity, itemType);
                     this._cartItems[this._cartItems.IndexOf(item)] = newItem;
                     this.CalculateCartTotal();
                     return true;
@@ -102,10 +106,10 @@ namespace Pizza_Project.kiosk
         /// <param name="quantity">number of menu item</param>
         /// <param name="id">previous id if exists</param>
         /// <returns>a created order item</returns>
-        private OrderItems CreateItem(string itemId, List<string> ingredients, int quantity, string id = "")
+        private OrderItems CreateItem(List<string> ingredients, int quantity, string itemType, string id = "")
         {
-            var menuItem = _menuItemController.GetById(itemId);
-            menuItem.IngredientIds = ingredients;
+            //var menuItem = _menuItemController.GetById(itemId);
+            //menuItem.IngredientIds = ingredients;
 
             var newId = "";
             if (id.Equals(""))
@@ -116,13 +120,13 @@ namespace Pizza_Project.kiosk
             {
                 newId = id;
             }
-            
+
             return new OrderItems
             {
                 Id = newId,
-                Name = menuItem.Name,
-                MenuItem = menuItem,
-                ItemTotal = _menuItemController.GetFinalPrice(menuItem.Price, menuItem.IngredientIds),
+                Name = itemType + this._cartItems.Count,
+                //MenuItem = menuItem,
+                ItemTotal = _menuIngredientController.GetIngredientPrice(ingredients),
                 Quantity = quantity
             };
         }

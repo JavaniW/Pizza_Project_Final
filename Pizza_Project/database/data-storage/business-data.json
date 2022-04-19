@@ -114,6 +114,12 @@
       },
       {
         "category": "meat",
+        "price": 1.5,
+        "id": "fagey4qELkCetLMufajuthp",
+        "name": "Anchovy"
+      },
+      {
+        "category": "meat",
         "price": 2.5,
         "id": "wAZEik3MXkqUK9QdAd7FLQ",
         "name": "Sausage"
@@ -141,18 +147,6 @@
         "price": 1.5,
         "id": "LnmbuPsRk60xxLUB2jeNg",
         "name": "Green Olive"
-      },
-      {
-        "category": "vegetable",
-        "price": 1.5,
-        "id": "9XYW2n7jGkSj1s5YTa0Rgg",
-        "name": "Bell Pepper"
-      },
-      {
-        "category": "vegetable",
-        "price": 1.5,
-        "id": "jcAo4HIIE0aun2JxdZJdOA",
-        "name": "Red Pepper"
       },
       {
         "category": "fruit",

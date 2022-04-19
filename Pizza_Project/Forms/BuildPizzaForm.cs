@@ -19,13 +19,12 @@ namespace Pizza_Project.Forms
         private MenuIngredientController _menuIngredientController;
         private Cart _cart;
 
-        private List<string> ingredientIds;
+        private List<string> ingredientIds = new List<string>();
 
         public BuildPizzaForm(Cart cart)
         {
             InitializeComponent();
             this._menuIngredientController = new MenuIngredientController();
-            this.ingredientIds = new List<string>();
             this._cart = cart;
         }
 
@@ -34,9 +33,14 @@ namespace Pizza_Project.Forms
 
         }
 
+        private string GetNameFromCheckbox(string name)
+        {
+            return name.Split(" ")[0];
+        }
+
         private void CheckBoxChecked(CheckBox checkbox)
         {
-            var ingredient = _menuIngredientController.GetItemByName(checkbox.Text);
+            var ingredient = _menuIngredientController.GetItemByName(GetNameFromCheckbox(checkbox.Text));
         
             if (checkbox.Checked)
             {
