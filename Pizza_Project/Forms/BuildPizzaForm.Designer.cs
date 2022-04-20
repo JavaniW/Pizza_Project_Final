@@ -49,15 +49,13 @@ namespace Pizza_Project.Forms
             this.sizeMediumCheckbox = new System.Windows.Forms.CheckBox();
             this.sizeLargeCheckbox = new System.Windows.Forms.CheckBox();
             this.sizeXLCheckbox = new System.Windows.Forms.CheckBox();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.baseCheeseCheckbox = new System.Windows.Forms.CheckBox();
             this.baseSauceCheckbox = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.meatPepCheckbox = new System.Windows.Forms.CheckBox();
             this.meatSausageCheckbox = new System.Windows.Forms.CheckBox();
+            this.meatAnchovyCheckbox = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.vegOnionCheckbox = new System.Windows.Forms.CheckBox();
             this.vegMushroomCheckbox = new System.Windows.Forms.CheckBox();
@@ -66,16 +64,18 @@ namespace Pizza_Project.Forms
             this.vegSpinachCheckbox = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.fruitPineappleCheckbox = new System.Windows.Forms.CheckBox();
-            this.meatAnchovyCheckbox = new System.Windows.Forms.CheckBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -270,6 +270,7 @@ namespace Pizza_Project.Forms
             this.brooklynStyleCheckbox.TabIndex = 2;
             this.brooklynStyleCheckbox.Text = "Brooklyn Style +0.00";
             this.brooklynStyleCheckbox.UseVisualStyleBackColor = true;
+            this.brooklynStyleCheckbox.CheckedChanged += new System.EventHandler(this.brooklynStyleCheckbox_CheckedChanged);
             // 
             // handTossedCheckbox
             // 
@@ -285,6 +286,7 @@ namespace Pizza_Project.Forms
             this.handTossedCheckbox.TabIndex = 1;
             this.handTossedCheckbox.Text = "Hand Tossed +0.00";
             this.handTossedCheckbox.UseVisualStyleBackColor = true;
+            this.handTossedCheckbox.CheckedChanged += new System.EventHandler(this.handTossedCheckbox_CheckedChanged);
             // 
             // thinCheckbox
             // 
@@ -335,6 +337,7 @@ namespace Pizza_Project.Forms
             this.sizeSmallCheckbox.TabIndex = 1;
             this.sizeSmallCheckbox.Text = "Small +5.00";
             this.sizeSmallCheckbox.UseVisualStyleBackColor = true;
+            this.sizeSmallCheckbox.CheckedChanged += new System.EventHandler(this.sizeSmallCheckbox_CheckedChanged);
             // 
             // sizeMediumCheckbox
             // 
@@ -350,6 +353,7 @@ namespace Pizza_Project.Forms
             this.sizeMediumCheckbox.TabIndex = 2;
             this.sizeMediumCheckbox.Text = "Medium +7.00";
             this.sizeMediumCheckbox.UseVisualStyleBackColor = true;
+            this.sizeMediumCheckbox.CheckedChanged += new System.EventHandler(this.sizeMediumCheckbox_CheckedChanged);
             // 
             // sizeLargeCheckbox
             // 
@@ -365,6 +369,7 @@ namespace Pizza_Project.Forms
             this.sizeLargeCheckbox.TabIndex = 3;
             this.sizeLargeCheckbox.Text = "Large +12.00";
             this.sizeLargeCheckbox.UseVisualStyleBackColor = true;
+            this.sizeLargeCheckbox.CheckedChanged += new System.EventHandler(this.sizeLargeCheckbox_CheckedChanged);
             // 
             // sizeXLCheckbox
             // 
@@ -380,6 +385,249 @@ namespace Pizza_Project.Forms
             this.sizeXLCheckbox.TabIndex = 4;
             this.sizeXLCheckbox.Text = "Extra Large +15.00";
             this.sizeXLCheckbox.UseVisualStyleBackColor = true;
+            this.sizeXLCheckbox.CheckedChanged += new System.EventHandler(this.sizeXLCheckbox_CheckedChanged);
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Controls.Add(this.baseCheeseCheckbox, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.baseSauceCheckbox, 0, 1);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(521, 34);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 3;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.27273F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.72727F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(252, 130);
+            this.tableLayoutPanel6.TabIndex = 14;
+            // 
+            // baseCheeseCheckbox
+            // 
+            this.baseCheeseCheckbox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.baseCheeseCheckbox.AutoSize = true;
+            this.baseCheeseCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.baseCheeseCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.baseCheeseCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.baseCheeseCheckbox.ForeColor = System.Drawing.Color.White;
+            this.baseCheeseCheckbox.Location = new System.Drawing.Point(68, 3);
+            this.baseCheeseCheckbox.Name = "baseCheeseCheckbox";
+            this.baseCheeseCheckbox.Size = new System.Drawing.Size(116, 21);
+            this.baseCheeseCheckbox.TabIndex = 2;
+            this.baseCheeseCheckbox.Text = "Cheese +1.50";
+            this.baseCheeseCheckbox.UseVisualStyleBackColor = true;
+            this.baseCheeseCheckbox.CheckedChanged += new System.EventHandler(this.baseCheeseCheckbox_CheckedChanged);
+            // 
+            // baseSauceCheckbox
+            // 
+            this.baseSauceCheckbox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.baseSauceCheckbox.AutoSize = true;
+            this.baseSauceCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.baseSauceCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.baseSauceCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.baseSauceCheckbox.ForeColor = System.Drawing.Color.White;
+            this.baseSauceCheckbox.Location = new System.Drawing.Point(73, 31);
+            this.baseSauceCheckbox.Name = "baseSauceCheckbox";
+            this.baseSauceCheckbox.Size = new System.Drawing.Size(106, 23);
+            this.baseSauceCheckbox.TabIndex = 3;
+            this.baseSauceCheckbox.Text = "Sauce +0.50";
+            this.baseSauceCheckbox.UseVisualStyleBackColor = true;
+            this.baseSauceCheckbox.CheckedChanged += new System.EventHandler(this.baseSauceCheckbox_CheckedChanged);
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 1;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Controls.Add(this.meatPepCheckbox, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.meatSausageCheckbox, 0, 1);
+            this.tableLayoutPanel7.Controls.Add(this.meatAnchovyCheckbox, 0, 2);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 205);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 4;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.14815F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.85185F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(253, 151);
+            this.tableLayoutPanel7.TabIndex = 15;
+            // 
+            // meatPepCheckbox
+            // 
+            this.meatPepCheckbox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.meatPepCheckbox.AutoSize = true;
+            this.meatPepCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.meatPepCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.meatPepCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.meatPepCheckbox.ForeColor = System.Drawing.Color.White;
+            this.meatPepCheckbox.Location = new System.Drawing.Point(60, 3);
+            this.meatPepCheckbox.Name = "meatPepCheckbox";
+            this.meatPepCheckbox.Size = new System.Drawing.Size(133, 21);
+            this.meatPepCheckbox.TabIndex = 1;
+            this.meatPepCheckbox.Text = "Pepperoni +2.50";
+            this.meatPepCheckbox.UseVisualStyleBackColor = true;
+            this.meatPepCheckbox.CheckedChanged += new System.EventHandler(this.meatPepCheckbox_CheckedChanged);
+            // 
+            // meatSausageCheckbox
+            // 
+            this.meatSausageCheckbox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.meatSausageCheckbox.AutoSize = true;
+            this.meatSausageCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.meatSausageCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.meatSausageCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.meatSausageCheckbox.ForeColor = System.Drawing.Color.White;
+            this.meatSausageCheckbox.Location = new System.Drawing.Point(65, 30);
+            this.meatSausageCheckbox.Name = "meatSausageCheckbox";
+            this.meatSausageCheckbox.Size = new System.Drawing.Size(122, 23);
+            this.meatSausageCheckbox.TabIndex = 2;
+            this.meatSausageCheckbox.Text = "Sausage +2.50";
+            this.meatSausageCheckbox.UseVisualStyleBackColor = true;
+            this.meatSausageCheckbox.CheckedChanged += new System.EventHandler(this.meatSausageCheckbox_CheckedChanged);
+            // 
+            // meatAnchovyCheckbox
+            // 
+            this.meatAnchovyCheckbox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.meatAnchovyCheckbox.AutoSize = true;
+            this.meatAnchovyCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.meatAnchovyCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.meatAnchovyCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.meatAnchovyCheckbox.ForeColor = System.Drawing.Color.White;
+            this.meatAnchovyCheckbox.Location = new System.Drawing.Point(65, 60);
+            this.meatAnchovyCheckbox.Name = "meatAnchovyCheckbox";
+            this.meatAnchovyCheckbox.Size = new System.Drawing.Size(122, 23);
+            this.meatAnchovyCheckbox.TabIndex = 3;
+            this.meatAnchovyCheckbox.Text = "Anchovy +1.50";
+            this.meatAnchovyCheckbox.UseVisualStyleBackColor = true;
+            this.meatAnchovyCheckbox.CheckedChanged += new System.EventHandler(this.meatAnchovyCheckbox_CheckedChanged);
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 1;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.Controls.Add(this.vegOnionCheckbox, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.vegMushroomCheckbox, 0, 1);
+            this.tableLayoutPanel8.Controls.Add(this.vegBOliveCheckbox, 0, 2);
+            this.tableLayoutPanel8.Controls.Add(this.vegGOliveCheckbox, 0, 3);
+            this.tableLayoutPanel8.Controls.Add(this.vegSpinachCheckbox, 0, 4);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(262, 205);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 6;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.21429F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.78571F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(253, 157);
+            this.tableLayoutPanel8.TabIndex = 16;
+            // 
+            // vegOnionCheckbox
+            // 
+            this.vegOnionCheckbox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.vegOnionCheckbox.AutoSize = true;
+            this.vegOnionCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.vegOnionCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.vegOnionCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.vegOnionCheckbox.ForeColor = System.Drawing.Color.White;
+            this.vegOnionCheckbox.Location = new System.Drawing.Point(73, 3);
+            this.vegOnionCheckbox.Name = "vegOnionCheckbox";
+            this.vegOnionCheckbox.Size = new System.Drawing.Size(107, 21);
+            this.vegOnionCheckbox.TabIndex = 2;
+            this.vegOnionCheckbox.Text = "Onion +1.50";
+            this.vegOnionCheckbox.UseVisualStyleBackColor = true;
+            this.vegOnionCheckbox.CheckedChanged += new System.EventHandler(this.vegOnionCheckbox_CheckedChanged);
+            // 
+            // vegMushroomCheckbox
+            // 
+            this.vegMushroomCheckbox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.vegMushroomCheckbox.AutoSize = true;
+            this.vegMushroomCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.vegMushroomCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.vegMushroomCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.vegMushroomCheckbox.ForeColor = System.Drawing.Color.White;
+            this.vegMushroomCheckbox.Location = new System.Drawing.Point(58, 30);
+            this.vegMushroomCheckbox.Name = "vegMushroomCheckbox";
+            this.vegMushroomCheckbox.Size = new System.Drawing.Size(137, 23);
+            this.vegMushroomCheckbox.TabIndex = 3;
+            this.vegMushroomCheckbox.Text = "Mushroom +1.50";
+            this.vegMushroomCheckbox.UseVisualStyleBackColor = true;
+            this.vegMushroomCheckbox.CheckedChanged += new System.EventHandler(this.vegMushroomCheckbox_CheckedChanged);
+            // 
+            // vegBOliveCheckbox
+            // 
+            this.vegBOliveCheckbox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.vegBOliveCheckbox.AutoSize = true;
+            this.vegBOliveCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.vegBOliveCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.vegBOliveCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.vegBOliveCheckbox.ForeColor = System.Drawing.Color.White;
+            this.vegBOliveCheckbox.Location = new System.Drawing.Point(56, 59);
+            this.vegBOliveCheckbox.Name = "vegBOliveCheckbox";
+            this.vegBOliveCheckbox.Size = new System.Drawing.Size(141, 23);
+            this.vegBOliveCheckbox.TabIndex = 4;
+            this.vegBOliveCheckbox.Text = "Black Olive +1.50";
+            this.vegBOliveCheckbox.UseVisualStyleBackColor = true;
+            this.vegBOliveCheckbox.CheckedChanged += new System.EventHandler(this.vegBOliveCheckbox_CheckedChanged);
+            // 
+            // vegGOliveCheckbox
+            // 
+            this.vegGOliveCheckbox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.vegGOliveCheckbox.AutoSize = true;
+            this.vegGOliveCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.vegGOliveCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.vegGOliveCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.vegGOliveCheckbox.ForeColor = System.Drawing.Color.White;
+            this.vegGOliveCheckbox.Location = new System.Drawing.Point(54, 88);
+            this.vegGOliveCheckbox.Name = "vegGOliveCheckbox";
+            this.vegGOliveCheckbox.Size = new System.Drawing.Size(145, 22);
+            this.vegGOliveCheckbox.TabIndex = 5;
+            this.vegGOliveCheckbox.Text = "Green Olive +1.50";
+            this.vegGOliveCheckbox.UseVisualStyleBackColor = true;
+            this.vegGOliveCheckbox.CheckedChanged += new System.EventHandler(this.vegGOliveCheckbox_CheckedChanged);
+            // 
+            // vegSpinachCheckbox
+            // 
+            this.vegSpinachCheckbox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.vegSpinachCheckbox.AutoSize = true;
+            this.vegSpinachCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.vegSpinachCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.vegSpinachCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.vegSpinachCheckbox.ForeColor = System.Drawing.Color.White;
+            this.vegSpinachCheckbox.Location = new System.Drawing.Point(67, 116);
+            this.vegSpinachCheckbox.Name = "vegSpinachCheckbox";
+            this.vegSpinachCheckbox.Size = new System.Drawing.Size(118, 22);
+            this.vegSpinachCheckbox.TabIndex = 6;
+            this.vegSpinachCheckbox.Text = "Spinach +0.75";
+            this.vegSpinachCheckbox.UseVisualStyleBackColor = true;
+            this.vegSpinachCheckbox.CheckedChanged += new System.EventHandler(this.vegSpinachCheckbox_CheckedChanged);
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 1;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.Controls.Add(this.fruitPineappleCheckbox, 0, 0);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(521, 205);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 2;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.83439F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.1656F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(252, 157);
+            this.tableLayoutPanel9.TabIndex = 17;
+            // 
+            // fruitPineappleCheckbox
+            // 
+            this.fruitPineappleCheckbox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.fruitPineappleCheckbox.AutoSize = true;
+            this.fruitPineappleCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.fruitPineappleCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.fruitPineappleCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.fruitPineappleCheckbox.ForeColor = System.Drawing.Color.White;
+            this.fruitPineappleCheckbox.Location = new System.Drawing.Point(60, 3);
+            this.fruitPineappleCheckbox.Name = "fruitPineappleCheckbox";
+            this.fruitPineappleCheckbox.Size = new System.Drawing.Size(132, 21);
+            this.fruitPineappleCheckbox.TabIndex = 3;
+            this.fruitPineappleCheckbox.Text = "Pineapple +1.50";
+            this.fruitPineappleCheckbox.UseVisualStyleBackColor = true;
+            this.fruitPineappleCheckbox.CheckedChanged += new System.EventHandler(this.fruitPineappleCheckbox_CheckedChanged);
             // 
             // tableLayoutPanel4
             // 
@@ -425,237 +673,6 @@ namespace Pizza_Project.Forms
             this.checkBox2.Text = "Hand Tossed";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 1;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Controls.Add(this.baseCheeseCheckbox, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.baseSauceCheckbox, 0, 1);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(521, 34);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 3;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.27273F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.72727F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(252, 130);
-            this.tableLayoutPanel6.TabIndex = 14;
-            // 
-            // baseCheeseCheckbox
-            // 
-            this.baseCheeseCheckbox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.baseCheeseCheckbox.AutoSize = true;
-            this.baseCheeseCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.baseCheeseCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.baseCheeseCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.baseCheeseCheckbox.ForeColor = System.Drawing.Color.White;
-            this.baseCheeseCheckbox.Location = new System.Drawing.Point(68, 3);
-            this.baseCheeseCheckbox.Name = "baseCheeseCheckbox";
-            this.baseCheeseCheckbox.Size = new System.Drawing.Size(116, 21);
-            this.baseCheeseCheckbox.TabIndex = 2;
-            this.baseCheeseCheckbox.Text = "Cheese +1.50";
-            this.baseCheeseCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // baseSauceCheckbox
-            // 
-            this.baseSauceCheckbox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.baseSauceCheckbox.AutoSize = true;
-            this.baseSauceCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.baseSauceCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.baseSauceCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.baseSauceCheckbox.ForeColor = System.Drawing.Color.White;
-            this.baseSauceCheckbox.Location = new System.Drawing.Point(73, 31);
-            this.baseSauceCheckbox.Name = "baseSauceCheckbox";
-            this.baseSauceCheckbox.Size = new System.Drawing.Size(106, 23);
-            this.baseSauceCheckbox.TabIndex = 3;
-            this.baseSauceCheckbox.Text = "Sauce +0.50";
-            this.baseSauceCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel7
-            // 
-            this.tableLayoutPanel7.ColumnCount = 1;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Controls.Add(this.meatPepCheckbox, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.meatSausageCheckbox, 0, 1);
-            this.tableLayoutPanel7.Controls.Add(this.meatAnchovyCheckbox, 0, 2);
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 205);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 4;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.14815F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.85185F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(253, 151);
-            this.tableLayoutPanel7.TabIndex = 15;
-            // 
-            // meatPepCheckbox
-            // 
-            this.meatPepCheckbox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.meatPepCheckbox.AutoSize = true;
-            this.meatPepCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.meatPepCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.meatPepCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.meatPepCheckbox.ForeColor = System.Drawing.Color.White;
-            this.meatPepCheckbox.Location = new System.Drawing.Point(60, 3);
-            this.meatPepCheckbox.Name = "meatPepCheckbox";
-            this.meatPepCheckbox.Size = new System.Drawing.Size(133, 21);
-            this.meatPepCheckbox.TabIndex = 1;
-            this.meatPepCheckbox.Text = "Pepperoni +2.50";
-            this.meatPepCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // meatSausageCheckbox
-            // 
-            this.meatSausageCheckbox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.meatSausageCheckbox.AutoSize = true;
-            this.meatSausageCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.meatSausageCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.meatSausageCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.meatSausageCheckbox.ForeColor = System.Drawing.Color.White;
-            this.meatSausageCheckbox.Location = new System.Drawing.Point(65, 30);
-            this.meatSausageCheckbox.Name = "meatSausageCheckbox";
-            this.meatSausageCheckbox.Size = new System.Drawing.Size(122, 23);
-            this.meatSausageCheckbox.TabIndex = 2;
-            this.meatSausageCheckbox.Text = "Sausage +2.50";
-            this.meatSausageCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel8
-            // 
-            this.tableLayoutPanel8.ColumnCount = 1;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Controls.Add(this.vegOnionCheckbox, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.vegMushroomCheckbox, 0, 1);
-            this.tableLayoutPanel8.Controls.Add(this.vegBOliveCheckbox, 0, 2);
-            this.tableLayoutPanel8.Controls.Add(this.vegGOliveCheckbox, 0, 3);
-            this.tableLayoutPanel8.Controls.Add(this.vegSpinachCheckbox, 0, 4);
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(262, 205);
-            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 6;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.21429F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.78571F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(253, 157);
-            this.tableLayoutPanel8.TabIndex = 16;
-            // 
-            // vegOnionCheckbox
-            // 
-            this.vegOnionCheckbox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.vegOnionCheckbox.AutoSize = true;
-            this.vegOnionCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.vegOnionCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.vegOnionCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.vegOnionCheckbox.ForeColor = System.Drawing.Color.White;
-            this.vegOnionCheckbox.Location = new System.Drawing.Point(73, 3);
-            this.vegOnionCheckbox.Name = "vegOnionCheckbox";
-            this.vegOnionCheckbox.Size = new System.Drawing.Size(107, 21);
-            this.vegOnionCheckbox.TabIndex = 2;
-            this.vegOnionCheckbox.Text = "Onion +1.50";
-            this.vegOnionCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // vegMushroomCheckbox
-            // 
-            this.vegMushroomCheckbox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.vegMushroomCheckbox.AutoSize = true;
-            this.vegMushroomCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.vegMushroomCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.vegMushroomCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.vegMushroomCheckbox.ForeColor = System.Drawing.Color.White;
-            this.vegMushroomCheckbox.Location = new System.Drawing.Point(58, 30);
-            this.vegMushroomCheckbox.Name = "vegMushroomCheckbox";
-            this.vegMushroomCheckbox.Size = new System.Drawing.Size(137, 23);
-            this.vegMushroomCheckbox.TabIndex = 3;
-            this.vegMushroomCheckbox.Text = "Mushroom +1.50";
-            this.vegMushroomCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // vegBOliveCheckbox
-            // 
-            this.vegBOliveCheckbox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.vegBOliveCheckbox.AutoSize = true;
-            this.vegBOliveCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.vegBOliveCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.vegBOliveCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.vegBOliveCheckbox.ForeColor = System.Drawing.Color.White;
-            this.vegBOliveCheckbox.Location = new System.Drawing.Point(56, 59);
-            this.vegBOliveCheckbox.Name = "vegBOliveCheckbox";
-            this.vegBOliveCheckbox.Size = new System.Drawing.Size(141, 23);
-            this.vegBOliveCheckbox.TabIndex = 4;
-            this.vegBOliveCheckbox.Text = "Black Olive +1.50";
-            this.vegBOliveCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // vegGOliveCheckbox
-            // 
-            this.vegGOliveCheckbox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.vegGOliveCheckbox.AutoSize = true;
-            this.vegGOliveCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.vegGOliveCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.vegGOliveCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.vegGOliveCheckbox.ForeColor = System.Drawing.Color.White;
-            this.vegGOliveCheckbox.Location = new System.Drawing.Point(54, 88);
-            this.vegGOliveCheckbox.Name = "vegGOliveCheckbox";
-            this.vegGOliveCheckbox.Size = new System.Drawing.Size(145, 22);
-            this.vegGOliveCheckbox.TabIndex = 5;
-            this.vegGOliveCheckbox.Text = "Green Olive +1.50";
-            this.vegGOliveCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // vegSpinachCheckbox
-            // 
-            this.vegSpinachCheckbox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.vegSpinachCheckbox.AutoSize = true;
-            this.vegSpinachCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.vegSpinachCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.vegSpinachCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.vegSpinachCheckbox.ForeColor = System.Drawing.Color.White;
-            this.vegSpinachCheckbox.Location = new System.Drawing.Point(67, 116);
-            this.vegSpinachCheckbox.Name = "vegSpinachCheckbox";
-            this.vegSpinachCheckbox.Size = new System.Drawing.Size(118, 22);
-            this.vegSpinachCheckbox.TabIndex = 6;
-            this.vegSpinachCheckbox.Text = "Spinach +0.75";
-            this.vegSpinachCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel9
-            // 
-            this.tableLayoutPanel9.ColumnCount = 1;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Controls.Add(this.fruitPineappleCheckbox, 0, 0);
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(521, 205);
-            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 2;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.83439F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.1656F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(252, 157);
-            this.tableLayoutPanel9.TabIndex = 17;
-            // 
-            // fruitPineappleCheckbox
-            // 
-            this.fruitPineappleCheckbox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.fruitPineappleCheckbox.AutoSize = true;
-            this.fruitPineappleCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.fruitPineappleCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.fruitPineappleCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.fruitPineappleCheckbox.ForeColor = System.Drawing.Color.White;
-            this.fruitPineappleCheckbox.Location = new System.Drawing.Point(60, 3);
-            this.fruitPineappleCheckbox.Name = "fruitPineappleCheckbox";
-            this.fruitPineappleCheckbox.Size = new System.Drawing.Size(132, 22);
-            this.fruitPineappleCheckbox.TabIndex = 3;
-            this.fruitPineappleCheckbox.Text = "Pineapple +1.50";
-            this.fruitPineappleCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // meatAnchovyCheckbox
-            // 
-            this.meatAnchovyCheckbox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.meatAnchovyCheckbox.AutoSize = true;
-            this.meatAnchovyCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.meatAnchovyCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.meatAnchovyCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.meatAnchovyCheckbox.ForeColor = System.Drawing.Color.White;
-            this.meatAnchovyCheckbox.Location = new System.Drawing.Point(65, 60);
-            this.meatAnchovyCheckbox.Name = "meatAnchovyCheckbox";
-            this.meatAnchovyCheckbox.Size = new System.Drawing.Size(122, 23);
-            this.meatAnchovyCheckbox.TabIndex = 3;
-            this.meatAnchovyCheckbox.Text = "Anchovy +1.50";
-            this.meatAnchovyCheckbox.UseVisualStyleBackColor = true;
-            // 
             // BuildPizzaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -675,8 +692,6 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
@@ -685,6 +700,8 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel8.PerformLayout();
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }

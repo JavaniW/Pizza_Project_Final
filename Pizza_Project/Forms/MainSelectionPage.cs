@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 
+using Pizza_Project.helper_classes;
+
 namespace Pizza_Project.Forms
 {
     public partial class MainSelectionPage : Form
@@ -22,6 +24,9 @@ namespace Pizza_Project.Forms
 
         private void MainSelectionPage_Load(object sender, EventArgs e)
         {
+            this.pictureBox2.ImageLocation = FilePath.GetPath(@"\\images\\pizza-slice.jpeg");
+            this.pictureBox1.ImageLocation = FilePath.GetPath(@"\\images\\list.jpeg");
+            this.pictureBox3.ImageLocation = FilePath.GetPath(@"\\images\\customer.jpeg");
 
         }
 
