@@ -30,7 +30,7 @@
         {
             this.OrderTotalLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.PaymentMethodDropdown = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // OrderTotalLabel
@@ -56,17 +56,17 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(432, 358);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // comboBox1
+            // PaymentMethodDropdown
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.PaymentMethodDropdown.FormattingEnabled = true;
+            this.PaymentMethodDropdown.Items.AddRange(new object[] {
             "Cash",
             "Card",
             "Check"});
-            this.comboBox1.Location = new System.Drawing.Point(618, 23);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 28);
-            this.comboBox1.TabIndex = 2;
+            this.PaymentMethodDropdown.Location = new System.Drawing.Point(619, 23);
+            this.PaymentMethodDropdown.Name = "PaymentMethodDropdown";
+            this.PaymentMethodDropdown.Size = new System.Drawing.Size(159, 28);
+            this.PaymentMethodDropdown.TabIndex = 2;
             // 
             // CheckoutPage
             // 
@@ -74,7 +74,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.PaymentMethodDropdown);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.OrderTotalLabel);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -89,6 +89,6 @@
 
         private System.Windows.Forms.Label OrderTotalLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox PaymentMethodDropdown;
     }
 }
