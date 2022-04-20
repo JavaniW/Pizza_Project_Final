@@ -140,6 +140,8 @@ namespace Pizza_Project.Forms
 
             this.CustomerId = cust.Id;
             this.ErrorMsg = "Could not create customer.";
+
+            this.ToOrderCreation();
         }
 
         
@@ -149,10 +151,23 @@ namespace Pizza_Project.Forms
         private void FindCustomer()
         {
             System.Diagnostics.Debug.WriteLine(this.PhoneNumber);
-            var cust = _customerController.GetByPhone(this.PhoneNumber);
-            this.CustomerId = cust.Id;
-            this.ErrorMsg = "Could not find customer";
-            this.errorText.Text = cust.Id;
+                var cust = _customerController.GetByPhone(this.PhoneNumber);
+
+                if (cust != null)
+                {
+                    this.CustomerId = cust.Id;
+                    this.ToOrderCreation();
+                }
+
+                this.ErrorMsg = "Could not find customer";
+                this.errorText.Text = this.ErrorMsg;
+        }
+
+        private void ToOrderCreation()
+        {
+            var orderCreationPage = new OrderCreationPage(this.CustomerId);
+            this.Hide();
+            orderCreationPage.Show();
         }
 
     }

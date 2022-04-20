@@ -6,9 +6,15 @@ using Pizza_Project.database.Models.menu_item;
 
 namespace Pizza_Project.database.controllers.data_controllers.menu_controllers
 {
-    public class MenuItemController : AbstractCRUD<MenuItem>
+    public class MenuItemController : AbstractMenu<MenuItem>
     {
-        private double GetFinalPrice(double initPrice, List<string> ingredients)
+        /// <summary>
+        /// Gets the total price of an item.
+        /// </summary>
+        /// <param name="initPrice">Initial price of food item</param>
+        /// <param name="ingredients">Ingredient Ids</param>
+        /// <returns>Total item price.</returns>
+        public double GetFinalPrice(double initPrice, List<string> ingredients)
         {
             var finalPrice = initPrice;
 
@@ -28,6 +34,7 @@ namespace Pizza_Project.database.controllers.data_controllers.menu_controllers
 
             return finalPrice;
         }
+        
         public override List<MenuItem> Read()
         {
             var data = GetAllData();

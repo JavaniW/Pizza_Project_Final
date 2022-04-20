@@ -6,11 +6,8 @@ namespace Pizza_Project.database.Models.menu_item
 {
     public class MenuItem : GlobalJSONProperties
     {
-        [JsonPropertyName("initPrice")]
-        public double InitPrice {get; set;}
-        
-        [JsonPropertyName("finalPrice")]
-        public double FinalPrice {get; set;}
+        [JsonPropertyName("price")]
+        public double Price {get; set;}
         
         [JsonPropertyName("category")]
         public string Category {get; set;}
@@ -19,6 +16,6 @@ namespace Pizza_Project.database.Models.menu_item
         public string Instructions { get; set;}
         
         [JsonPropertyName("ingredientIds")]
-        public IList<string> IngredientIds { get; set;}
+        public List<string> IngredientIds { get; set;}
     }
 }

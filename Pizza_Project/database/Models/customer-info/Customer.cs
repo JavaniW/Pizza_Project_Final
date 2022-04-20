@@ -12,6 +12,6 @@ namespace Pizza_Project.database.Models.customer_info
         public IList<Order> Orders {get; set;}
         
         [JsonPropertyName("paymentInfo")]
-        public IList<CreditCardInfo> PaymentInfo { get; set; }
+        public CreditCardInfo PaymentInfo { get; set; }
     }
 }

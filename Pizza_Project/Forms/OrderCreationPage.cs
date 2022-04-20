@@ -8,13 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Pizza_Project.kiosk;
+using Pizza_Project.UserControls;
+
 namespace Pizza_Project.Forms
 {
     public partial class OrderCreationPage : Form
     {
-        public OrderCreationPage()
+        private readonly Kiosk kiosk;
+
+        private readonly string customerId;
+
+        public OrderCreationPage(string customerId)
         {
             InitializeComponent();
+            this.customerId = customerId;
+            this.kiosk = new Kiosk(this.customerId);
+            this.dataGridView1.Columns.Add("itemName", "Cart Item");
+            this.dataGridView1.Columns.Add("itemQuantity", "Quantity");
+            this.dataGridView1.ForeColor = Color.DimGray;
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -25,6 +37,39 @@ namespace Pizza_Project.Forms
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            var mainSelectionPage = new MainSelectionPage();
+            this.Close();
+            mainSelectionPage.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OrderCreationPage_Load(object sender, EventArgs e)
+        {
+            string path = System.IO.Path.GetDirectoryName(
+                System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).Substring(6) + @"\\images\\full-pizza.jpeg";
+      
+            this.pictureBox3.ImageLocation = path;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var buildPizzaForm = new BuildPizzaForm(kiosk.GetCart());
+            buildPizzaForm.ShowDialog();
+
+            var (cartItems, cartTotal) = this.kiosk.GetCart().GetCartDetails();
+            foreach (var el in cartItems)
+            {
+                var cartItemControl = new CartItemControl(el);
+                this.dataGridView1.Rows.Add(el.Name, el.Quantity);
+            }
         }
     }
 }
