@@ -32,20 +32,21 @@
             this.CustomerListPanel = new System.Windows.Forms.Panel();
             this.CustomerListBackButton = new System.Windows.Forms.Button();
             this.customerControllerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.CustomerListDataGrid = new System.Windows.Forms.DataGridView();
-            this.CustomerListPanel.SuspendLayout();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.CustomerInfoButton = new System.Windows.Forms.Button();
+            this.CustomerNumber = new System.Windows.Forms.Label();
+            this.CustomerName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.customerControllerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CustomerListDataGrid)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // CustomerListPanel
             // 
             this.CustomerListPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CustomerListPanel.AutoScroll = true;
-            this.CustomerListPanel.Controls.Add(this.CustomerListDataGrid);
-            this.CustomerListPanel.Location = new System.Drawing.Point(261, 12);
+            this.CustomerListPanel.Location = new System.Drawing.Point(193, 12);
             this.CustomerListPanel.Name = "CustomerListPanel";
-            this.CustomerListPanel.Size = new System.Drawing.Size(321, 426);
+            this.CustomerListPanel.Size = new System.Drawing.Size(422, 426);
             this.CustomerListPanel.TabIndex = 0;
             // 
             // CustomerListBackButton
@@ -66,17 +67,61 @@
             // 
             this.customerControllerBindingSource.DataSource = typeof(Pizza_Project.database.controllers.data_controllers.person_controllers.CustomerController);
             // 
-            // CustomerListDataGrid
+            // tableLayoutPanel1
             // 
-            this.CustomerListDataGrid.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CustomerListDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CustomerListDataGrid.Location = new System.Drawing.Point(3, 27);
-            this.CustomerListDataGrid.Name = "CustomerListDataGrid";
-            this.CustomerListDataGrid.RowHeadersWidth = 51;
-            this.CustomerListDataGrid.RowTemplate.Height = 29;
-            this.CustomerListDataGrid.Size = new System.Drawing.Size(300, 188);
-            this.CustomerListDataGrid.TabIndex = 0;
-            this.CustomerListDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustomerListDataGrid_CellContentClick);
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Controls.Add(this.CustomerName, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.CustomerInfoButton, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.CustomerNumber, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(193, 15);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(422, 71);
+            this.tableLayoutPanel1.TabIndex = 2;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            // 
+            // CustomerInfoButton
+            // 
+            this.CustomerInfoButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CustomerInfoButton.AutoSize = true;
+            this.CustomerInfoButton.BackColor = System.Drawing.Color.Orange;
+            this.CustomerInfoButton.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CustomerInfoButton.ForeColor = System.Drawing.Color.White;
+            this.CustomerInfoButton.Location = new System.Drawing.Point(304, 16);
+            this.CustomerInfoButton.Name = "CustomerInfoButton";
+            this.CustomerInfoButton.Size = new System.Drawing.Size(94, 38);
+            this.CustomerInfoButton.TabIndex = 3;
+            this.CustomerInfoButton.Text = "Info";
+            this.CustomerInfoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.CustomerInfoButton.UseVisualStyleBackColor = false;
+            // 
+            // CustomerNumber
+            // 
+            this.CustomerNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CustomerNumber.AutoSize = true;
+            this.CustomerNumber.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CustomerNumber.ForeColor = System.Drawing.Color.White;
+            this.CustomerNumber.Location = new System.Drawing.Point(166, 21);
+            this.CustomerNumber.Name = "CustomerNumber";
+            this.CustomerNumber.Size = new System.Drawing.Size(88, 28);
+            this.CustomerNumber.TabIndex = 3;
+            this.CustomerNumber.Text = "Number";
+            // 
+            // CustomerName
+            // 
+            this.CustomerName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CustomerName.AutoSize = true;
+            this.CustomerName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CustomerName.ForeColor = System.Drawing.Color.White;
+            this.CustomerName.Location = new System.Drawing.Point(36, 21);
+            this.CustomerName.Name = "CustomerName";
+            this.CustomerName.Size = new System.Drawing.Size(67, 28);
+            this.CustomerName.TabIndex = 4;
+            this.CustomerName.Text = "Name";
             // 
             // CustomerListPageForm
             // 
@@ -84,14 +129,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.CustomerListBackButton);
             this.Controls.Add(this.CustomerListPanel);
             this.Name = "CustomerListPageForm";
             this.Text = "CustomerListPageForm";
             this.Load += new System.EventHandler(this.CustomerListPageForm_Load);
-            this.CustomerListPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.customerControllerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CustomerListDataGrid)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,6 +148,9 @@
         private System.Windows.Forms.Panel CustomerListPanel;
         private System.Windows.Forms.Button CustomerListBackButton;
         private System.Windows.Forms.BindingSource customerControllerBindingSource;
-        private System.Windows.Forms.DataGridView CustomerListDataGrid;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label CustomerName;
+        private System.Windows.Forms.Button CustomerInfoButton;
+        private System.Windows.Forms.Label CustomerNumber;
     }
 }

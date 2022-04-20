@@ -37,10 +37,26 @@ namespace Pizza_Project.Forms
         private void CustomerListPageForm_Load(object sender, EventArgs e)
         {
             var listOfCustomers = this.listOfCustomers;
-            CustomerListDataGrid.DataSource = listOfCustomers;
+            foreach (Customer cx in listOfCustomers)
+            {
+              //Panel CustomerListPanel = new C;
+           // BindingSource customerControllerBindingSource = new BindingSource();
+
+            Button CustomerListBackButton = new Button();
+            TableLayoutPanel tableLayoutPanel1 = new TableLayoutPanel();
+            Label CustomerName = new Label();
+            Button CustomerInfoButton = new Button();
+            Label CustomerNumber = new Label();
+    }
+            
         }
 
         private void CustomerListDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
