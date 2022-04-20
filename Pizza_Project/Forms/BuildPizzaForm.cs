@@ -59,11 +59,6 @@ namespace Pizza_Project.Forms
         private void addToCart_Click(object sender, EventArgs e)
         {
             this._cart.AddItem(this.ingredientIds, 1, "Pizza");
-            var (cartItems, cartTotal) = this._cart.GetCartDetails();
-            foreach (var el in cartItems)
-            {
-                System.Diagnostics.Debug.WriteLine(el.Name);
-            }
             this.Close();
         }
 

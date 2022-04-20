@@ -35,13 +35,14 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.CartPanel = new System.Windows.Forms.Panel();
             this.CheckoutButton = new System.Windows.Forms.Button();
             this.CartTextLabel = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.CancelButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuText
@@ -137,9 +138,9 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.CartPanel, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.CheckoutButton, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.CartTextLabel, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.dataGridView1, 0, 1);
             this.tableLayoutPanel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.tableLayoutPanel2.ForeColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(497, 16);
@@ -151,14 +152,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(193, 307);
             this.tableLayoutPanel2.TabIndex = 2;
-            // 
-            // CartPanel
-            // 
-            this.CartPanel.Location = new System.Drawing.Point(4, 45);
-            this.CartPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CartPanel.Name = "CartPanel";
-            this.CartPanel.Size = new System.Drawing.Size(185, 213);
-            this.CartPanel.TabIndex = 3;
             // 
             // CheckoutButton
             // 
@@ -188,6 +181,24 @@
             this.CartTextLabel.TabIndex = 3;
             this.CartTextLabel.Text = "Cart";
             this.CartTextLabel.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.DimGray;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.GridColor = System.Drawing.Color.DimGray;
+            this.dataGridView1.Location = new System.Drawing.Point(4, 46);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.ShowCellErrors = false;
+            this.dataGridView1.ShowCellToolTips = false;
+            this.dataGridView1.ShowEditingIcon = false;
+            this.dataGridView1.ShowRowErrors = false;
+            this.dataGridView1.Size = new System.Drawing.Size(185, 211);
+            this.dataGridView1.TabIndex = 4;
             // 
             // CancelButton
             // 
@@ -224,6 +235,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,5 +258,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

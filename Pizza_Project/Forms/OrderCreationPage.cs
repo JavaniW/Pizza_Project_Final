@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Pizza_Project.kiosk;
+using Pizza_Project.UserControls;
 
 namespace Pizza_Project.Forms
 {
@@ -23,6 +24,9 @@ namespace Pizza_Project.Forms
             InitializeComponent();
             this.customerId = customerId;
             this.kiosk = new Kiosk(this.customerId);
+            this.dataGridView1.Columns.Add("itemName", "Cart Item");
+            this.dataGridView1.Columns.Add("itemQuantity", "Quantity");
+            this.dataGridView1.ForeColor = Color.DimGray;
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -58,7 +62,14 @@ namespace Pizza_Project.Forms
         private void button3_Click(object sender, EventArgs e)
         {
             var buildPizzaForm = new BuildPizzaForm(kiosk.GetCart());
-            buildPizzaForm.Show();
+            buildPizzaForm.ShowDialog();
+
+            var (cartItems, cartTotal) = this.kiosk.GetCart().GetCartDetails();
+            foreach (var el in cartItems)
+            {
+                var cartItemControl = new CartItemControl(el);
+                this.dataGridView1.Rows.Add(el.Name, el.Quantity);
+            }
         }
     }
 }
