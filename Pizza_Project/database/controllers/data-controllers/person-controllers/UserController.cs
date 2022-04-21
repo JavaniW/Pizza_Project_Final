@@ -7,7 +7,7 @@ using Pizza_Project.database.Models.user_info;
 
 namespace Pizza_Project.database.controllers.data_controllers.person_controllers
 {
-    public class UserController : AbstractCRUDTest<User>
+    public class UserController : AbstractPerson<User>
     {
 
         public override List<User> Read()
@@ -24,6 +24,11 @@ namespace Pizza_Project.database.controllers.data_controllers.person_controllers
             DatabaseHandler.Write(data);
         }
 
+        /// <summary>
+        /// Gets a user by email
+        /// </summary>
+        /// <param name="email">user's email</param>
+        /// <returns>User</returns>
         public User GetByEmail(string email)
         {
             var users = Read();

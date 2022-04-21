@@ -11,7 +11,7 @@ namespace Pizza_Project.database.Models.person_info {
         [JsonPropertyName("phoneNumber")]
         public string PhoneNumber {get; set;}
         [JsonPropertyName("userAddress")]
-        public IList<PersonAddress> UserAddresses {get; set;}
+        public PersonAddress UserAddresses {get; set;}
         
     }
 }

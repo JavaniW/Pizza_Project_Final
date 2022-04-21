@@ -105,5 +105,12 @@ namespace Pizza_Project.Forms
                 this.dataGridView1.Rows.Add(el.Name, el.Quantity, "edit");
             }
         }
+
+        private void CheckoutButton_Click(object sender, EventArgs e)
+        {
+            var checkoutForm = new CheckoutPage(this.kiosk.GetCart(), this.customerId);
+            checkoutForm.Hide();
+            checkoutForm.ShowDialog();
+        }
     }
 }

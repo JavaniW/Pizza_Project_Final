@@ -170,6 +170,7 @@ namespace Pizza_Project.Forms
             this.CheckoutButton.TabIndex = 3;
             this.CheckoutButton.Text = "Checkout";
             this.CheckoutButton.UseVisualStyleBackColor = false;
+            this.CheckoutButton.Click += new System.EventHandler(this.CheckoutButton_Click);
             // 
             // CartTextLabel
             // 

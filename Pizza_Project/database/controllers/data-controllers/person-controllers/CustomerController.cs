@@ -7,7 +7,7 @@ using Pizza_Project.database.Models.person_info;
 
 namespace Pizza_Project.database.controllers.data_controllers.person_controllers
 {
-    public class CustomerController : AbstractCRUD<Customer>
+    public class CustomerController : AbstractPerson<Customer>
     {
         public override  List<Customer> Read() {
             var data =  GetAllData().People.Customers;
