@@ -15,7 +15,7 @@ namespace Pizza_Project.Forms
 {
     public partial class CustomerListPageForm : Form
     {
-
+        
         static CustomerController c1 = new CustomerController();
         List<Customer> listOfCustomers = c1.Read();
         long customerKey;
@@ -33,7 +33,7 @@ namespace Pizza_Project.Forms
             {
                 addToCustomerList(cust);
             }
-            CustomerListDataGrid.Rows.Add(new string [] { "Javani", "7068164058"});
+            CustomerListDataGrid.Rows.Add(new string[] { "Javani", "7068164058" });
             CustomerListDataGrid.Rows.Add(new string[] { "Wright", "1234567890" });
             CustomerListDataGrid.Rows.Add(new string[] { "Javani", "7068164058" });
             CustomerListDataGrid.Rows.Add(new string[] { "Wright", "1234567890" });
@@ -84,6 +84,11 @@ namespace Pizza_Project.Forms
             if (e.ColumnIndex == 2)
             {
                 customerKey = long.Parse(CustomerListDataGrid.Rows[e.RowIndex].Cells[1].Value.ToString());
+                var customerInfoPage = new CustomerInfoPageForm(customerKey);
+                this.Update();
+                customerInfoPage.Show();
+            
+                //Application.Run(new CustomerInfoPageForm(customerKey));
                 MessageBox.Show(e.ColumnIndex + " " + e.RowIndex + " " + customerKey);
             }
         }

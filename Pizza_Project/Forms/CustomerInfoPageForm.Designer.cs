@@ -30,8 +30,8 @@ namespace Pizza_Project.Forms
         {
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -78,6 +78,18 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel4.Size = new System.Drawing.Size(725, 128);
             this.tableLayoutPanel4.TabIndex = 11;
             // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(19, 82);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(142, 28);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Card Number:";
+            // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -91,18 +103,6 @@ namespace Pizza_Project.Forms
             this.label6.Text = "Cardholder \r\nName:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(19, 82);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 28);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Card Number:";
             // 
             // tableLayoutPanel3
             // 
@@ -258,6 +258,7 @@ namespace Pizza_Project.Forms
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "CustomerInfoPageForm";
             this.Text = "Customer Information";
+            this.Load += new System.EventHandler(this.CustomerInfoPageForm_Load);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);

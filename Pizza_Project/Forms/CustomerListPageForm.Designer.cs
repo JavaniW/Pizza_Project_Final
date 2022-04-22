@@ -38,6 +38,7 @@
             this.CustomerNumber = new System.Windows.Forms.Label();
             this.CustomerListBackButton = new System.Windows.Forms.Button();
             this.CustomerListDataGrid = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerListDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,8 +106,8 @@
             this.CustomerListDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.CustomerListDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.CustomerListDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.CustomerListDataGrid.BackgroundColor = System.Drawing.Color.White;
-            this.CustomerListDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CustomerListDataGrid.BackgroundColor = System.Drawing.Color.DimGray;
+            this.CustomerListDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.CustomerListDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.CustomerListDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -123,14 +124,13 @@
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0);
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.CustomerListDataGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.CustomerListDataGrid.EnableHeadersVisualStyles = false;
             this.CustomerListDataGrid.GridColor = System.Drawing.Color.White;
-            this.CustomerListDataGrid.Location = new System.Drawing.Point(206, -2);
+            this.CustomerListDataGrid.Location = new System.Drawing.Point(181, 73);
             this.CustomerListDataGrid.MultiSelect = false;
             this.CustomerListDataGrid.Name = "CustomerListDataGrid";
             this.CustomerListDataGrid.ReadOnly = true;
@@ -152,9 +152,20 @@
             this.CustomerListDataGrid.RowTemplate.ReadOnly = true;
             this.CustomerListDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.CustomerListDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.CustomerListDataGrid.Size = new System.Drawing.Size(391, 450);
+            this.CustomerListDataGrid.Size = new System.Drawing.Size(450, 365);
             this.CustomerListDataGrid.TabIndex = 0;
             this.CustomerListDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustomerListDataGrid_CellContentClick_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(274, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(244, 49);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Customer List";
             // 
             // CustomerListPageForm
             // 
@@ -162,6 +173,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.CustomerListDataGrid);
             this.Controls.Add(this.CustomerListBackButton);
             this.Name = "CustomerListPageForm";
@@ -179,5 +191,6 @@
         private System.Windows.Forms.Button CustomerInfoButton;
         private System.Windows.Forms.Label CustomerNumber;
         private System.Windows.Forms.DataGridView CustomerListDataGrid;
+        private System.Windows.Forms.Label label1;
     }
 }

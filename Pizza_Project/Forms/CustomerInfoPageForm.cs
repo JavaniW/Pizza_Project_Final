@@ -17,12 +17,21 @@ namespace Pizza_Project.Forms
             InitializeComponent();
         }
 
+        public CustomerInfoPageForm(long customerKey)
+        {
+            InitializeComponent();
+        }
         private void label5_Click(object sender, EventArgs e)
         {
 
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CustomerInfoPageForm_Load(object sender, EventArgs e)
         {
 
         }
