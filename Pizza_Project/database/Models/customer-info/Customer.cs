@@ -9,7 +9,7 @@ namespace Pizza_Project.database.Models.customer_info
     public class Customer : Person
     {
         [JsonPropertyName("orders")]
-        public IList<Order> Orders {get; set;}
+        public List<Order> Orders {get; set;}
         
         [JsonPropertyName("paymentInfo")]
         public CreditCardInfo PaymentInfo { get; set; }

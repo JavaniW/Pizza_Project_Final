@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Pizza_Project.database.controllers.data_controllers.person_controllers;
 using Pizza_Project.database.Models.customer_info;
+using Pizza_Project.database.Models.order_info;
 
 namespace Pizza_Project.Forms
 {
@@ -97,12 +98,28 @@ namespace Pizza_Project.Forms
         /// <param name="e"></param>
         private async void button1_Click(object sender, EventArgs e)
         {
-            ButtonsClicked();
+
+            try
+            {
+                ButtonsClicked();
+
+            }catch (Exception error)
+            {
+                this.errorText.Text = "There was a problem with your request.";
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ButtonsClicked();
+            try
+            {
+                ButtonsClicked();
+
+            }
+            catch (Exception error)
+            {
+                this.errorText.Text = "There was a problem with your request.";
+            };
         }
 
         private void ButtonsClicked()
@@ -132,11 +149,12 @@ namespace Pizza_Project.Forms
         {
             var cust = _customerController.Create(new Customer
             {
+                Orders = new List<Order>(),
                 Name = this.Name,
                 Email = this.Email,
                 PhoneNumber = this.PhoneNumber,
                 Id = Identifier.CreateIdentifier()
-            });
+            });;
 
             this.CustomerId = cust.Id;
             this.ErrorMsg = "Could not create customer.";

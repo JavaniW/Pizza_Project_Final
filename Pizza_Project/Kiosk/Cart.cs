@@ -88,7 +88,7 @@ namespace Pizza_Project.kiosk
             {
                 if (item.Id.Equals(id))
                 {
-                    var newItem = this.CreateItem(ingredients, quantity, itemType);
+                    var newItem = this.CreateItem(ingredients, quantity, itemType, item.Id);
                     this._cartItems[this._cartItems.IndexOf(item)] = newItem;
                     this.CalculateCartTotal();
                     return true;
@@ -111,21 +111,13 @@ namespace Pizza_Project.kiosk
             //var menuItem = _menuItemController.GetById(itemId);
             //menuItem.IngredientIds = ingredients;
 
-            var newId = "";
-            if (id.Equals(""))
-            {
-                newId = Identifier.CreateIdentifier();
-            }
-            else
-            {
-                newId = id;
-            }
+            if (id.Equals("")) id = Identifier.CreateIdentifier();
 
             return new OrderItems
             {
-                Id = newId,
+                Id = id,
                 Name = itemType + this._cartItems.Count,
-                //MenuItem = menuItem,
+                Ingredients = ingredients,
                 ItemTotal = _menuIngredientController.GetIngredientPrice(ingredients),
                 Quantity = quantity
             };
@@ -183,6 +175,21 @@ namespace Pizza_Project.kiosk
         public (List<OrderItems>, double) GetCartDetails()
         {
             return (this._cartItems, this._orderTotal);
+        }
+
+        public string GetItemId(string itemName)
+        {
+            string itemId = "";
+            this._cartItems.ForEach(item =>
+            {
+                //System.Diagnostics.Debug.WriteLine(item.Name);
+                if (item.Name.Equals(itemName))
+                {
+                    itemId = item.Id;
+
+                }
+            });
+            return itemId;
         }
     }
 }

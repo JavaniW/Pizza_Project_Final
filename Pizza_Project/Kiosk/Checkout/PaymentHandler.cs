@@ -12,7 +12,7 @@ namespace Pizza_Project.kiosk.Checkout
         {
             this._customerController = new CustomerController();
         }
-        
+
         /// <summary>
         /// Processes credit card payments.
         /// </summary>
@@ -21,16 +21,15 @@ namespace Pizza_Project.kiosk.Checkout
         /// <param name="cvc">credit card CVC number</param>
         /// <param name="nameOnCard">credit card name</param>
         /// <returns>true if payment was successful, false if not</returns>
-        public bool PayWithCard(string custId, string cardNumber, string exp, string cvc, string nameOnCard)
+        public bool PayWithCard(string custId, CreditCardInfo cardInfo = null)
         {
             var customer = _customerController.GetById(custId);
             
             if (customer.PaymentInfo == null)
             {
-                var cardDetails = this.CreateCard(cardNumber, exp, cvc, nameOnCard);
-                if (cardDetails == null) return false;
+                if (cardInfo == null) return false;
 
-                customer.PaymentInfo = cardDetails;
+                customer.PaymentInfo = cardInfo;
                 _customerController.UpdateById(custId, customer);
                 
                 return true;

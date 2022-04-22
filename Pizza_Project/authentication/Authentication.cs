@@ -11,6 +11,12 @@ namespace Pizza_Project.authentication
     {
         private readonly UserController _userController = new UserController();
 
+        /// <summary>
+        /// Logs a user into the application
+        /// </summary>
+        /// <param name="email">user's email</param>
+        /// <param name="password">users password</param>
+        /// <returns>true if a user can be logged in, false if user could not be logged in</returns>
         public bool Login(string email, string password)
         {
             try
@@ -31,10 +37,27 @@ namespace Pizza_Project.authentication
             
         }
 
+        /// <summary>
+        /// Logs a user out of the application
+        /// </summary>
+        /// <returns>false</returns>
         public bool Logout() {
             return false;
         }
 
+        /// <summary>
+        /// Creates a user
+        /// </summary>
+        /// <param name="name">user name</param>
+        /// <param name="email">user email</param>
+        /// <param name="phoneNumber">user phone</param>
+        /// <param name="role">user's role</param>
+        /// <param name="password">user's password</param>
+        /// <param name="address">user's address</param>
+        /// <param name="city">user's city</param>
+        /// <param name="state">user's state</param>
+        /// <param name="zipCode">user's zipcode</param>
+        /// <param name="extraInformation">user's extra info</param>
         public void CreateUser(string name,
             string email,
             string phoneNumber,
@@ -53,9 +76,7 @@ namespace Pizza_Project.authentication
                     Password = password,
                     Role = role,
                     PhoneNumber = phoneNumber,
-                    UserAddresses = new List<PersonAddress>
-                    {
-                        new PersonAddress
+                    UserAddresses =  new PersonAddress
                         {
                             Address = address,
                             City = city,
@@ -63,7 +84,7 @@ namespace Pizza_Project.authentication
                             ZipCode = zipCode,
                             ExtraInformation = extraInformation
                         }
-                    }
+                    
                 });
         }
     }

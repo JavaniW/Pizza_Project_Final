@@ -30,7 +30,10 @@ namespace Pizza_Project.Forms
 
         private void BuildPizzaForm_Load(object sender, EventArgs e)
         {
-
+            this.thinCheckbox.Checked = true;
+            this.sizeSmallCheckbox.Checked = true;
+            this.baseCheeseCheckbox.Checked = true;
+            this.baseSauceCheckbox.Checked = true;
         }
 
         private string GetNameFromCheckbox(string name)
@@ -58,7 +61,7 @@ namespace Pizza_Project.Forms
 
         private void addToCart_Click(object sender, EventArgs e)
         {
-            this._cart.AddItem(this.ingredientIds, 1, "Pizza");
+            this._cart.AddItem(this.ingredientIds, Decimal.ToInt32(this.qtyNumericCounter.Value), "Pizza");
             this.Close();
         }
 

@@ -15,12 +15,19 @@ namespace Pizza_Project.database.controllers.data_controllers.order_controllers
         /// </summary>
         /// <param name="order">Customer's order</param>
         /// <param name="customerPhone">Customer's phone number</param>
-        public void CreateOrder(Order order, string customerId)
+        public Order CreateOrder(Order order, string customerId)
         {
+            var newOrderList = new List<OrderItems>();
+            if (this.GetAllOrders() == null)
+            {
+
+            }
+
             order.OrderNumber = GetOrderCount() + 1;
             var customer = _customerController.GetById(customerId);
             customer.Orders.Add(order);
            _customerController.UpdateById(customer.Id, customer);
+            return order;
         }
 
         /// <summary>

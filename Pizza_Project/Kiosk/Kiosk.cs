@@ -1,5 +1,8 @@
 using System;
+
 using Pizza_Project.kiosk.Checkout;
+using Pizza_Project.database.Models.customer_info.payment;
+using Pizza_Project.database.Models.order_info;
 
 namespace Pizza_Project.kiosk
 {
@@ -17,12 +20,31 @@ namespace Pizza_Project.kiosk
             this.custId = custId;
         }
 
-        public void Checkout(string paymentType)
+        /// <summary>
+        /// Gets a customers id
+        /// </summary>
+        /// <returns>current customer's id</returns>
+        public string GetCustomerId()
         {
-            var (cartItems, orderPrice) = _cart.GetCartDetails();
-            this._checkoutHandler.Checkout(custId, cartItems, orderPrice, paymentType);
+            return this.custId;
         }
 
+        /// <summary>
+        /// Handles checkout
+        /// </summary>
+        /// <param name="paymentType">payment method</param>
+        /// <param name="cashIn">cash given by customer</param>
+        /// <param name="cardInfo">customer's card info</param>
+        public (Order, double) Checkout(string paymentType, double cashIn, CreditCardInfo cardInfo = null)
+        {
+            var (cartItems, orderPrice) = _cart.GetCartDetails();
+            return this._checkoutHandler.Checkout(custId, cartItems, orderPrice, paymentType, cashIn, cardInfo);
+        }
+
+        /// <summary>
+        /// Gets the cart object
+        /// </summary>
+        /// <returns>Cart object</returns>
         public Cart GetCart()
         {
             return this._cart;

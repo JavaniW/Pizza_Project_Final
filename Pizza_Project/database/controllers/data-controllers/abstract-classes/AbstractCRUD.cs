@@ -18,19 +18,10 @@ namespace Pizza_Project.database.controllers.data_controllers.abstract_classes
             return item;
         }
 
-        ///<summary>
-        /// Fetches all users from database
-        ///</summary>
         public abstract List<T> Read();
 
-        ///<summary>
-        /// Replaces users with new list of users.
-        ///</summary>
         public abstract void Update(List<T> list);
 
-        ///<summary>
-        /// Updates a single user.
-        ///</summary>
         public void UpdateById(string id, T data) {
             var items = Read();
             var itemIndex = GetIndex(id);
@@ -38,9 +29,6 @@ namespace Pizza_Project.database.controllers.data_controllers.abstract_classes
             Update(items);
         }
 
-        ///<summary>
-        /// Deletes user from database.
-        ///</summary>
         public void Delete(string id) {
             var items = Read();
             var itemPosition = GetIndex(id);
@@ -49,30 +37,16 @@ namespace Pizza_Project.database.controllers.data_controllers.abstract_classes
             Update(items);
         }
 
-        ///<summary>
-        /// Gets user by id.
-        ///</summary>
         public T GetById(string id)
         {
             return FindItemByProperty(Read(), id, "Id");
         }
 
-        public T GetByPhone(string phoneNumber)
-        {
-            return FindItemByProperty(Read(), phoneNumber, "PhoneNumber");
-        }
-
-        ///<summary>
-        /// Get all data.
-        ///</summary>
-        protected PizzaDatabase GetAllData()
+        public PizzaDatabase GetAllData()
         {
             return DatabaseHandler.Read().Result;
         }
 
-        ///<summary>
-        /// Get user index
-        ///</summary>
         public int GetIndex(string id)
         {
             var list = Read();

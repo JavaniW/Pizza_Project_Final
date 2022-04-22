@@ -33,6 +33,8 @@ namespace Pizza_Project.Forms
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.addToCart = new System.Windows.Forms.Button();
+            this.qtyNumericCounter = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -68,6 +70,7 @@ namespace Pizza_Project.Forms
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.qtyNumericCounter)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -80,13 +83,17 @@ namespace Pizza_Project.Forms
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnCount = 5;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 381F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 190F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 417F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 77F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.addToCart, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.addToCart, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.qtyNumericCounter, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label8, 2, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -100,7 +107,7 @@ namespace Pizza_Project.Forms
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(328, 13);
+            this.label1.Location = new System.Drawing.Point(306, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 29);
             this.label1.TabIndex = 0;
@@ -130,13 +137,44 @@ namespace Pizza_Project.Forms
             this.addToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addToCart.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.addToCart.ForeColor = System.Drawing.Color.White;
-            this.addToCart.Location = new System.Drawing.Point(676, 10);
+            this.addToCart.Location = new System.Drawing.Point(702, 10);
             this.addToCart.Name = "addToCart";
-            this.addToCart.Size = new System.Drawing.Size(97, 34);
+            this.addToCart.Size = new System.Drawing.Size(71, 34);
             this.addToCart.TabIndex = 2;
             this.addToCart.Text = "Add To Cart";
             this.addToCart.UseVisualStyleBackColor = false;
             this.addToCart.Click += new System.EventHandler(this.addToCart_Click);
+            // 
+            // qtyNumericCounter
+            // 
+            this.qtyNumericCounter.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.qtyNumericCounter.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.qtyNumericCounter.Location = new System.Drawing.Point(635, 14);
+            this.qtyNumericCounter.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.qtyNumericCounter.Name = "qtyNumericCounter";
+            this.qtyNumericCounter.Size = new System.Drawing.Size(61, 27);
+            this.qtyNumericCounter.TabIndex = 3;
+            this.qtyNumericCounter.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(593, 18);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(36, 19);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Qty:";
             // 
             // tableLayoutPanel2
             // 
@@ -686,6 +724,7 @@ namespace Pizza_Project.Forms
             this.Load += new System.EventHandler(this.BuildPizzaForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.qtyNumericCounter)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -746,5 +785,8 @@ namespace Pizza_Project.Forms
         private System.Windows.Forms.CheckBox meatAnchovyCheckbox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.CheckBox fruitPineappleCheckbox;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.NumericUpDown qtyNumericCounter;
     }
 }
