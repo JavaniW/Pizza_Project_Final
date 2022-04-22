@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CustomerName = new System.Windows.Forms.Label();
             this.CustomerInfoButton = new System.Windows.Forms.Button();
             this.CustomerNumber = new System.Windows.Forms.Label();
@@ -107,10 +108,12 @@
             this.CustomerListDataGrid.BackgroundColor = System.Drawing.Color.White;
             this.CustomerListDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CustomerListDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.CustomerListDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -120,7 +123,7 @@
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0);
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -130,6 +133,7 @@
             this.CustomerListDataGrid.Location = new System.Drawing.Point(206, -2);
             this.CustomerListDataGrid.MultiSelect = false;
             this.CustomerListDataGrid.Name = "CustomerListDataGrid";
+            this.CustomerListDataGrid.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -140,14 +144,17 @@
             this.CustomerListDataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.CustomerListDataGrid.RowHeadersVisible = false;
             this.CustomerListDataGrid.RowHeadersWidth = 51;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.CustomerListDataGrid.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.CustomerListDataGrid.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.CustomerListDataGrid.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(5);
             this.CustomerListDataGrid.RowTemplate.Height = 29;
             this.CustomerListDataGrid.RowTemplate.ReadOnly = true;
             this.CustomerListDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CustomerListDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.CustomerListDataGrid.Size = new System.Drawing.Size(391, 450);
             this.CustomerListDataGrid.TabIndex = 0;
-            this.CustomerListDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            this.CustomerListDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustomerListDataGrid_CellContentClick_1);
             // 
             // CustomerListPageForm
             // 

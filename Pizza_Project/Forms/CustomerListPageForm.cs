@@ -18,19 +18,47 @@ namespace Pizza_Project.Forms
 
         static CustomerController c1 = new CustomerController();
         List<Customer> listOfCustomers = c1.Read();
+        long customerKey;
         public CustomerListPageForm()
         {
             InitializeComponent();
+            listOfCustomers = c1.Read();
             CustomerListDataGrid.ColumnCount = 2;
             CustomerListDataGrid.Columns[0].HeaderText = "Name";
             CustomerListDataGrid.Columns[1].HeaderText = "Number";
+            CustomerListDataGrid.Columns[0].DefaultCellStyle.Padding = new Padding(5);
+            CustomerListDataGrid.Columns[1].DefaultCellStyle.Padding = new Padding(5);
             //CustomerListDataGrid.DataSource = listOfCustomers;
-           foreach (var cust in listOfCustomers)
+            foreach (var cust in listOfCustomers)
             {
                 addToCustomerList(cust);
             }
+            CustomerListDataGrid.Rows.Add(new string [] { "Javani", "7068164058"});
+            CustomerListDataGrid.Rows.Add(new string[] { "Wright", "1234567890" });
+            CustomerListDataGrid.Rows.Add(new string[] { "Javani", "7068164058" });
+            CustomerListDataGrid.Rows.Add(new string[] { "Wright", "1234567890" });
+            CustomerListDataGrid.Rows.Add(new string[] { "Javani", "7068164058" });
+            CustomerListDataGrid.Rows.Add(new string[] { "Wright", "1234567890" });
+            CustomerListDataGrid.Rows.Add(new string[] { "Javani", "7068164058" });
+            CustomerListDataGrid.Rows.Add(new string[] { "Wright", "1234567890" });
+            CustomerListDataGrid.Rows.Add(new string[] { "Javani", "7068164058" });
+            CustomerListDataGrid.Rows.Add(new string[] { "Wright", "1234567890" });
+            CustomerListDataGrid.Rows.Add(new string[] { "Javani", "7068164058" });
+            CustomerListDataGrid.Rows.Add(new string[] { "Wright", "1234567890" });
+            addButtonColumn();
         }
 
+        public void addButtonColumn()
+        {
+            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            btn.HeaderText = "";
+            btn.Text = "More Info";
+            btn.Name = "MoreInfoButton";
+            btn.UseColumnTextForButtonValue = true;
+            //btn.DefaultCellStyle.Padding = new Padding(0);
+            btn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            CustomerListDataGrid.Columns.Add(btn);
+        }
         public void addToCustomerList(Customer customer)
         {
 
@@ -46,19 +74,18 @@ namespace Pizza_Project.Forms
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void CustomerListPageForm_Load(object sender, EventArgs e)
         {
 
         }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        // If button inside a cell is clicked
+        private void CustomerListDataGrid_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.ColumnIndex == 2)
+            {
+                customerKey = long.Parse(CustomerListDataGrid.Rows[e.RowIndex].Cells[1].Value.ToString());
+                MessageBox.Show(e.ColumnIndex + " " + e.RowIndex + " " + customerKey);
+            }
         }
     }
 }
