@@ -206,7 +206,10 @@ namespace Pizza_Project.Forms
             this._customerController.UpdateById(Customer.Id, Customer);
 
             // checkout cart
-            this._kiosk.Checkout(paymentType, this.CashIn, cardInfo);
+            var (order, total) = this._kiosk.Checkout(paymentType, this.CashIn, cardInfo);
+
+            var receiptForm = new RecieptPageForm(order.Items, double.Parse(CartPrice));
+            receiptForm.Show();
             this.Close();
         }
 
@@ -260,5 +263,9 @@ namespace Pizza_Project.Forms
             this.zipCode = this.zipCodeInput.Text;
         }
 
+        private void CheckoutPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+        }
     }
 }

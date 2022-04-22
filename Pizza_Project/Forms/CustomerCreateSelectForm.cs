@@ -98,12 +98,28 @@ namespace Pizza_Project.Forms
         /// <param name="e"></param>
         private async void button1_Click(object sender, EventArgs e)
         {
-            ButtonsClicked();
+
+            try
+            {
+                ButtonsClicked();
+
+            }catch (Exception error)
+            {
+                this.errorText.Text = "There was a problem with your request.";
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ButtonsClicked();
+            try
+            {
+                ButtonsClicked();
+
+            }
+            catch (Exception error)
+            {
+                this.errorText.Text = "There was a problem with your request.";
+            };
         }
 
         private void ButtonsClicked()

@@ -2,6 +2,7 @@ using System;
 
 using Pizza_Project.kiosk.Checkout;
 using Pizza_Project.database.Models.customer_info.payment;
+using Pizza_Project.database.Models.order_info;
 
 namespace Pizza_Project.kiosk
 {
@@ -34,10 +35,10 @@ namespace Pizza_Project.kiosk
         /// <param name="paymentType">payment method</param>
         /// <param name="cashIn">cash given by customer</param>
         /// <param name="cardInfo">customer's card info</param>
-        public void Checkout(string paymentType, double cashIn, CreditCardInfo cardInfo = null)
+        public (Order, double) Checkout(string paymentType, double cashIn, CreditCardInfo cardInfo = null)
         {
             var (cartItems, orderPrice) = _cart.GetCartDetails();
-            this._checkoutHandler.Checkout(custId, cartItems, orderPrice, paymentType, cashIn, cardInfo);
+            return this._checkoutHandler.Checkout(custId, cartItems, orderPrice, paymentType, cashIn, cardInfo);
         }
 
         /// <summary>

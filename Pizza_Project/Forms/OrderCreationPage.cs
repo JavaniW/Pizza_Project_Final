@@ -110,6 +110,7 @@ namespace Pizza_Project.Forms
         {
             var checkoutForm = new CheckoutPage(this._kiosk);
             checkoutForm.ShowDialog();
+            this.Close();
         }
     }
 }

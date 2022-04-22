@@ -16,6 +16,6 @@ namespace Pizza_Project.database.Models.order_info
         public double OrderTotal {get;set;}
         
         [JsonPropertyName("items")]
-        public IList<OrderItems> Items {get; set;}
+        public List<OrderItems> Items {get; set;}
     }
 }
