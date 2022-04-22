@@ -18,7 +18,7 @@ namespace Pizza_Project.Forms
         
         static CustomerController c1 = new CustomerController();
         List<Customer> listOfCustomers = c1.Read();
-        long customerKey;
+        string customerKey;
         public CustomerListPageForm()
         {
             InitializeComponent();
@@ -28,23 +28,27 @@ namespace Pizza_Project.Forms
             CustomerListDataGrid.Columns[1].HeaderText = "Number";
             CustomerListDataGrid.Columns[0].DefaultCellStyle.Padding = new Padding(5);
             CustomerListDataGrid.Columns[1].DefaultCellStyle.Padding = new Padding(5);
-            //CustomerListDataGrid.DataSource = listOfCustomers;
+
+            int currentRow = 0;
             foreach (var cust in listOfCustomers)
             {
                 addToCustomerList(cust);
+                CustomerListDataGrid.Rows[currentRow].HeaderCell.Value = cust.Id;
+                currentRow++;  
             }
             CustomerListDataGrid.Rows.Add(new string[] { "Javani", "7068164058" });
             CustomerListDataGrid.Rows.Add(new string[] { "Wright", "1234567890" });
+            CustomerListDataGrid.Rows.Add(new string[] { "Javani", "1212121212" });
             CustomerListDataGrid.Rows.Add(new string[] { "Javani", "7068164058" });
             CustomerListDataGrid.Rows.Add(new string[] { "Wright", "1234567890" });
+            CustomerListDataGrid.Rows.Add(new string[] { "Javani", "1212121212" });
             CustomerListDataGrid.Rows.Add(new string[] { "Javani", "7068164058" });
             CustomerListDataGrid.Rows.Add(new string[] { "Wright", "1234567890" });
+            CustomerListDataGrid.Rows.Add(new string[] { "Javani", "1212121212" });
             CustomerListDataGrid.Rows.Add(new string[] { "Javani", "7068164058" });
             CustomerListDataGrid.Rows.Add(new string[] { "Wright", "1234567890" });
-            CustomerListDataGrid.Rows.Add(new string[] { "Javani", "7068164058" });
-            CustomerListDataGrid.Rows.Add(new string[] { "Wright", "1234567890" });
-            CustomerListDataGrid.Rows.Add(new string[] { "Javani", "7068164058" });
-            CustomerListDataGrid.Rows.Add(new string[] { "Wright", "1234567890" });
+            CustomerListDataGrid.Rows.Add(new string[] { "Javani", "1212121212" });
+
             addButtonColumn();
         }
 
@@ -63,9 +67,6 @@ namespace Pizza_Project.Forms
         {
 
             var item = new ListViewItem( new String [] {customer.Name, customer.PhoneNumber} );
-            Console.WriteLine(item.Text);
-            Console.WriteLine(customer.Name);
-            Console.WriteLine(customer.PhoneNumber);
             CustomerListDataGrid.Rows.Add(new String[] { customer.Name, customer.PhoneNumber });
            // CustomerListDataGrid.ite
         }
@@ -83,13 +84,12 @@ namespace Pizza_Project.Forms
         {
             if (e.ColumnIndex == 2)
             {
-                customerKey = long.Parse(CustomerListDataGrid.Rows[e.RowIndex].Cells[1].Value.ToString());
-                var customerInfoPage = new CustomerInfoPageForm(customerKey);
-                this.Update();
+                customerKey = (string)CustomerListDataGrid.Rows[e.RowIndex].HeaderCell.Value;
+                var customerInfoPage = new CustomerInfoPageForm(customerKey, this);
+                //this.Hide();
+                //MessageBox.Show((string)CustomerListDataGrid.Rows[e.RowIndex].HeaderCell.Value);
                 customerInfoPage.Show();
             
-                //Application.Run(new CustomerInfoPageForm(customerKey));
-                MessageBox.Show(e.ColumnIndex + " " + e.RowIndex + " " + customerKey);
             }
         }
     }

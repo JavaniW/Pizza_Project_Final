@@ -14,5 +14,10 @@ namespace Pizza_Project.database.Models.person_info {
         public string ZipCode { get; set; }
         [JsonPropertyName("extraInformation")]
         public string ExtraInformation { get; set; }
+
+        public string concatenatedAddress()
+        {
+            return Address + ", " + City + ", " + State + " " + ZipCode ;
+        }
     }
 }

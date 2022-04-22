@@ -16,5 +16,10 @@ namespace Pizza_Project.database.Models.customer_info.payment
         
         [JsonPropertyName("cvc")]
         public string CVC { get; set; }
+
+        public string [] arrayOfInfo()
+        {
+            return new string [] { NameOnCard, CardNumber, ExpDate, CVC };
+        }
     }
 }
