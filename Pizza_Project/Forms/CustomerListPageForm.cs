@@ -15,50 +15,66 @@ namespace Pizza_Project.Forms
 {
     public partial class CustomerListPageForm : Form
     {
-
-        CustomerController c1 = new CustomerController();
-        List<Customer> listOfCustomers;
+        
+        static CustomerController c1 = new CustomerController();
+        List<Customer> listOfCustomers = c1.Read();
+        string customerKey;
         public CustomerListPageForm()
         {
-            listOfCustomers = c1.Read();
             InitializeComponent();
+            listOfCustomers = c1.Read();
+            CustomerListDataGrid.ColumnCount = 2;
+            CustomerListDataGrid.Columns[0].HeaderText = "Name";
+            CustomerListDataGrid.Columns[1].HeaderText = "Number";
+            CustomerListDataGrid.Columns[0].DefaultCellStyle.Padding = new Padding(5);
+            CustomerListDataGrid.Columns[1].DefaultCellStyle.Padding = new Padding(5);
+
+            int currentRow = 0;
+            foreach (var cust in listOfCustomers)
+            {
+                addToCustomerList(cust);
+                CustomerListDataGrid.Rows[currentRow].HeaderCell.Value = cust.Id;
+                currentRow++;  
+            }
+            addButtonColumn();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void addButtonColumn()
+        {
+            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            btn.HeaderText = "";
+            btn.Text = "More Info";
+            btn.Name = "MoreInfoButton";
+            btn.UseColumnTextForButtonValue = true;
+            btn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            CustomerListDataGrid.Columns.Add(btn);
+        }
+        public void addToCustomerList(Customer customer)
         {
 
+            var item = new ListViewItem( new String [] {customer.Name, customer.PhoneNumber} );
+            CustomerListDataGrid.Rows.Add(new String[] { customer.Name, customer.PhoneNumber });
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
 
         private void CustomerListPageForm_Load(object sender, EventArgs e)
         {
-            var listOfCustomers = this.listOfCustomers;
-            foreach (Customer cx in listOfCustomers)
+
+        }
+        // If button inside a cell is clicked
+        private void CustomerListDataGrid_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 2)
             {
-              //Panel CustomerListPanel = new C;
-           // BindingSource customerControllerBindingSource = new BindingSource();
-
-            Button CustomerListBackButton = new Button();
-            TableLayoutPanel tableLayoutPanel1 = new TableLayoutPanel();
-            Label CustomerName = new Label();
-            Button CustomerInfoButton = new Button();
-            Label CustomerNumber = new Label();
-    }
+                customerKey = (string)CustomerListDataGrid.Rows[e.RowIndex].HeaderCell.Value;
+                var customerInfoPage = new CustomerInfoPageForm(customerKey, this);
+                this.Hide();
+                customerInfoPage.Show();
             
-        }
-
-        private void CustomerListDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            }
         }
     }
 }

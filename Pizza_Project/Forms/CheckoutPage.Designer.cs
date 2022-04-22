@@ -1,4 +1,4 @@
-﻿namespace Pizza_Project.Forms
+namespace Pizza_Project.Forms
 {
     partial class CheckoutPage
     {
