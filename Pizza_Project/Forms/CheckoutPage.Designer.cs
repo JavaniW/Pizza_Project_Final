@@ -79,7 +79,7 @@
             this.Controls.Add(this.OrderTotalLabel);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Name = "CheckoutPage";
-            this.Text = "CheckoutPage";
+            this.Text = "Checkout";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -16,14 +16,31 @@ namespace Pizza_Project.Forms
     public partial class CustomerListPageForm : Form
     {
 
-        CustomerController c1 = new CustomerController();
-        List<Customer> listOfCustomers;
+        static CustomerController c1 = new CustomerController();
+        List<Customer> listOfCustomers = c1.Read();
         public CustomerListPageForm()
         {
-            listOfCustomers = c1.Read();
             InitializeComponent();
+            CustomerListDataGrid.ColumnCount = 2;
+            CustomerListDataGrid.Columns[0].HeaderText = "Name";
+            CustomerListDataGrid.Columns[1].HeaderText = "Number";
+            //CustomerListDataGrid.DataSource = listOfCustomers;
+           foreach (var cust in listOfCustomers)
+            {
+                addToCustomerList(cust);
+            }
         }
 
+        public void addToCustomerList(Customer customer)
+        {
+
+            var item = new ListViewItem( new String [] {customer.Name, customer.PhoneNumber} );
+            Console.WriteLine(item.Text);
+            Console.WriteLine(customer.Name);
+            Console.WriteLine(customer.PhoneNumber);
+            CustomerListDataGrid.Rows.Add(new String[] { customer.Name, customer.PhoneNumber });
+           // CustomerListDataGrid.ite
+        }
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -36,27 +53,10 @@ namespace Pizza_Project.Forms
 
         private void CustomerListPageForm_Load(object sender, EventArgs e)
         {
-            var listOfCustomers = this.listOfCustomers;
-            foreach (Customer cx in listOfCustomers)
-            {
-              //Panel CustomerListPanel = new C;
-           // BindingSource customerControllerBindingSource = new BindingSource();
-
-            Button CustomerListBackButton = new Button();
-            TableLayoutPanel tableLayoutPanel1 = new TableLayoutPanel();
-            Label CustomerName = new Label();
-            Button CustomerInfoButton = new Button();
-            Label CustomerNumber = new Label();
-    }
-            
-        }
-
-        private void CustomerListDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }
