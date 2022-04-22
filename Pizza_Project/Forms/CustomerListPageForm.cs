@@ -36,19 +36,6 @@ namespace Pizza_Project.Forms
                 CustomerListDataGrid.Rows[currentRow].HeaderCell.Value = cust.Id;
                 currentRow++;  
             }
-            CustomerListDataGrid.Rows.Add(new string[] { "Javani", "7068164058" });
-            CustomerListDataGrid.Rows.Add(new string[] { "Wright", "1234567890" });
-            CustomerListDataGrid.Rows.Add(new string[] { "Javani", "1212121212" });
-            CustomerListDataGrid.Rows.Add(new string[] { "Javani", "7068164058" });
-            CustomerListDataGrid.Rows.Add(new string[] { "Wright", "1234567890" });
-            CustomerListDataGrid.Rows.Add(new string[] { "Javani", "1212121212" });
-            CustomerListDataGrid.Rows.Add(new string[] { "Javani", "7068164058" });
-            CustomerListDataGrid.Rows.Add(new string[] { "Wright", "1234567890" });
-            CustomerListDataGrid.Rows.Add(new string[] { "Javani", "1212121212" });
-            CustomerListDataGrid.Rows.Add(new string[] { "Javani", "7068164058" });
-            CustomerListDataGrid.Rows.Add(new string[] { "Wright", "1234567890" });
-            CustomerListDataGrid.Rows.Add(new string[] { "Javani", "1212121212" });
-
             addButtonColumn();
         }
 
@@ -59,7 +46,6 @@ namespace Pizza_Project.Forms
             btn.Text = "More Info";
             btn.Name = "MoreInfoButton";
             btn.UseColumnTextForButtonValue = true;
-            //btn.DefaultCellStyle.Padding = new Padding(0);
             btn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             CustomerListDataGrid.Columns.Add(btn);
         }
@@ -68,7 +54,6 @@ namespace Pizza_Project.Forms
 
             var item = new ListViewItem( new String [] {customer.Name, customer.PhoneNumber} );
             CustomerListDataGrid.Rows.Add(new String[] { customer.Name, customer.PhoneNumber });
-           // CustomerListDataGrid.ite
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -86,8 +71,7 @@ namespace Pizza_Project.Forms
             {
                 customerKey = (string)CustomerListDataGrid.Rows[e.RowIndex].HeaderCell.Value;
                 var customerInfoPage = new CustomerInfoPageForm(customerKey, this);
-                //this.Hide();
-                //MessageBox.Show((string)CustomerListDataGrid.Rows[e.RowIndex].HeaderCell.Value);
+                this.Hide();
                 customerInfoPage.Show();
             
             }

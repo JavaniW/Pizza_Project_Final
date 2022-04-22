@@ -33,18 +33,13 @@ namespace Pizza_Project.Forms
             //InitializeComponent();
             //fillInLabel(customerKey);
             if (customerMain == null)
-            {
-                //this.Hide();
-                //MessageBox.Show("This customer does not exist");
-                //referenceForm.Update();
-               // Owner.Show();
+            { 
+               referenceForm.Show();
 
-                //throw new Exception("Customer doesn't exist");
             } else
             {
             InitializeComponent();
             fillInLabel(customerKey);
-
             }
         }
 
@@ -54,8 +49,6 @@ namespace Pizza_Project.Forms
             NumberReplaceLabel.Text = customerMain.PhoneNumber;
 
             
-            //AddressReplaceLabel.Text = customerMain.UserAddresses[0].concatenatedAddress();
-
             if (customerMain.PaymentInfo != null)
             {
             CardholderNameReplaceLabel.Text = customerMain.PaymentInfo.NameOnCard;
@@ -97,6 +90,12 @@ namespace Pizza_Project.Forms
         private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            referenceForm.Show();
         }
     }
 }

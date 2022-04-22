@@ -83,7 +83,6 @@
             // 
             // CustomerListBackButton
             // 
-            this.CustomerListBackButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CustomerListBackButton.AutoSize = true;
             this.CustomerListBackButton.BackColor = System.Drawing.Color.Orange;
             this.CustomerListBackButton.ForeColor = System.Drawing.Color.White;
@@ -131,6 +130,7 @@
             this.CustomerListDataGrid.EnableHeadersVisualStyles = false;
             this.CustomerListDataGrid.GridColor = System.Drawing.Color.White;
             this.CustomerListDataGrid.Location = new System.Drawing.Point(181, 73);
+            this.CustomerListDataGrid.MinimumSize = new System.Drawing.Size(450, 365);
             this.CustomerListDataGrid.MultiSelect = false;
             this.CustomerListDataGrid.Name = "CustomerListDataGrid";
             this.CustomerListDataGrid.ReadOnly = true;
@@ -176,6 +176,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CustomerListDataGrid);
             this.Controls.Add(this.CustomerListBackButton);
+            this.MinimumSize = new System.Drawing.Size(818, 497);
             this.Name = "CustomerListPageForm";
             this.Text = "CustomerListPageForm";
             this.Load += new System.EventHandler(this.CustomerListPageForm_Load);

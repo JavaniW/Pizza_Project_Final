@@ -69,6 +69,7 @@ namespace Pizza_Project.Forms
             this.button1.TabIndex = 12;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tableLayoutPanel4
             // 
@@ -361,6 +362,7 @@ namespace Pizza_Project.Forms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MinimumSize = new System.Drawing.Size(818, 498);
             this.Name = "CustomerInfoPageForm";
             this.Text = "Customer Information";
             this.Load += new System.EventHandler(this.CustomerInfoPageForm_Load);
