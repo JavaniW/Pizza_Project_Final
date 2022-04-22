@@ -17,6 +17,12 @@ namespace Pizza_Project.database.controllers.data_controllers.order_controllers
         /// <param name="customerPhone">Customer's phone number</param>
         public Order CreateOrder(Order order, string customerId)
         {
+            var newOrderList = new List<OrderItems>();
+            if (this.GetAllOrders() == null)
+            {
+
+            }
+
             order.OrderNumber = GetOrderCount() + 1;
             var customer = _customerController.GetById(customerId);
             customer.Orders.Add(order);

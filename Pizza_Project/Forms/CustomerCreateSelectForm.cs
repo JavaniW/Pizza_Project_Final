@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Pizza_Project.database.controllers.data_controllers.person_controllers;
 using Pizza_Project.database.Models.customer_info;
+using Pizza_Project.database.Models.order_info;
 
 namespace Pizza_Project.Forms
 {
@@ -132,11 +133,12 @@ namespace Pizza_Project.Forms
         {
             var cust = _customerController.Create(new Customer
             {
+                Orders = new List<Order>(),
                 Name = this.Name,
                 Email = this.Email,
                 PhoneNumber = this.PhoneNumber,
                 Id = Identifier.CreateIdentifier()
-            });
+            });;
 
             this.CustomerId = cust.Id;
             this.ErrorMsg = "Could not create customer.";

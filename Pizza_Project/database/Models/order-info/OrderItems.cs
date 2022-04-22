@@ -10,8 +10,8 @@ namespace Pizza_Project.database.Models.order_info
         [JsonPropertyName("quantity")]
         public int Quantity { get; set; }
         
-        //[JsonPropertyName("menuItem")]
-        //public MenuItem MenuItem { get; set; }
+        [JsonPropertyName("ingredients")]
+        public List<string> Ingredients { get; set; }
         
         [JsonPropertyName("itemTotal")]
         public double ItemTotal { get; set; }

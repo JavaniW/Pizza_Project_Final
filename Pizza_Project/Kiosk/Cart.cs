@@ -117,7 +117,7 @@ namespace Pizza_Project.kiosk
             {
                 Id = id,
                 Name = itemType + this._cartItems.Count,
-                //MenuItem = menuItem,
+                Ingredients = ingredients,
                 ItemTotal = _menuIngredientController.GetIngredientPrice(ingredients),
                 Quantity = quantity
             };
