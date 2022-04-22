@@ -11,7 +11,8 @@ using System.Windows.Forms;
 using Pizza_Project.database.Models.customer_info;
 using Pizza_Project.database.controllers.data_controllers.person_controllers;
 using Pizza_Project.kiosk;
-using Pizza_Project.kiosk.Checkout;
+using Pizza_Project.database.Models.customer_info.payment;
+using Pizza_Project.database.Models.person_info;
 
 namespace Pizza_Project.Forms
 {
@@ -19,6 +20,7 @@ namespace Pizza_Project.Forms
     {
         private readonly Kiosk _kiosk;
 
+        private readonly CustomerController _customerController;
         private readonly Customer Customer;
 
         private bool cashPayment = true;
@@ -31,6 +33,8 @@ namespace Pizza_Project.Forms
         private string cardEXP = "";
         private string cardCVC = "";
 
+        private double CashIn = 0;
+
         private string address = "";
         private string city = "";
         private string state = "";
@@ -41,7 +45,8 @@ namespace Pizza_Project.Forms
         {
             InitializeComponent();
             this._kiosk = kiosk;
-            this.Customer = new CustomerController().GetById(this._kiosk.GetCustomerId());
+            this._customerController = new CustomerController();
+            this.Customer =this._customerController.GetById(this._kiosk.GetCustomerId());
 
             //Data grid view elements
             this.itemDataGridView.Columns.Add("itemName", "Item");
@@ -55,6 +60,7 @@ namespace Pizza_Project.Forms
         {
             this.paymentComboBox.SelectedItem = "Cash";
             this.paymentText.Text = "Cash Payment";
+            this.ShowCashInputs();
 
             this.deliveryComboBox.SelectedItem = "Pickup";
             this.deliveryText.Text = "Store Pickup";
@@ -68,34 +74,71 @@ namespace Pizza_Project.Forms
                 this.itemDataGridView.Rows.Add(item.Name, item.Quantity, item.ItemTotal);
             }
 
-            this.payButton.Text = "Pay $" + cartPrice;
+            this.payButton.Text = "Confirm $" + cartPrice;
         }
 
         private void paymentComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // display card or cash payment forms.
             if (this.paymentComboBox.SelectedItem.Equals("Card")) {
                 this.ShowCardInputs();
                 this.cashPayment = false;
             }else
             {
-                this.cashPayment = true;
-                this.paymentInputLayout.Visible = false;
-                this.paymentText.Text = "Cash Payment";
+                this.ShowCashInputs();
+            }
+        }
+
+        private void ShowCashInputs()
+        {
+
+            // display cash payment method form (subset of cc info form)
+            this.cashPayment = true;
+            this.paymentInputLayout.Visible = true;
+            this.paymentText.Text = "Cash Payment";
+
+            this.nameOnCardInput.Visible = true;
+            this.cardNameLabel.Visible = true;
+
+            this.cardNumberInput.Visible = false;
+            this.cardNumberLabel.Visible = false;
+            this.cardExpLabel.Visible = false;
+            this.expInput.Visible = false;
+            this.cardCvcLabel.Visible = false;
+            this.cvcInput.Visible = false;
+
+            this.cardNameLabel.Text = "Cash In";
+            if (this.nameOnCardInput.Text.Length > 0)
+            {
+                this.CashIn = double.Parse(this.nameOnCardInput.Text);
             }
         }
 
         private void ShowCardInputs()
         {
-
+            // display component based on selected dropdown item
             if (this.Customer.PaymentInfo == null)
             {
                 this.paymentText.Text = "Enter Card Information";
                 this.paymentInputLayout.Visible = true;
-            }  
+                this.cardNameLabel.Text = "Name";
+                this.cardNumberInput.Visible = true;
+                this.cardNumberLabel.Visible = true;
+                this.cardExpLabel.Visible = true;
+                this.expInput.Visible = true;
+                this.cardCvcLabel.Visible = true;
+                this.cvcInput.Visible = true;
+            }else
+            {
+                this.paymentText.Text = "Card Information Exists";
+                this.cardNameLabel.Visible = false;
+                this.nameOnCardInput.Visible = false;
+            }
         }
 
         private void deliveryComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // display component based on selected dropdown item
             if(this.deliveryComboBox.SelectedItem.Equals("Delivery"))
             {
                 this.ShowDeliveryInputs();
@@ -112,8 +155,15 @@ namespace Pizza_Project.Forms
         {
             if (this.Customer.UserAddresses == null)
             {
+                //display address input layout if customer does not have address
                 this.deliveryText.Text = "Enter Address";
                 this.deliveryInputLayout.Visible = true;
+
+            }else
+            {
+                // remove address inputs if customer has an address.
+                this.deliveryInputLayout.Visible = false;
+                this.deliveryText.Text = "Address Information Exists";
             }
         }
         private void backButton_Click(object sender, EventArgs e)
@@ -123,15 +173,40 @@ namespace Pizza_Project.Forms
 
         private void payButton_Click(object sender, EventArgs e)
         {
+            // set payment type
+            CreditCardInfo cardInfo = null;
             string paymentType = "";
             if (this.cashPayment)
             {
                 paymentType = "cash";
             }else
             {
+                // create customer cc info
                 paymentType = "card";
+                cardInfo = new CreditCardInfo
+                {
+                    NameOnCard = this.nameOnCard,
+                    ExpDate = this.cardEXP,
+                    CVC = this.cardCVC,
+                    CardNumber = this.cardNumber
+                };
             }
-            this._kiosk.Checkout(paymentType);
+
+            // create customer address
+            var address = new PersonAddress
+            {
+                    Address = this.address,
+                    City = this.city,
+                    State = this.state,
+                    ZipCode = this.zipCode
+            };
+
+            // add address to customer
+            this.Customer.UserAddresses = address;
+            this._customerController.UpdateById(Customer.Id, Customer);
+
+            // checkout cart
+            this._kiosk.Checkout(paymentType, this.CashIn, cardInfo);
             this.Close();
         }
 
