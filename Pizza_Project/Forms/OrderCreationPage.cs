@@ -15,7 +15,7 @@ namespace Pizza_Project.Forms
 {
     public partial class OrderCreationPage : Form
     {
-        private readonly Kiosk kiosk;
+        private readonly Kiosk _kiosk;
 
         private readonly string customerId;
 
@@ -23,7 +23,7 @@ namespace Pizza_Project.Forms
         {
             InitializeComponent();
             this.customerId = customerId;
-            this.kiosk = new Kiosk(this.customerId);
+            this._kiosk = new Kiosk(this.customerId);
             this.dataGridView1.Columns.Add("itemName", "Cart Item");
             this.dataGridView1.Columns.Add("itemQuantity", "Quantity");
             this.dataGridView1.AutoSize = true;
@@ -70,7 +70,7 @@ namespace Pizza_Project.Forms
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var buildPizzaForm = new BuildPizzaForm(kiosk.GetCart());
+            var buildPizzaForm = new BuildPizzaForm(_kiosk.GetCart());
             buildPizzaForm.ShowDialog();
             DisplayGridItems();
         }
@@ -90,7 +90,7 @@ namespace Pizza_Project.Forms
 
         private void EditCartItem(string itemName)
         {
-            var cart = this.kiosk.GetCart();
+            var cart = this._kiosk.GetCart();
             cart.RemoveItem(cart.GetItemId(itemName));
             DisplayGridItems();
         }
@@ -99,7 +99,7 @@ namespace Pizza_Project.Forms
         {
             this.dataGridView1.Rows.Clear();
             this.dataGridView1.Refresh();
-            var (cartItems, cartTotal) = this.kiosk.GetCart().GetCartDetails();
+            var (cartItems, cartTotal) = this._kiosk.GetCart().GetCartDetails();
             foreach (var el in cartItems)
             {
                 this.dataGridView1.Rows.Add(el.Name, el.Quantity, "edit");
@@ -108,8 +108,7 @@ namespace Pizza_Project.Forms
 
         private void CheckoutButton_Click(object sender, EventArgs e)
         {
-            var checkoutForm = new CheckoutPage(this.kiosk.GetCart(), this.customerId);
-            checkoutForm.Hide();
+            var checkoutForm = new CheckoutPage(this._kiosk);
             checkoutForm.ShowDialog();
         }
     }

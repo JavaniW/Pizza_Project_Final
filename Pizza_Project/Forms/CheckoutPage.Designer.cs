@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.backButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -99,6 +102,7 @@
             this.backButton.TabIndex = 4;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // label1
             // 
@@ -125,6 +129,7 @@
             this.payButton.TabIndex = 3;
             this.payButton.Text = "Pay";
             this.payButton.UseVisualStyleBackColor = false;
+            this.payButton.Click += new System.EventHandler(this.payButton_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -339,12 +344,53 @@
             // 
             // itemDataGridView
             // 
+            this.itemDataGridView.AllowUserToAddRows = false;
+            this.itemDataGridView.AllowUserToDeleteRows = false;
+            this.itemDataGridView.AllowUserToResizeColumns = false;
+            this.itemDataGridView.AllowUserToResizeRows = false;
             this.itemDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.itemDataGridView.BackgroundColor = System.Drawing.Color.DimGray;
+            this.itemDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.itemDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.itemDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.itemDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.itemDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.itemDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            this.itemDataGridView.GridColor = System.Drawing.Color.DimGray;
             this.itemDataGridView.Location = new System.Drawing.Point(3, 37);
+            this.itemDataGridView.MultiSelect = false;
             this.itemDataGridView.Name = "itemDataGridView";
+            this.itemDataGridView.ReadOnly = true;
+            this.itemDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Fuchsia;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.itemDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.itemDataGridView.RowHeadersVisible = false;
             this.itemDataGridView.RowTemplate.Height = 25;
-            this.itemDataGridView.Size = new System.Drawing.Size(219, 223);
+            this.itemDataGridView.ShowCellErrors = false;
+            this.itemDataGridView.ShowCellToolTips = false;
+            this.itemDataGridView.ShowEditingIcon = false;
+            this.itemDataGridView.ShowRowErrors = false;
+            this.itemDataGridView.Size = new System.Drawing.Size(219, 220);
             this.itemDataGridView.TabIndex = 1;
             // 
             // tableLayoutPanel3

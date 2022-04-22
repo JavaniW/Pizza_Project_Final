@@ -17,6 +17,11 @@ namespace Pizza_Project.kiosk
             this.custId = custId;
         }
 
+        public string GetCustomerId()
+        {
+            return this.custId;
+        }
+
         public void Checkout(string paymentType)
         {
             var (cartItems, orderPrice) = _cart.GetCartDetails();

@@ -17,14 +17,14 @@ namespace Pizza_Project.Forms
 {
     public partial class CheckoutPage : Form
     {
-        private readonly Cart _cart;
-        private readonly CheckoutHandler _checkoutHandler;
+        private readonly Kiosk _kiosk;
+
         private readonly Customer Customer;
 
-        private readonly string customerId;
+        private bool cashPayment = true;
+        private bool orderPickup = true;
 
-        private bool showPaymentInputs = false;
-        private bool showAddressInputs = false;
+        private string CartPrice;
 
         private string nameOnCard = "";
         private string cardNumber = "";
@@ -37,12 +37,19 @@ namespace Pizza_Project.Forms
         private string zipCode = "";
 
 
-        public CheckoutPage(Cart cart, string customerId)
+        public CheckoutPage(Kiosk kiosk)
         {
             InitializeComponent();
-            this._cart = cart;
-            this.customerId = customerId;
-            this.Customer = new CustomerController().GetById(customerId);
+            this._kiosk = kiosk;
+            this.Customer = new CustomerController().GetById(this._kiosk.GetCustomerId());
+
+            //Data grid view elements
+            this.itemDataGridView.Columns.Add("itemName", "Item");
+            this.itemDataGridView.Columns.Add("itemQuantity", "Quantity");
+            this.itemDataGridView.Columns.Add("itemPrice", "Price");
+            this.itemDataGridView.AutoSize = true;
+            this.itemDataGridView.DefaultCellStyle.ForeColor = Color.White;
+            this.itemDataGridView.DefaultCellStyle.BackColor = Color.DimGray;
         }
         private void CheckoutPage_Load(object sender, EventArgs e)
         {
@@ -51,14 +58,27 @@ namespace Pizza_Project.Forms
 
             this.deliveryComboBox.SelectedItem = "Pickup";
             this.deliveryText.Text = "Store Pickup";
+
+            // Data grid view show data (READ ONLY)
+            var (cartItems, cartPrice) = this._kiosk.GetCart().GetCartDetails();
+            this.CartPrice = cartPrice.ToString();
+
+            foreach(var item in cartItems)
+            {
+                this.itemDataGridView.Rows.Add(item.Name, item.Quantity, item.ItemTotal);
+            }
+
+            this.payButton.Text = "Pay $" + cartPrice;
         }
 
         private void paymentComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (this.paymentComboBox.SelectedItem.Equals("Card")) {
                 this.ShowCardInputs();
+                this.cashPayment = false;
             }else
             {
+                this.cashPayment = true;
                 this.paymentInputLayout.Visible = false;
                 this.paymentText.Text = "Cash Payment";
             }
@@ -79,8 +99,10 @@ namespace Pizza_Project.Forms
             if(this.deliveryComboBox.SelectedItem.Equals("Delivery"))
             {
                 this.ShowDeliveryInputs();
+                this.orderPickup = false;
             }else
             {
+                this.orderPickup = false;
                 this.deliveryInputLayout.Visible = false;
                 this.deliveryText.Text = "Store Pickup";
             }
@@ -93,6 +115,24 @@ namespace Pizza_Project.Forms
                 this.deliveryText.Text = "Enter Address";
                 this.deliveryInputLayout.Visible = true;
             }
+        }
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void payButton_Click(object sender, EventArgs e)
+        {
+            string paymentType = "";
+            if (this.cashPayment)
+            {
+                paymentType = "cash";
+            }else
+            {
+                paymentType = "card";
+            }
+            this._kiosk.Checkout(paymentType);
+            this.Close();
         }
 
         private void cardDetailsLayout_Paint(object sender, PaintEventArgs e)
