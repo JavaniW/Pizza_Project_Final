@@ -73,7 +73,7 @@ namespace Pizza_Project.Forms
 
             foreach(var item in cartItems)
             {
-                this.itemDataGridView.Rows.Add(item.Name, item.Quantity, item.ItemTotal);
+                this.itemDataGridView.Rows.Add(item.Name, item.Quantity, "$"+item.ItemTotal);
             }
 
             this.payButton.Text = "Confirm $" + cartPrice;
