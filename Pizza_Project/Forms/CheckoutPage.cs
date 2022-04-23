@@ -26,6 +26,8 @@ namespace Pizza_Project.Forms
         private bool cashPayment = true;
         private bool orderPickup = true;
 
+        public bool orderSuccess = false;
+
         private string CartPrice;
 
         private string nameOnCard = "";
@@ -168,6 +170,7 @@ namespace Pizza_Project.Forms
         }
         private void backButton_Click(object sender, EventArgs e)
         {
+            this.orderSuccess = false;
             this.Close();
         }
 
@@ -181,35 +184,50 @@ namespace Pizza_Project.Forms
                 paymentType = "cash";
             }else
             {
+
                 // create customer cc info
                 paymentType = "card";
-                cardInfo = new CreditCardInfo
+
+                if (this.cardCvcLabel.Visible == true)
                 {
-                    NameOnCard = this.nameOnCard,
-                    ExpDate = this.cardEXP,
-                    CVC = this.cardCVC,
-                    CardNumber = this.cardNumber
-                };
+                    cardInfo = new CreditCardInfo
+                    {
+                        NameOnCard = this.nameOnCard,
+                        ExpDate = this.cardEXP,
+                        CVC = this.cardCVC,
+                        CardNumber = this.cardNumber
+                    };
+                }
             }
 
-            // create customer address
-            var address = new PersonAddress
+            if (this.deliveryInputLayout.Visible == true)
             {
-                    Address = this.address,
-                    City = this.city,
-                    State = this.state,
-                    ZipCode = this.zipCode
-            };
+                // create customer address
+                var address = new PersonAddress
+                {
+                        Address = this.address,
+                        City = this.city,
+                        State = this.state,
+                        ZipCode = this.zipCode
+                };
 
-            // add address to customer
-            this.Customer.UserAddresses = address;
-            this._customerController.UpdateById(Customer.Id, Customer);
+                // add address to customer
+                this.Customer.UserAddresses = address;
+                this._customerController.UpdateById(Customer.Id, Customer);
+            }
+
+            if (this.cashPayment && this.CashIn < double.Parse(this.CartPrice))
+            {
+                this.paymentText.Text = "Invalid Cash Amount";
+                return;
+            }
 
             // checkout cart
-            var (order, total) = this._kiosk.Checkout(paymentType, this.CashIn, cardInfo);
+            var (order, changeDue) = this._kiosk.Checkout(paymentType, this.CashIn, cardInfo);
 
-            var receiptForm = new RecieptPageForm(order.Items, double.Parse(CartPrice));
+            var receiptForm = new RecieptPageForm(order, this.cashPayment, changeDue);
             receiptForm.Show();
+            this.orderSuccess = true;
             this.Close();
         }
 
@@ -225,6 +243,10 @@ namespace Pizza_Project.Forms
 
         private void nameOnCardInput_TextChanged(object sender, EventArgs e)
         {
+            if (this.cashPayment)
+            {
+                this.CashIn = double.Parse(this.nameOnCardInput.Text);                
+            }
             this.nameOnCard = this.nameOnCardInput.Text;
         }
 

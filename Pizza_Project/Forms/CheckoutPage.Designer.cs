@@ -361,7 +361,7 @@ namespace Pizza_Project.Forms
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.itemDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -597,7 +597,7 @@ namespace Pizza_Project.Forms
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CheckoutPage";
-            this.Text = "CheckoutPage";
+            this.Text = "Checkout";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CheckoutPage_FormClosing);
             this.Load += new System.EventHandler(this.CheckoutPage_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
