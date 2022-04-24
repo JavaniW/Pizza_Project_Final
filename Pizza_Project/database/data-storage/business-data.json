@@ -16,7 +16,7 @@
         "password": "1234",
         "role": "manager",
         "email": "wyatt2@wyatt.com",
-        "phoneNumber": "4236642964",
+        "phoneNumber": "4236642965",
         "userAddress": null,
         "id": "wNodjfcqkkz6OCLIqCaYA",
         "name": "wyatt2"
@@ -161,22 +161,52 @@
         "name": "Brooklyn Style"
       },
       {
-        "category": "beverage",
-        "price": 2,
+        "category": "beverage-size",
+        "price": 1,
         "id": "AbyqBwpgbE29GPzSCYaBdQ",
-        "name": "Small"
+        "name": "Small Beverage"
       },
       {
-        "category": "beverage",
-        "price": 3,
+        "category": "beverage-size",
+        "price": 2.5,
         "id": "iurAVzkEuMDo2jKg42bw",
-        "name": "Medium"
+        "name": "Medium Beverage"
+      },
+      {
+        "category": "beverage-size",
+        "price": 2.75,
+        "id": "B1O4TRUTx0CXQXBTk8Hx0w",
+        "name": "Large Beverage"
       },
       {
         "category": "beverage",
-        "price": 4,
-        "id": "B1O4TRUTx0CXQXBTk8Hx0w",
-        "name": "Large"
+        "price": 0,
+        "id": "B1O4TRUTx0CXQX55ahrdfed",
+        "name": "Coca Cola Beverage"
+      },
+      {
+        "category": "beverage",
+        "price": 0,
+        "id": "B1O4TRUTx0CXQX55ahrllihjed",
+        "name": "Sprite Beverage"
+      },
+      {
+        "category": "beverage",
+        "price": 0,
+        "id": "B1O4TRUTx0CXQX55u5675d",
+        "name": "Pepsi Beverage"
+      },
+      {
+        "category": "beverage",
+        "price": 0,
+        "id": "B1O4TRUTx0CXQX55ah562gsdh",
+        "name": "Sweet Tea Beverage"
+      },
+      {
+        "category": "beverage",
+        "price": 0,
+        "id": "B1O4TRUTx0CXQX55feast45hd",
+        "name": "Unsweet Tea Beverage"
       }
     ]
   }

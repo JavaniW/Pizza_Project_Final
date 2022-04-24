@@ -30,21 +30,6 @@ namespace Pizza_Project.kiosk
         /// <returns>true if item added, false if item could not be added.</returns>
         public bool AddItem(List<string> ingredients, int quantity, string itemType)
         {
-            //var menuItem = _menuItemController.GetById(itemId);
-            //menuItem.IngredientIds = ingredients;
-
-
-            /* var orderItem = new OrderItems
-             {
-                 Id = Identifier.CreateIdentifier(),
-                 Name = "Pizza" + this._cartItems.Count,
-                 //MenuItem = menuItem,
-                 ItemTotal = _menuIngredientController.GetIngredientPrice(ingredients),
-                 //ItemTotal = _menuItemController.GetFinalPrice(menuItem.Price, menuItem.IngredientIds),
-                 Quantity = quantity
-             };
-            */
-
             if (GetToppingAmount(ingredients) > 4) return false;
             var orderItem = this.CreateItem(ingredients, quantity, itemType);
             
@@ -116,7 +101,7 @@ namespace Pizza_Project.kiosk
             return new OrderItems
             {
                 Id = id,
-                Name = itemType + this._cartItems.Count,
+                Name = itemType + (this._cartItems.Count + 1),
                 Ingredients = ingredients,
                 ItemTotal = _menuIngredientController.GetIngredientPrice(ingredients),
                 Quantity = quantity

@@ -141,7 +141,7 @@ namespace Pizza_Project.Forms
             this.addToCart.Name = "addToCart";
             this.addToCart.Size = new System.Drawing.Size(71, 34);
             this.addToCart.TabIndex = 2;
-            this.addToCart.Text = "Add To Cart";
+            this.addToCart.Text = "Add";
             this.addToCart.UseVisualStyleBackColor = false;
             this.addToCart.Click += new System.EventHandler(this.addToCart_Click);
             // 
