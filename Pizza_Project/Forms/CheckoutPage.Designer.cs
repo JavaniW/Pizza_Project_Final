@@ -30,28 +30,14 @@ namespace Pizza_Project.Forms
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.backButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.payButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.paymentComboBox = new System.Windows.Forms.ComboBox();
-            this.paymentText = new System.Windows.Forms.Label();
-            this.paymentInputLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.cvcInput = new System.Windows.Forms.TextBox();
-            this.expInput = new System.Windows.Forms.TextBox();
-            this.cardNumberInput = new System.Windows.Forms.TextBox();
-            this.cardNumberLabel = new System.Windows.Forms.Label();
-            this.nameOnCardInput = new System.Windows.Forms.TextBox();
-            this.cardExpLabel = new System.Windows.Forms.Label();
-            this.cardCvcLabel = new System.Windows.Forms.Label();
-            this.cardNameLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.itemDataGridView = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.deliveryComboBox = new System.Windows.Forms.ComboBox();
             this.deliveryText = new System.Windows.Forms.Label();
@@ -64,17 +50,32 @@ namespace Pizza_Project.Forms
             this.addressInput = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.paymentComboBox = new System.Windows.Forms.ComboBox();
+            this.paymentText = new System.Windows.Forms.Label();
+            this.paymentInputLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.cvcInput = new System.Windows.Forms.TextBox();
+            this.expInput = new System.Windows.Forms.TextBox();
+            this.cardNumberInput = new System.Windows.Forms.TextBox();
+            this.cardNumberLabel = new System.Windows.Forms.Label();
+            this.nameOnCardInput = new System.Windows.Forms.TextBox();
+            this.cardExpLabel = new System.Windows.Forms.Label();
+            this.cardCvcLabel = new System.Windows.Forms.Label();
+            this.cardNameLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.itemDataGridView = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.paymentInputLayout.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.itemDataGridView)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.deliveryInputLayout.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.paymentInputLayout.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.itemDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -141,12 +142,12 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label2, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label4, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.itemDataGridView, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel7, 0, 1);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 63);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
@@ -154,161 +155,6 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.07224F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(676, 263);
             this.tableLayoutPanel2.TabIndex = 1;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.paymentComboBox, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.paymentText, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.paymentInputLayout, 0, 2);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(228, 37);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 4;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 149F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(219, 223);
-            this.tableLayoutPanel4.TabIndex = 5;
-            // 
-            // paymentComboBox
-            // 
-            this.paymentComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.paymentComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.paymentComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.paymentComboBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.paymentComboBox.FormattingEnabled = true;
-            this.paymentComboBox.Items.AddRange(new object[] {
-            "Cash",
-            "Card"});
-            this.paymentComboBox.Location = new System.Drawing.Point(3, 3);
-            this.paymentComboBox.Name = "paymentComboBox";
-            this.paymentComboBox.Size = new System.Drawing.Size(213, 27);
-            this.paymentComboBox.TabIndex = 0;
-            this.paymentComboBox.SelectedIndexChanged += new System.EventHandler(this.paymentComboBox_SelectedIndexChanged);
-            // 
-            // paymentText
-            // 
-            this.paymentText.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.paymentText.AutoSize = true;
-            this.paymentText.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.paymentText.ForeColor = System.Drawing.Color.White;
-            this.paymentText.Location = new System.Drawing.Point(46, 40);
-            this.paymentText.Name = "paymentText";
-            this.paymentText.Size = new System.Drawing.Size(127, 19);
-            this.paymentText.TabIndex = 3;
-            this.paymentText.Text = "Enter Card Details";
-            // 
-            // paymentInputLayout
-            // 
-            this.paymentInputLayout.ColumnCount = 2;
-            this.paymentInputLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.paymentInputLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
-            this.paymentInputLayout.Controls.Add(this.cvcInput, 1, 3);
-            this.paymentInputLayout.Controls.Add(this.expInput, 1, 2);
-            this.paymentInputLayout.Controls.Add(this.cardNumberInput, 1, 1);
-            this.paymentInputLayout.Controls.Add(this.cardNumberLabel, 0, 1);
-            this.paymentInputLayout.Controls.Add(this.nameOnCardInput, 1, 0);
-            this.paymentInputLayout.Controls.Add(this.cardExpLabel, 0, 2);
-            this.paymentInputLayout.Controls.Add(this.cardCvcLabel, 0, 3);
-            this.paymentInputLayout.Controls.Add(this.cardNameLabel, 0, 0);
-            this.paymentInputLayout.Location = new System.Drawing.Point(3, 69);
-            this.paymentInputLayout.Name = "paymentInputLayout";
-            this.paymentInputLayout.RowCount = 5;
-            this.paymentInputLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.paymentInputLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.paymentInputLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.paymentInputLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.paymentInputLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 0F));
-            this.paymentInputLayout.Size = new System.Drawing.Size(213, 143);
-            this.paymentInputLayout.TabIndex = 4;
-            this.paymentInputLayout.Visible = false;
-            // 
-            // cvcInput
-            // 
-            this.cvcInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cvcInput.Location = new System.Drawing.Point(103, 111);
-            this.cvcInput.Name = "cvcInput";
-            this.cvcInput.Size = new System.Drawing.Size(107, 23);
-            this.cvcInput.TabIndex = 12;
-            this.cvcInput.TextChanged += new System.EventHandler(this.cvcInput_TextChanged);
-            // 
-            // expInput
-            // 
-            this.expInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.expInput.Location = new System.Drawing.Point(103, 76);
-            this.expInput.Name = "expInput";
-            this.expInput.Size = new System.Drawing.Size(107, 23);
-            this.expInput.TabIndex = 11;
-            this.expInput.TextChanged += new System.EventHandler(this.expInput_TextChanged);
-            // 
-            // cardNumberInput
-            // 
-            this.cardNumberInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cardNumberInput.Location = new System.Drawing.Point(103, 41);
-            this.cardNumberInput.Name = "cardNumberInput";
-            this.cardNumberInput.Size = new System.Drawing.Size(107, 23);
-            this.cardNumberInput.TabIndex = 10;
-            this.cardNumberInput.TextChanged += new System.EventHandler(this.cardNumberInput_TextChanged);
-            // 
-            // cardNumberLabel
-            // 
-            this.cardNumberLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.cardNumberLabel.AutoSize = true;
-            this.cardNumberLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cardNumberLabel.ForeColor = System.Drawing.Color.White;
-            this.cardNumberLabel.Location = new System.Drawing.Point(46, 43);
-            this.cardNumberLabel.Name = "cardNumberLabel";
-            this.cardNumberLabel.Size = new System.Drawing.Size(51, 19);
-            this.cardNumberLabel.TabIndex = 7;
-            this.cardNumberLabel.Text = "Card #";
-            this.cardNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // nameOnCardInput
-            // 
-            this.nameOnCardInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nameOnCardInput.Location = new System.Drawing.Point(103, 6);
-            this.nameOnCardInput.Name = "nameOnCardInput";
-            this.nameOnCardInput.Size = new System.Drawing.Size(107, 23);
-            this.nameOnCardInput.TabIndex = 6;
-            this.nameOnCardInput.TextChanged += new System.EventHandler(this.nameOnCardInput_TextChanged);
-            // 
-            // cardExpLabel
-            // 
-            this.cardExpLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.cardExpLabel.AutoSize = true;
-            this.cardExpLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cardExpLabel.ForeColor = System.Drawing.Color.White;
-            this.cardExpLabel.Location = new System.Drawing.Point(64, 78);
-            this.cardExpLabel.Name = "cardExpLabel";
-            this.cardExpLabel.Size = new System.Drawing.Size(33, 19);
-            this.cardExpLabel.TabIndex = 8;
-            this.cardExpLabel.Text = "EXP";
-            // 
-            // cardCvcLabel
-            // 
-            this.cardCvcLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.cardCvcLabel.AutoSize = true;
-            this.cardCvcLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cardCvcLabel.ForeColor = System.Drawing.Color.White;
-            this.cardCvcLabel.Location = new System.Drawing.Point(61, 113);
-            this.cardCvcLabel.Name = "cardCvcLabel";
-            this.cardCvcLabel.Size = new System.Drawing.Size(36, 19);
-            this.cardCvcLabel.TabIndex = 9;
-            this.cardCvcLabel.Text = "CVC";
-            // 
-            // cardNameLabel
-            // 
-            this.cardNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.cardNameLabel.AutoSize = true;
-            this.cardNameLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cardNameLabel.ForeColor = System.Drawing.Color.White;
-            this.cardNameLabel.Location = new System.Drawing.Point(50, 8);
-            this.cardNameLabel.Name = "cardNameLabel";
-            this.cardNameLabel.Size = new System.Drawing.Size(47, 19);
-            this.cardNameLabel.TabIndex = 5;
-            this.cardNameLabel.Text = "Name";
             // 
             // label2
             // 
@@ -345,57 +191,6 @@ namespace Pizza_Project.Forms
             this.label4.Size = new System.Drawing.Size(133, 26);
             this.label4.TabIndex = 2;
             this.label4.Text = "Payment Type";
-            // 
-            // itemDataGridView
-            // 
-            this.itemDataGridView.AllowUserToAddRows = false;
-            this.itemDataGridView.AllowUserToDeleteRows = false;
-            this.itemDataGridView.AllowUserToResizeColumns = false;
-            this.itemDataGridView.AllowUserToResizeRows = false;
-            this.itemDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.itemDataGridView.BackgroundColor = System.Drawing.Color.DimGray;
-            this.itemDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.itemDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.itemDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.itemDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.itemDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.itemDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
-            this.itemDataGridView.GridColor = System.Drawing.Color.DimGray;
-            this.itemDataGridView.Location = new System.Drawing.Point(3, 37);
-            this.itemDataGridView.MultiSelect = false;
-            this.itemDataGridView.Name = "itemDataGridView";
-            this.itemDataGridView.ReadOnly = true;
-            this.itemDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Fuchsia;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.itemDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.itemDataGridView.RowHeadersVisible = false;
-            this.itemDataGridView.RowTemplate.Height = 25;
-            this.itemDataGridView.ShowCellErrors = false;
-            this.itemDataGridView.ShowCellToolTips = false;
-            this.itemDataGridView.ShowEditingIcon = false;
-            this.itemDataGridView.ShowRowErrors = false;
-            this.itemDataGridView.Size = new System.Drawing.Size(219, 220);
-            this.itemDataGridView.TabIndex = 1;
             // 
             // tableLayoutPanel3
             // 
@@ -554,6 +349,161 @@ namespace Pizza_Project.Forms
             this.label8.TabIndex = 9;
             this.label8.Text = "Zipcode";
             // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.paymentComboBox, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.paymentText, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.paymentInputLayout, 0, 2);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(228, 37);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 4;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 149F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(219, 223);
+            this.tableLayoutPanel4.TabIndex = 5;
+            // 
+            // paymentComboBox
+            // 
+            this.paymentComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.paymentComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.paymentComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.paymentComboBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.paymentComboBox.FormattingEnabled = true;
+            this.paymentComboBox.Items.AddRange(new object[] {
+            "Cash",
+            "Card"});
+            this.paymentComboBox.Location = new System.Drawing.Point(3, 3);
+            this.paymentComboBox.Name = "paymentComboBox";
+            this.paymentComboBox.Size = new System.Drawing.Size(213, 27);
+            this.paymentComboBox.TabIndex = 0;
+            this.paymentComboBox.SelectedIndexChanged += new System.EventHandler(this.paymentComboBox_SelectedIndexChanged);
+            // 
+            // paymentText
+            // 
+            this.paymentText.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.paymentText.AutoSize = true;
+            this.paymentText.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.paymentText.ForeColor = System.Drawing.Color.White;
+            this.paymentText.Location = new System.Drawing.Point(46, 40);
+            this.paymentText.Name = "paymentText";
+            this.paymentText.Size = new System.Drawing.Size(127, 19);
+            this.paymentText.TabIndex = 3;
+            this.paymentText.Text = "Enter Card Details";
+            // 
+            // paymentInputLayout
+            // 
+            this.paymentInputLayout.ColumnCount = 2;
+            this.paymentInputLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.paymentInputLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
+            this.paymentInputLayout.Controls.Add(this.cvcInput, 1, 3);
+            this.paymentInputLayout.Controls.Add(this.expInput, 1, 2);
+            this.paymentInputLayout.Controls.Add(this.cardNumberInput, 1, 1);
+            this.paymentInputLayout.Controls.Add(this.cardNumberLabel, 0, 1);
+            this.paymentInputLayout.Controls.Add(this.nameOnCardInput, 1, 0);
+            this.paymentInputLayout.Controls.Add(this.cardExpLabel, 0, 2);
+            this.paymentInputLayout.Controls.Add(this.cardCvcLabel, 0, 3);
+            this.paymentInputLayout.Controls.Add(this.cardNameLabel, 0, 0);
+            this.paymentInputLayout.Location = new System.Drawing.Point(3, 69);
+            this.paymentInputLayout.Name = "paymentInputLayout";
+            this.paymentInputLayout.RowCount = 5;
+            this.paymentInputLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.paymentInputLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.paymentInputLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.paymentInputLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.paymentInputLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 0F));
+            this.paymentInputLayout.Size = new System.Drawing.Size(213, 143);
+            this.paymentInputLayout.TabIndex = 4;
+            this.paymentInputLayout.Visible = false;
+            // 
+            // cvcInput
+            // 
+            this.cvcInput.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cvcInput.Location = new System.Drawing.Point(103, 111);
+            this.cvcInput.Name = "cvcInput";
+            this.cvcInput.Size = new System.Drawing.Size(107, 23);
+            this.cvcInput.TabIndex = 12;
+            this.cvcInput.TextChanged += new System.EventHandler(this.cvcInput_TextChanged);
+            // 
+            // expInput
+            // 
+            this.expInput.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.expInput.Location = new System.Drawing.Point(103, 76);
+            this.expInput.Name = "expInput";
+            this.expInput.Size = new System.Drawing.Size(107, 23);
+            this.expInput.TabIndex = 11;
+            this.expInput.TextChanged += new System.EventHandler(this.expInput_TextChanged);
+            // 
+            // cardNumberInput
+            // 
+            this.cardNumberInput.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cardNumberInput.Location = new System.Drawing.Point(103, 41);
+            this.cardNumberInput.Name = "cardNumberInput";
+            this.cardNumberInput.Size = new System.Drawing.Size(107, 23);
+            this.cardNumberInput.TabIndex = 10;
+            this.cardNumberInput.TextChanged += new System.EventHandler(this.cardNumberInput_TextChanged);
+            // 
+            // cardNumberLabel
+            // 
+            this.cardNumberLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cardNumberLabel.AutoSize = true;
+            this.cardNumberLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cardNumberLabel.ForeColor = System.Drawing.Color.White;
+            this.cardNumberLabel.Location = new System.Drawing.Point(46, 43);
+            this.cardNumberLabel.Name = "cardNumberLabel";
+            this.cardNumberLabel.Size = new System.Drawing.Size(51, 19);
+            this.cardNumberLabel.TabIndex = 7;
+            this.cardNumberLabel.Text = "Card #";
+            this.cardNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // nameOnCardInput
+            // 
+            this.nameOnCardInput.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nameOnCardInput.Location = new System.Drawing.Point(103, 6);
+            this.nameOnCardInput.Name = "nameOnCardInput";
+            this.nameOnCardInput.Size = new System.Drawing.Size(107, 23);
+            this.nameOnCardInput.TabIndex = 6;
+            this.nameOnCardInput.TextChanged += new System.EventHandler(this.nameOnCardInput_TextChanged);
+            // 
+            // cardExpLabel
+            // 
+            this.cardExpLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cardExpLabel.AutoSize = true;
+            this.cardExpLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cardExpLabel.ForeColor = System.Drawing.Color.White;
+            this.cardExpLabel.Location = new System.Drawing.Point(64, 78);
+            this.cardExpLabel.Name = "cardExpLabel";
+            this.cardExpLabel.Size = new System.Drawing.Size(33, 19);
+            this.cardExpLabel.TabIndex = 8;
+            this.cardExpLabel.Text = "EXP";
+            // 
+            // cardCvcLabel
+            // 
+            this.cardCvcLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cardCvcLabel.AutoSize = true;
+            this.cardCvcLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cardCvcLabel.ForeColor = System.Drawing.Color.White;
+            this.cardCvcLabel.Location = new System.Drawing.Point(61, 113);
+            this.cardCvcLabel.Name = "cardCvcLabel";
+            this.cardCvcLabel.Size = new System.Drawing.Size(36, 19);
+            this.cardCvcLabel.TabIndex = 9;
+            this.cardCvcLabel.Text = "CVC";
+            // 
+            // cardNameLabel
+            // 
+            this.cardNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cardNameLabel.AutoSize = true;
+            this.cardNameLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cardNameLabel.ForeColor = System.Drawing.Color.White;
+            this.cardNameLabel.Location = new System.Drawing.Point(50, 8);
+            this.cardNameLabel.Name = "cardNameLabel";
+            this.cardNameLabel.Size = new System.Drawing.Size(47, 19);
+            this.cardNameLabel.TabIndex = 5;
+            this.cardNameLabel.Text = "Name";
+            // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 2;
@@ -586,6 +536,62 @@ namespace Pizza_Project.Forms
             this.textBox2.Size = new System.Drawing.Size(94, 23);
             this.textBox2.TabIndex = 11;
             // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 1;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Controls.Add(this.itemDataGridView, 0, 0);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 37);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(219, 223);
+            this.tableLayoutPanel7.TabIndex = 6;
+            // 
+            // itemDataGridView
+            // 
+            this.itemDataGridView.AllowUserToAddRows = false;
+            this.itemDataGridView.AllowUserToDeleteRows = false;
+            this.itemDataGridView.AllowUserToResizeColumns = false;
+            this.itemDataGridView.AllowUserToResizeRows = false;
+            this.itemDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.itemDataGridView.BackgroundColor = System.Drawing.Color.DimGray;
+            this.itemDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.itemDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.itemDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.itemDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.itemDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            this.itemDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.itemDataGridView.EnableHeadersVisualStyles = false;
+            this.itemDataGridView.GridColor = System.Drawing.Color.DimGray;
+            this.itemDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.itemDataGridView.MultiSelect = false;
+            this.itemDataGridView.Name = "itemDataGridView";
+            this.itemDataGridView.ReadOnly = true;
+            this.itemDataGridView.RowHeadersVisible = false;
+            this.itemDataGridView.RowTemplate.Height = 25;
+            this.itemDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.itemDataGridView.ShowCellErrors = false;
+            this.itemDataGridView.ShowCellToolTips = false;
+            this.itemDataGridView.ShowEditingIcon = false;
+            this.itemDataGridView.ShowRowErrors = false;
+            this.itemDataGridView.Size = new System.Drawing.Size(213, 217);
+            this.itemDataGridView.TabIndex = 6;
+            // 
             // CheckoutPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -597,24 +603,25 @@ namespace Pizza_Project.Forms
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CheckoutPage";
-            this.Text = "CheckoutPage";
+            this.Text = "Checkout";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CheckoutPage_FormClosing);
             this.Load += new System.EventHandler(this.CheckoutPage_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
-            this.paymentInputLayout.ResumeLayout(false);
-            this.paymentInputLayout.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.itemDataGridView)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.deliveryInputLayout.ResumeLayout(false);
             this.deliveryInputLayout.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            this.paymentInputLayout.ResumeLayout(false);
+            this.paymentInputLayout.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
+            this.tableLayoutPanel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.itemDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -657,5 +664,7 @@ namespace Pizza_Project.Forms
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
     }
 }

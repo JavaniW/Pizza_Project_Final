@@ -7,6 +7,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="services\**" />
+    <Compile Remove="UserControls\**" />
+    <EmbeddedResource Remove="services\**" />
+    <EmbeddedResource Remove="UserControls\**" />
+    <None Remove="services\**" />
+    <None Remove="UserControls\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Form1.cs" />
+    <Compile Remove="Form1.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Form1.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -28,6 +46,9 @@
   <ItemGroup>
     <None Update="database\data-storage\business-data.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="images\beverage.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="images\customer.jpeg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

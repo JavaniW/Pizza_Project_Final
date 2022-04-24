@@ -2,31 +2,31 @@
   "people": {
     "customers": [
       {
-        "orders": null,
+        "orders": [
+          {
+            "orderNumber": 1,
+            "orderName": "",
+            "orderTotal": 2.5,
+            "items": [
+              {
+                "quantity": 1,
+                "ingredients": [
+                  "iurAVzkEuMDo2jKg42bw",
+                  "B1O4TRUTx0CXQX55ahrdfed"
+                ],
+                "itemTotal": 2.5,
+                "id": "vrAAPMJnz02tk2MO0cFEjw",
+                "name": "Beverage1"
+              }
+            ]
+          }
+        ],
         "paymentInfo": null,
         "email": "wyatt2@wyatt.com",
         "phoneNumber": "4236642964",
         "userAddress": null,
         "id": "HIPa1b0nkUKZSQ1SdDqlhQ",
         "name": "wyatt2"
-      },
-      {
-        "orders": null,
-        "paymentInfo": null,
-        "email": "wyatt2@wyatt.com",
-        "phoneNumber": "4236642964",
-        "userAddress": null,
-        "id": "z5fDB0x2kuNAQYt7SOKJQ",
-        "name": "wyatt2"
-      },
-      {
-        "orders": null,
-        "paymentInfo": null,
-        "email": "wyatt2@wyatt.com",
-        "phoneNumber": "4236642964",
-        "userAddress": null,
-        "id": "2tfO5jIiYUqffRe33Ceyug",
-        "name": "wyatt3"
       }
     ],
     "users": [
@@ -34,7 +34,7 @@
         "password": "1234",
         "role": "manager",
         "email": "wyatt2@wyatt.com",
-        "phoneNumber": "4236642964",
+        "phoneNumber": "4236642965",
         "userAddress": null,
         "id": "wNodjfcqkkz6OCLIqCaYA",
         "name": "wyatt2"
@@ -179,22 +179,52 @@
         "name": "Brooklyn Style"
       },
       {
-        "category": "beverage",
-        "price": 2,
+        "category": "beverage-size",
+        "price": 1,
         "id": "AbyqBwpgbE29GPzSCYaBdQ",
-        "name": "Small"
+        "name": "Small Beverage"
       },
       {
-        "category": "beverage",
-        "price": 3,
+        "category": "beverage-size",
+        "price": 2.5,
         "id": "iurAVzkEuMDo2jKg42bw",
-        "name": "Medium"
+        "name": "Medium Beverage"
+      },
+      {
+        "category": "beverage-size",
+        "price": 2.75,
+        "id": "B1O4TRUTx0CXQXBTk8Hx0w",
+        "name": "Large Beverage"
       },
       {
         "category": "beverage",
-        "price": 4,
-        "id": "B1O4TRUTx0CXQXBTk8Hx0w",
-        "name": "Large"
+        "price": 0,
+        "id": "B1O4TRUTx0CXQX55ahrdfed",
+        "name": "Coca Cola Beverage"
+      },
+      {
+        "category": "beverage",
+        "price": 0,
+        "id": "B1O4TRUTx0CXQX55ahrllihjed",
+        "name": "Sprite Beverage"
+      },
+      {
+        "category": "beverage",
+        "price": 0,
+        "id": "B1O4TRUTx0CXQX55u5675d",
+        "name": "Pepsi Beverage"
+      },
+      {
+        "category": "beverage",
+        "price": 0,
+        "id": "B1O4TRUTx0CXQX55ah562gsdh",
+        "name": "Sweet Tea Beverage"
+      },
+      {
+        "category": "beverage",
+        "price": 0,
+        "id": "B1O4TRUTx0CXQX55feast45hd",
+        "name": "Unsweet Tea Beverage"
       }
     ]
   }

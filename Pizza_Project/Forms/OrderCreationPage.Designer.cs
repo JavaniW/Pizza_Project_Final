@@ -32,27 +32,29 @@ namespace Pizza_Project.Forms
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MenuText = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buildPizzaButton = new System.Windows.Forms.Button();
+            this.buildPizzaImg = new System.Windows.Forms.PictureBox();
+            this.beverageButton = new System.Windows.Forms.Button();
+            this.beverageImage = new System.Windows.Forms.PictureBox();
+            this.CancelButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.CheckoutButton = new System.Windows.Forms.Button();
             this.CartTextLabel = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.CancelButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buildPizzaImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.beverageImage)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuText
             // 
+            this.MenuText.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.MenuText.AutoSize = true;
             this.MenuText.Font = new System.Drawing.Font("Calibri", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MenuText.ForeColor = System.Drawing.Color.White;
-            this.MenuText.Location = new System.Drawing.Point(10, 7);
+            this.MenuText.Location = new System.Drawing.Point(3, 19);
             this.MenuText.Name = "MenuText";
             this.MenuText.Size = new System.Drawing.Size(90, 37);
             this.MenuText.TabIndex = 0;
@@ -60,80 +62,98 @@ namespace Pizza_Project.Forms
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 1, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 47);
+            this.tableLayoutPanel1.Controls.Add(this.buildPizzaButton, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.buildPizzaImg, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.beverageButton, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.MenuText, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.beverageImage, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.CancelButton, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 16);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 140F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(426, 276);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 139F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 93F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(426, 307);
             this.tableLayoutPanel1.TabIndex = 1;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
-            // button2
+            // buildPizzaButton
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.Color.Orange;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(155, 21);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 30);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Beverage";
-            this.button2.UseVisualStyleBackColor = false;
+            this.buildPizzaButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buildPizzaButton.BackColor = System.Drawing.Color.Orange;
+            this.buildPizzaButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buildPizzaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buildPizzaButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buildPizzaButton.ForeColor = System.Drawing.Color.White;
+            this.buildPizzaButton.Location = new System.Drawing.Point(43, 217);
+            this.buildPizzaButton.Name = "buildPizzaButton";
+            this.buildPizzaButton.Size = new System.Drawing.Size(126, 30);
+            this.buildPizzaButton.TabIndex = 5;
+            this.buildPizzaButton.Text = "Build A Pizza";
+            this.buildPizzaButton.UseVisualStyleBackColor = false;
+            this.buildPizzaButton.Click += new System.EventHandler(this.buildPizzaButton_Click);
             // 
-            // button1
+            // buildPizzaImg
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.Orange;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(13, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 30);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Food";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buildPizzaImg.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buildPizzaImg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buildPizzaImg.Location = new System.Drawing.Point(38, 78);
+            this.buildPizzaImg.Name = "buildPizzaImg";
+            this.buildPizzaImg.Size = new System.Drawing.Size(136, 133);
+            this.buildPizzaImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.buildPizzaImg.TabIndex = 2;
+            this.buildPizzaImg.TabStop = false;
+            this.buildPizzaImg.Click += new System.EventHandler(this.buildPizzaImg_Click);
             // 
-            // pictureBox3
+            // beverageButton
             // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox3.Location = new System.Drawing.Point(145, 75);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(136, 134);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            this.beverageButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.beverageButton.BackColor = System.Drawing.Color.Orange;
+            this.beverageButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.beverageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.beverageButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.beverageButton.ForeColor = System.Drawing.Color.White;
+            this.beverageButton.Location = new System.Drawing.Point(256, 217);
+            this.beverageButton.Name = "beverageButton";
+            this.beverageButton.Size = new System.Drawing.Size(126, 30);
+            this.beverageButton.TabIndex = 3;
+            this.beverageButton.Text = "Add A Beverage";
+            this.beverageButton.UseVisualStyleBackColor = false;
+            this.beverageButton.Click += new System.EventHandler(this.beverageButton_Click);
             // 
-            // button3
+            // beverageImage
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button3.BackColor = System.Drawing.Color.Orange;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(150, 215);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(126, 30);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Build A Pizza";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.beverageImage.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.beverageImage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.beverageImage.Location = new System.Drawing.Point(251, 78);
+            this.beverageImage.Name = "beverageImage";
+            this.beverageImage.Size = new System.Drawing.Size(136, 133);
+            this.beverageImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.beverageImage.TabIndex = 4;
+            this.beverageImage.TabStop = false;
+            this.beverageImage.Click += new System.EventHandler(this.beverageImage_Click);
+            // 
+            // CancelButton
+            // 
+            this.CancelButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.CancelButton.AutoSize = true;
+            this.CancelButton.BackColor = System.Drawing.Color.Orange;
+            this.CancelButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CancelButton.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CancelButton.ForeColor = System.Drawing.Color.White;
+            this.CancelButton.Location = new System.Drawing.Point(341, 21);
+            this.CancelButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(82, 33);
+            this.CancelButton.TabIndex = 3;
+            this.CancelButton.Text = "Cancel";
+            this.CancelButton.UseVisualStyleBackColor = false;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -230,44 +250,26 @@ namespace Pizza_Project.Forms
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // CancelButton
-            // 
-            this.CancelButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CancelButton.AutoSize = true;
-            this.CancelButton.BackColor = System.Drawing.Color.Orange;
-            this.CancelButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CancelButton.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CancelButton.ForeColor = System.Drawing.Color.White;
-            this.CancelButton.Location = new System.Drawing.Point(354, 14);
-            this.CancelButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(82, 33);
-            this.CancelButton.TabIndex = 3;
-            this.CancelButton.Text = "Cancel";
-            this.CancelButton.UseVisualStyleBackColor = false;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
-            // 
             // OrderCreationPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(700, 338);
-            this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.MenuText);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "OrderCreationPage";
             this.Text = "Take Order";
             this.Load += new System.EventHandler(this.OrderCreationPage_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buildPizzaImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.beverageImage)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -281,14 +283,14 @@ namespace Pizza_Project.Forms
         private System.Windows.Forms.Panel CartPanel;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox buildPizzaImg;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button beverageButton;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button buildPizzaButton;
+        private System.Windows.Forms.PictureBox beverageImage;
     }
 }

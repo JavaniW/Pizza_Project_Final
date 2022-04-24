@@ -65,13 +65,38 @@ namespace Pizza_Project.Forms
         private void OrderCreationPage_Load(object sender, EventArgs e)
         {
             
-            this.pictureBox3.ImageLocation = FilePath.GetPath(@"\\images\\full-pizza.jpeg");
+            this.buildPizzaImg.ImageLocation = FilePath.GetPath(@"\\images\\full-pizza.jpeg");
+            this.beverageImage.ImageLocation = FilePath.GetPath(@"\\images\\beverage.jpg");
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void buildPizzaButton_Click(object sender, EventArgs e)
+        {
+            this.BuildPizzaFormLoader();
+        }
+        private void buildPizzaImg_Click(object sender, EventArgs e)
+        {
+            this.BuildPizzaFormLoader();
+        }
+
+        private void BuildPizzaFormLoader()
         {
             var buildPizzaForm = new BuildPizzaForm(_kiosk.GetCart());
             buildPizzaForm.ShowDialog();
+            DisplayGridItems();
+        }
+        private void beverageButton_Click(object sender, EventArgs e)
+        {
+            this.BeverageSelectFormLoader();
+        }
+        private void beverageImage_Click(object sender, EventArgs e)
+        {
+            this.BeverageSelectFormLoader();
+        }
+
+        private void BeverageSelectFormLoader()
+        {
+            var beverageSelectForm = new BeverageForm(this._kiosk.GetCart());
+            beverageSelectForm.ShowDialog();
             DisplayGridItems();
         }
 
@@ -110,7 +135,11 @@ namespace Pizza_Project.Forms
         {
             var checkoutForm = new CheckoutPage(this._kiosk);
             checkoutForm.ShowDialog();
-            this.Close();
+            if (checkoutForm.orderSuccess)
+            {
+                this.Close();
+            }
         }
+
     }
 }

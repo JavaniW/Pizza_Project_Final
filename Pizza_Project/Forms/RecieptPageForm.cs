@@ -14,30 +14,42 @@ namespace Pizza_Project.Forms
 {
     public partial class RecieptPageForm : Form
     {
-        private readonly List<OrderItems> CartItems;
-        private readonly double CartTotal;
+        private readonly Order Order;
+        private readonly double ChangeDue;
 
-        private string Signiture = "";
-        private bool DisplayError = false;
+        private readonly bool CashPayment;
 
-        public RecieptPageForm(List<OrderItems> cartItems, double cartTotal)
+        private string Signature = "";
+
+        public RecieptPageForm(Order order, bool cashPayment, double changeDue)
         {
             InitializeComponent();
 
             this.itemDataGridView.Columns.Add("itemName", "Item");
             this.itemDataGridView.Columns.Add("itemPrice", "Price");
+            this.itemDataGridView.Columns["itemPrice"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            this.itemDataGridView.Columns["itemPrice"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight;
             this.itemDataGridView.AutoSize = true;
             this.itemDataGridView.DefaultCellStyle.ForeColor = Color.White;
             this.itemDataGridView.DefaultCellStyle.BackColor = Color.DimGray;
 
-            this.CartItems = cartItems;
-            this.CartTotal = cartTotal;
+            this.Order = order;
+            this.ChangeDue = changeDue;
+            this.CashPayment = cashPayment;
         }
 
         private void RecieptPageForm_Load(object sender, EventArgs e)
         {
-            this.totalPriceLabel.Text = "$" + this.CartTotal;
-            foreach (var item in this.CartItems)
+            if (this.CashPayment)
+            {
+                this.signitureInput.Visible = false;
+                this.signatureLabel.Text = "Change due";
+                this.changeDueLabel.Text = "$" + this.ChangeDue;
+            }
+
+            this.orderNumberText.Text = "Order #" + this.Order.OrderNumber.ToString();
+            this.totalPriceLabel.Text = "$" + this.Order.OrderTotal;
+            foreach (var item in this.Order.Items)
             {
                 var totalString = "$" + item.ItemTotal;
                 this.itemDataGridView.Rows.Add(item.Name, totalString);
@@ -46,17 +58,19 @@ namespace Pizza_Project.Forms
 
         private void signitureInput_TextChanged(object sender, EventArgs e)
         {
-            this.Signiture = this.signitureInput.Text;
+            this.Signature = this.signitureInput.Text;
         }
 
         private void FinishButton_Click(object sender, EventArgs e)
         {
-            if (this.Signiture.Length > 0)
+            System.Diagnostics.Debug.WriteLine(this.Signature);
+            if ((!this.Signature.Equals("") && this.CashPayment == false) || this.CashPayment == true)
             {
+                var mainSelectionForm = new MainSelectionPage();
+                mainSelectionForm.Show();
                 this.Close();
             }
 
-            this.DisplayError = true;
             this.errorLabel.Text = "Please type a valid signiture.";
         }
 
@@ -67,6 +81,11 @@ namespace Pizza_Project.Forms
 
         private void LayoutPanelReceiptPage_Paint(object sender, PaintEventArgs e)
         {
+        }
+
+        private void signitureInput_TextChanged_1(object sender, EventArgs e)
+        {
+            this.Signature = this.signitureInput.Text;
         }
     }
 }
