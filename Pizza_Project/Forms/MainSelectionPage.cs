@@ -51,5 +51,29 @@ namespace Pizza_Project.Forms
             this.Hide();
             customerCreateSelectForm.Show();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            var customerListForm = new CustomerListPageForm(this);
+            this.Hide();
+            customerListForm.Show();
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+           
+        }
+
+        private void tableLayoutPanel2_Click(object sender, EventArgs e)
+        {
+  
+        }
+
+        private void ViewCustomerInfoText_Click(object sender, EventArgs e)
+        {
+            var customerListForm = new CustomerListPageForm(this);
+            this.Hide();
+            customerListForm.Show();
+        }
     }
 }

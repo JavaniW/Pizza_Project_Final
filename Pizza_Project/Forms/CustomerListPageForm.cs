@@ -19,8 +19,15 @@ namespace Pizza_Project.Forms
         static CustomerController c1 = new CustomerController();
         List<Customer> listOfCustomers = c1.Read();
         string customerKey;
+        MainSelectionPage referencedPage;
+
         public CustomerListPageForm()
         {
+
+        }
+        public CustomerListPageForm(MainSelectionPage referencedPage)
+        {
+            this.referencedPage = referencedPage;
             InitializeComponent();
             listOfCustomers = c1.Read();
             CustomerListDataGrid.ColumnCount = 2;
@@ -57,7 +64,8 @@ namespace Pizza_Project.Forms
         }
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            referencedPage.Show();
         }
 
         private void CustomerListPageForm_Load(object sender, EventArgs e)
