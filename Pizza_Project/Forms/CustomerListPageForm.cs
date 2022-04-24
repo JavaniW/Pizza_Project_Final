@@ -16,7 +16,6 @@ namespace Pizza_Project.Forms
 {
     public partial class CustomerListPageForm : Form
     {
-        
         static CustomerController c1 = new CustomerController();
         List<Customer> listOfCustomers;
         string customerKey;
@@ -81,8 +80,15 @@ namespace Pizza_Project.Forms
         {
             if (e.ColumnIndex == 2)
             {
+         
+                if (!GlobalVariables.CurrentUserRole.Equals("manager"))
+                {
+                    this.errorLabel.Visible = true;
+                    return;
+                }
+
                 customerKey = (string)CustomerListDataGrid.Rows[e.RowIndex].HeaderCell.Value;
-                var customerInfoPage = new CustomerInfoPageForm(customerKey, this);
+                var customerInfoPage = new CustomerInfoPageForm(this.customerKey, this);
                 this.Hide();
                 customerInfoPage.ShowDialog();
                 this.Show();

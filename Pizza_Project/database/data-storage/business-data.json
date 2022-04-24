@@ -22,22 +22,41 @@
           }
         ],
         "paymentInfo": null,
-        "email": "wyatt2@wyatt.com",
-        "phoneNumber": "4236642964",
+        "email": "jenny@tommy.com",
+        "phoneNumber": "7068675309",
         "userAddress": null,
         "id": "HIPa1b0nkUKZSQ1SdDqlhQ",
-        "name": "wyatt2"
+        "name": "Jenny"
       }
     ],
     "users": [
       {
-        "password": "1234",
+        "password": "pizza-time",
         "role": "manager",
-        "email": "wyatt2@wyatt.com",
-        "phoneNumber": "4236642965",
-        "userAddress": null,
+        "email": "jeff@pizza.com",
+        "phoneNumber": "",
+        "userAddress": {
+          "address": "1000 Chastain Rd NW",
+          "city": "Kennesaw",
+          "state": "Ga",
+          "zipCode": "30144"
+        },
         "id": "wNodjfcqkkz6OCLIqCaYA",
-        "name": "wyatt2"
+        "name": "Jeff Adkisson"
+      },
+      {
+        "password": "kill-all-humans-except-one",
+        "role": "employee",
+        "email": "bender@pizza.com",
+        "phoneNumber": "9876543210",
+        "userAddress": {
+          "address": "1000 Chastain Rd NW",
+          "city": "Kennesaw",
+          "state": "Ga",
+          "zipCode": "30144"
+        },
+        "id": "wNodjfcqkkz6O561snaYA",
+        "name": "Bender"
       }
     ]
   },

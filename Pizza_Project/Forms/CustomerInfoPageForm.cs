@@ -47,7 +47,14 @@ namespace Pizza_Project.Forms
             NameReplaceLabel.Text = customerMain.Name;
             NumberReplaceLabel.Text = customerMain.PhoneNumber;
 
-            
+            if (customerMain.UserAddresses != null)
+            {
+                var personAddress = customerMain.UserAddresses;
+                string addressString = $"{personAddress.Address}, {personAddress.City}, {personAddress.State} {personAddress.ZipCode}";
+
+                this.AddressReplaceLabel.Text = addressString;
+            }   
+         
             if (customerMain.PaymentInfo != null)
             {
                 CardholderNameReplaceLabel.Text = customerMain.PaymentInfo.NameOnCard;

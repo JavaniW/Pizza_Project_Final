@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Pizza_Project.database.controllers.data_controllers.person_controllers;
 using Pizza_Project.database.Models.person_info;
 using Pizza_Project.database.Models.user_info;
+using Pizza_Project.helper_classes;
 // using Pizza_Project.services.interfaces;
 
 namespace Pizza_Project.authentication
@@ -24,9 +25,11 @@ namespace Pizza_Project.authentication
                 var user = _userController.GetByEmail(email);
                 if (user != null && user.Password.Equals(password))
                 {
+                    GlobalVariables.CurrentUserRole = user.Role;
                     return true;
                 }
                 return false;
+
             }
             catch (Exception e)
             {
@@ -41,6 +44,7 @@ namespace Pizza_Project.authentication
         /// </summary>
         /// <returns>false</returns>
         public bool Logout() {
+            GlobalVariables.CurrentUserRole = "";
             return false;
         }
 
