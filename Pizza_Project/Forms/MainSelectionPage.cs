@@ -44,7 +44,7 @@ namespace Pizza_Project.Forms
 
         private void ViewOrderList()
         {
-            var orderListForm = new OrderListForm();
+            var orderListForm = new OrderListForm(this);
             this.Hide();
             orderListForm.ShowDialog();
             this.Show();

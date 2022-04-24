@@ -85,6 +85,7 @@
             // 
             this.CustomerListBackButton.AutoSize = true;
             this.CustomerListBackButton.BackColor = System.Drawing.Color.Orange;
+            this.CustomerListBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CustomerListBackButton.ForeColor = System.Drawing.Color.White;
             this.CustomerListBackButton.Location = new System.Drawing.Point(12, 12);
             this.CustomerListBackButton.Name = "CustomerListBackButton";

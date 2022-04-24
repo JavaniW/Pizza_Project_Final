@@ -12,13 +12,15 @@ using Pizza_Project.database.Models.customer_info;
 using Pizza_Project.database.controllers.data_controllers.person_controllers;
 using Pizza_Project.database.Models.order_info;
 using Pizza_Project.database.controllers.data_controllers.order_controllers;
+using Pizza_Project.helper_classes;
 
 namespace Pizza_Project.Forms
 {
     public partial class OrderDetailsForm : Form
     {
-        Customer custy;
+        
         Order orddy;
+        OrderListForm referencedPage;
         CustomerController custyController = new CustomerController();
         OrderController orddyController = new OrderController();
         public OrderDetailsForm()
@@ -26,22 +28,45 @@ namespace Pizza_Project.Forms
             InitializeComponent();
         }
 
-        public OrderDetailsForm(string OrderNumber)
+        public OrderDetailsForm(string OrderNumber, OrderListForm referencePage)
         {
+            this.referencedPage = referencePage;
             orddy = orddyController.GetOrderByNumber(int.Parse(OrderNumber));
-            OrderLabel.Text = orddy.OrderName;
+            InitializeComponent();
+            FixWindowSize.FixLayout(this);
+
+            label1.Text = "Order #" + orddy.OrderNumber.ToString();
+            dataGridView2.ColumnCount = 3;
+            dataGridView2.Columns[0].HeaderCell.Value = "Quantity";
+            dataGridView2.Columns[1].HeaderCell.Value = "Ingredients";
+            dataGridView2.Columns[2].HeaderCell.Value = "Total Price";
+            //dataGridView2.column
            FillupDataGrid();
            
         }
         public void FillupDataGrid()
         {
-            foreach (OrderItems order in orddy.Items)
+            foreach (OrderItems orderItem in orddy.Items)
             {
-                var item = new ListViewItem(new string[] {order.ItemTotal.ToString()});
-                dataGridView2.Rows.Add(item);
+                dataGridView2.Rows.Add(new string[] { orderItem.Quantity.ToString(), orderItem.ingredientsWrite(), ("$" + orderItem.ItemTotal.ToString()) });
 
             }
         }
-       
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void OrderDetailsForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            referencedPage.Show(); 
+            this.Close();
+        }
     }
 }

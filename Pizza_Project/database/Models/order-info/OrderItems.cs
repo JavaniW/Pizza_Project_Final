@@ -16,5 +16,14 @@ namespace Pizza_Project.database.Models.order_info
         [JsonPropertyName("itemTotal")]
         public double ItemTotal { get; set; }
 
+        public string ingredientsWrite()
+        {
+            string listOfIngredients = "";
+            foreach (string ingred in Ingredients)
+            {
+                listOfIngredients += ingred + "\n";
+            }
+            return listOfIngredients;
+        }
     }
 }
