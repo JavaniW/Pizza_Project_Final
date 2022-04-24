@@ -69,6 +69,8 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.errorMessageLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qtyNumericCounter)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -79,6 +81,7 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -194,15 +197,15 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel7, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel8, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel9, 2, 3);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 73);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 101);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.53933F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.46067F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 162F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 156F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(776, 365);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(776, 337);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // label7
@@ -211,7 +214,7 @@ namespace Pizza_Project.Forms
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(624, 173);
+            this.label7.Location = new System.Drawing.Point(624, 153);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 23);
             this.label7.TabIndex = 11;
@@ -223,7 +226,7 @@ namespace Pizza_Project.Forms
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(346, 173);
+            this.label6.Location = new System.Drawing.Point(346, 153);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 23);
             this.label6.TabIndex = 10;
@@ -235,7 +238,7 @@ namespace Pizza_Project.Forms
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(104, 173);
+            this.label5.Location = new System.Drawing.Point(104, 153);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 23);
             this.label5.TabIndex = 9;
@@ -247,7 +250,7 @@ namespace Pizza_Project.Forms
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(624, 4);
+            this.label4.Location = new System.Drawing.Point(624, 2);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 23);
             this.label4.TabIndex = 8;
@@ -259,7 +262,7 @@ namespace Pizza_Project.Forms
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(368, 4);
+            this.label3.Location = new System.Drawing.Point(368, 2);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 23);
             this.label3.TabIndex = 7;
@@ -271,7 +274,7 @@ namespace Pizza_Project.Forms
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(104, 4);
+            this.label2.Location = new System.Drawing.Point(104, 2);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 23);
             this.label2.TabIndex = 6;
@@ -284,14 +287,14 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel3.Controls.Add(this.brooklynStyleCheckbox, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.handTossedCheckbox, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.thinCheckbox, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 34);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 30);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.27273F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.72727F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(253, 130);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.63158F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.36842F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(253, 117);
             this.tableLayoutPanel3.TabIndex = 12;
             // 
             // brooklynStyleCheckbox
@@ -302,7 +305,7 @@ namespace Pizza_Project.Forms
             this.brooklynStyleCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.brooklynStyleCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.brooklynStyleCheckbox.ForeColor = System.Drawing.Color.White;
-            this.brooklynStyleCheckbox.Location = new System.Drawing.Point(47, 63);
+            this.brooklynStyleCheckbox.Location = new System.Drawing.Point(47, 56);
             this.brooklynStyleCheckbox.Name = "brooklynStyleCheckbox";
             this.brooklynStyleCheckbox.Size = new System.Drawing.Size(159, 23);
             this.brooklynStyleCheckbox.TabIndex = 2;
@@ -318,9 +321,9 @@ namespace Pizza_Project.Forms
             this.handTossedCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.handTossedCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.handTossedCheckbox.ForeColor = System.Drawing.Color.White;
-            this.handTossedCheckbox.Location = new System.Drawing.Point(51, 32);
+            this.handTossedCheckbox.Location = new System.Drawing.Point(51, 31);
             this.handTossedCheckbox.Name = "handTossedCheckbox";
-            this.handTossedCheckbox.Size = new System.Drawing.Size(151, 23);
+            this.handTossedCheckbox.Size = new System.Drawing.Size(151, 19);
             this.handTossedCheckbox.TabIndex = 1;
             this.handTossedCheckbox.Text = "Hand Tossed +0.00";
             this.handTossedCheckbox.UseVisualStyleBackColor = true;
@@ -350,15 +353,15 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel5.Controls.Add(this.sizeMediumCheckbox, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.sizeLargeCheckbox, 0, 2);
             this.tableLayoutPanel5.Controls.Add(this.sizeXLCheckbox, 0, 3);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(262, 34);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(262, 30);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 5;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.27273F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.72727F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.27273F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 11F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(253, 130);
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(253, 117);
             this.tableLayoutPanel5.TabIndex = 13;
             // 
             // sizeSmallCheckbox
@@ -371,7 +374,7 @@ namespace Pizza_Project.Forms
             this.sizeSmallCheckbox.ForeColor = System.Drawing.Color.White;
             this.sizeSmallCheckbox.Location = new System.Drawing.Point(75, 3);
             this.sizeSmallCheckbox.Name = "sizeSmallCheckbox";
-            this.sizeSmallCheckbox.Size = new System.Drawing.Size(103, 22);
+            this.sizeSmallCheckbox.Size = new System.Drawing.Size(103, 21);
             this.sizeSmallCheckbox.TabIndex = 1;
             this.sizeSmallCheckbox.Text = "Small +5.00";
             this.sizeSmallCheckbox.UseVisualStyleBackColor = true;
@@ -385,9 +388,9 @@ namespace Pizza_Project.Forms
             this.sizeMediumCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sizeMediumCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.sizeMediumCheckbox.ForeColor = System.Drawing.Color.White;
-            this.sizeMediumCheckbox.Location = new System.Drawing.Point(66, 32);
+            this.sizeMediumCheckbox.Location = new System.Drawing.Point(66, 30);
             this.sizeMediumCheckbox.Name = "sizeMediumCheckbox";
-            this.sizeMediumCheckbox.Size = new System.Drawing.Size(121, 23);
+            this.sizeMediumCheckbox.Size = new System.Drawing.Size(121, 19);
             this.sizeMediumCheckbox.TabIndex = 2;
             this.sizeMediumCheckbox.Text = "Medium +7.00";
             this.sizeMediumCheckbox.UseVisualStyleBackColor = true;
@@ -401,7 +404,7 @@ namespace Pizza_Project.Forms
             this.sizeLargeCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sizeLargeCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.sizeLargeCheckbox.ForeColor = System.Drawing.Color.White;
-            this.sizeLargeCheckbox.Location = new System.Drawing.Point(70, 63);
+            this.sizeLargeCheckbox.Location = new System.Drawing.Point(70, 55);
             this.sizeLargeCheckbox.Name = "sizeLargeCheckbox";
             this.sizeLargeCheckbox.Size = new System.Drawing.Size(112, 22);
             this.sizeLargeCheckbox.TabIndex = 3;
@@ -417,9 +420,9 @@ namespace Pizza_Project.Forms
             this.sizeXLCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sizeXLCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.sizeXLCheckbox.ForeColor = System.Drawing.Color.White;
-            this.sizeXLCheckbox.Location = new System.Drawing.Point(52, 91);
+            this.sizeXLCheckbox.Location = new System.Drawing.Point(52, 83);
             this.sizeXLCheckbox.Name = "sizeXLCheckbox";
-            this.sizeXLCheckbox.Size = new System.Drawing.Size(149, 23);
+            this.sizeXLCheckbox.Size = new System.Drawing.Size(149, 22);
             this.sizeXLCheckbox.TabIndex = 4;
             this.sizeXLCheckbox.Text = "Extra Large +15.00";
             this.sizeXLCheckbox.UseVisualStyleBackColor = true;
@@ -431,13 +434,13 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.Controls.Add(this.baseCheeseCheckbox, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.baseSauceCheckbox, 0, 1);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(521, 34);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(521, 30);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 3;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.27273F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.72727F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(252, 130);
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.7037F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.2963F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(252, 117);
             this.tableLayoutPanel6.TabIndex = 14;
             // 
             // baseCheeseCheckbox
@@ -450,7 +453,7 @@ namespace Pizza_Project.Forms
             this.baseCheeseCheckbox.ForeColor = System.Drawing.Color.White;
             this.baseCheeseCheckbox.Location = new System.Drawing.Point(68, 3);
             this.baseCheeseCheckbox.Name = "baseCheeseCheckbox";
-            this.baseCheeseCheckbox.Size = new System.Drawing.Size(116, 21);
+            this.baseCheeseCheckbox.Size = new System.Drawing.Size(116, 22);
             this.baseCheeseCheckbox.TabIndex = 2;
             this.baseCheeseCheckbox.Text = "Cheese +1.50";
             this.baseCheeseCheckbox.UseVisualStyleBackColor = true;
@@ -466,7 +469,7 @@ namespace Pizza_Project.Forms
             this.baseSauceCheckbox.ForeColor = System.Drawing.Color.White;
             this.baseSauceCheckbox.Location = new System.Drawing.Point(73, 31);
             this.baseSauceCheckbox.Name = "baseSauceCheckbox";
-            this.baseSauceCheckbox.Size = new System.Drawing.Size(106, 23);
+            this.baseSauceCheckbox.Size = new System.Drawing.Size(106, 18);
             this.baseSauceCheckbox.TabIndex = 3;
             this.baseSauceCheckbox.Text = "Sauce +0.50";
             this.baseSauceCheckbox.UseVisualStyleBackColor = true;
@@ -479,7 +482,7 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel7.Controls.Add(this.meatPepCheckbox, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.meatSausageCheckbox, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.meatAnchovyCheckbox, 0, 2);
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 205);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 183);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 4;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.14815F));
@@ -546,16 +549,16 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel8.Controls.Add(this.vegBOliveCheckbox, 0, 2);
             this.tableLayoutPanel8.Controls.Add(this.vegGOliveCheckbox, 0, 3);
             this.tableLayoutPanel8.Controls.Add(this.vegSpinachCheckbox, 0, 4);
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(262, 205);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(262, 183);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 6;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.21429F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.78571F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.27586F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.72414F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(253, 157);
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(253, 151);
             this.tableLayoutPanel8.TabIndex = 16;
             // 
             // vegOnionCheckbox
@@ -568,7 +571,7 @@ namespace Pizza_Project.Forms
             this.vegOnionCheckbox.ForeColor = System.Drawing.Color.White;
             this.vegOnionCheckbox.Location = new System.Drawing.Point(73, 3);
             this.vegOnionCheckbox.Name = "vegOnionCheckbox";
-            this.vegOnionCheckbox.Size = new System.Drawing.Size(107, 21);
+            this.vegOnionCheckbox.Size = new System.Drawing.Size(107, 22);
             this.vegOnionCheckbox.TabIndex = 2;
             this.vegOnionCheckbox.Text = "Onion +1.50";
             this.vegOnionCheckbox.UseVisualStyleBackColor = true;
@@ -582,7 +585,7 @@ namespace Pizza_Project.Forms
             this.vegMushroomCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.vegMushroomCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.vegMushroomCheckbox.ForeColor = System.Drawing.Color.White;
-            this.vegMushroomCheckbox.Location = new System.Drawing.Point(58, 30);
+            this.vegMushroomCheckbox.Location = new System.Drawing.Point(58, 31);
             this.vegMushroomCheckbox.Name = "vegMushroomCheckbox";
             this.vegMushroomCheckbox.Size = new System.Drawing.Size(137, 23);
             this.vegMushroomCheckbox.TabIndex = 3;
@@ -598,7 +601,7 @@ namespace Pizza_Project.Forms
             this.vegBOliveCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.vegBOliveCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.vegBOliveCheckbox.ForeColor = System.Drawing.Color.White;
-            this.vegBOliveCheckbox.Location = new System.Drawing.Point(56, 59);
+            this.vegBOliveCheckbox.Location = new System.Drawing.Point(56, 61);
             this.vegBOliveCheckbox.Name = "vegBOliveCheckbox";
             this.vegBOliveCheckbox.Size = new System.Drawing.Size(141, 23);
             this.vegBOliveCheckbox.TabIndex = 4;
@@ -614,9 +617,9 @@ namespace Pizza_Project.Forms
             this.vegGOliveCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.vegGOliveCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.vegGOliveCheckbox.ForeColor = System.Drawing.Color.White;
-            this.vegGOliveCheckbox.Location = new System.Drawing.Point(54, 88);
+            this.vegGOliveCheckbox.Location = new System.Drawing.Point(54, 90);
             this.vegGOliveCheckbox.Name = "vegGOliveCheckbox";
-            this.vegGOliveCheckbox.Size = new System.Drawing.Size(145, 22);
+            this.vegGOliveCheckbox.Size = new System.Drawing.Size(145, 23);
             this.vegGOliveCheckbox.TabIndex = 5;
             this.vegGOliveCheckbox.Text = "Green Olive +1.50";
             this.vegGOliveCheckbox.UseVisualStyleBackColor = true;
@@ -630,9 +633,9 @@ namespace Pizza_Project.Forms
             this.vegSpinachCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.vegSpinachCheckbox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.vegSpinachCheckbox.ForeColor = System.Drawing.Color.White;
-            this.vegSpinachCheckbox.Location = new System.Drawing.Point(67, 116);
+            this.vegSpinachCheckbox.Location = new System.Drawing.Point(67, 119);
             this.vegSpinachCheckbox.Name = "vegSpinachCheckbox";
-            this.vegSpinachCheckbox.Size = new System.Drawing.Size(118, 22);
+            this.vegSpinachCheckbox.Size = new System.Drawing.Size(118, 20);
             this.vegSpinachCheckbox.TabIndex = 6;
             this.vegSpinachCheckbox.Text = "Spinach +0.75";
             this.vegSpinachCheckbox.UseVisualStyleBackColor = true;
@@ -643,12 +646,12 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel9.ColumnCount = 1;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel9.Controls.Add(this.fruitPineappleCheckbox, 0, 0);
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(521, 205);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(521, 183);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 2;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.83439F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.1656F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(252, 157);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(252, 151);
             this.tableLayoutPanel9.TabIndex = 17;
             // 
             // fruitPineappleCheckbox
@@ -661,7 +664,7 @@ namespace Pizza_Project.Forms
             this.fruitPineappleCheckbox.ForeColor = System.Drawing.Color.White;
             this.fruitPineappleCheckbox.Location = new System.Drawing.Point(60, 3);
             this.fruitPineappleCheckbox.Name = "fruitPineappleCheckbox";
-            this.fruitPineappleCheckbox.Size = new System.Drawing.Size(132, 21);
+            this.fruitPineappleCheckbox.Size = new System.Drawing.Size(132, 20);
             this.fruitPineappleCheckbox.TabIndex = 3;
             this.fruitPineappleCheckbox.Text = "Pineapple +1.50";
             this.fruitPineappleCheckbox.UseVisualStyleBackColor = true;
@@ -711,12 +714,38 @@ namespace Pizza_Project.Forms
             this.checkBox2.Text = "Hand Tossed";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.ColumnCount = 2;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.18557F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.81443F));
+            this.tableLayoutPanel10.Controls.Add(this.errorMessageLabel, 1, 0);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(12, 62);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 1;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(776, 38);
+            this.tableLayoutPanel10.TabIndex = 2;
+            // 
+            // errorMessageLabel
+            // 
+            this.errorMessageLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.errorMessageLabel.AutoSize = true;
+            this.errorMessageLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.errorMessageLabel.ForeColor = System.Drawing.Color.White;
+            this.errorMessageLabel.Location = new System.Drawing.Point(606, 9);
+            this.errorMessageLabel.Name = "errorMessageLabel";
+            this.errorMessageLabel.Size = new System.Drawing.Size(0, 19);
+            this.errorMessageLabel.TabIndex = 9;
+            this.errorMessageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // BuildPizzaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tableLayoutPanel10);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "BuildPizzaForm";
@@ -741,6 +770,8 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel9.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel10.ResumeLayout(false);
+            this.tableLayoutPanel10.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -788,5 +819,7 @@ namespace Pizza_Project.Forms
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.NumericUpDown qtyNumericCounter;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
+        private System.Windows.Forms.Label errorMessageLabel;
     }
 }

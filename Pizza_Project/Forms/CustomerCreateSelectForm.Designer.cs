@@ -84,7 +84,7 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.contentDropdown, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.errorText, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 72);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 64);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -108,9 +108,9 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.11258F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.88742F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 235F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 236F));
             this.tableLayoutPanel2.Controls.Add(this.label1, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 6);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -123,7 +123,7 @@ namespace Pizza_Project.Forms
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(209, 12);
+            this.label1.Location = new System.Drawing.Point(208, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(301, 36);
             this.label1.TabIndex = 0;
@@ -251,7 +251,7 @@ namespace Pizza_Project.Forms
             this.createCustomerTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.createCustomerTable.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.createCustomerTable.Controls.Add(this.tableLayoutPanel4, 0, 1);
-            this.createCustomerTable.Location = new System.Drawing.Point(12, 131);
+            this.createCustomerTable.Location = new System.Drawing.Point(9, 109);
             this.createCustomerTable.Name = "createCustomerTable";
             this.createCustomerTable.RowCount = 3;
             this.createCustomerTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -266,7 +266,7 @@ namespace Pizza_Project.Forms
             this.findCustomerTable.ColumnCount = 1;
             this.findCustomerTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.findCustomerTable.Controls.Add(this.tableLayoutPanel7, 0, 1);
-            this.findCustomerTable.Location = new System.Drawing.Point(12, 131);
+            this.findCustomerTable.Location = new System.Drawing.Point(9, 109);
             this.findCustomerTable.Name = "findCustomerTable";
             this.findCustomerTable.RowCount = 3;
             this.findCustomerTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -334,7 +334,7 @@ namespace Pizza_Project.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 356);
             this.Controls.Add(this.findCustomerTable);
             this.Controls.Add(this.createCustomerTable);
             this.Controls.Add(this.tableLayoutPanel2);

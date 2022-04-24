@@ -61,8 +61,15 @@ namespace Pizza_Project.Forms
 
         private void addToCart_Click(object sender, EventArgs e)
         {
-            this._cart.AddItem(this.ingredientIds, Decimal.ToInt32(this.qtyNumericCounter.Value), "Pizza");
-            this.Close();
+            var isAdded = this._cart.AddItem(this.ingredientIds, Decimal.ToInt32(this.qtyNumericCounter.Value), "Pizza");
+            if (isAdded)
+            {
+                this.Close();
+                return;
+            }
+
+            this.errorMessageLabel.Text = "An item can only have a combination of 4 meats, vegetables, or fruits.";
+
         }
 
         private void button1_Click(object sender, EventArgs e)

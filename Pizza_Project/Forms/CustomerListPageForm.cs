@@ -64,8 +64,7 @@ namespace Pizza_Project.Forms
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            referencedPage.Show();
+            this.Close();
         }
 
         private void CustomerListPageForm_Load(object sender, EventArgs e)

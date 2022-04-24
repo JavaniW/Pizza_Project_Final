@@ -39,6 +39,7 @@ namespace Pizza_Project.Forms
                 System.Diagnostics.Debug.WriteLine("Logged in");
                 var mainSelectionForm = new MainSelectionPage();
                 mainSelectionForm.Show();
+                this.Hide();
             }
             else
             {

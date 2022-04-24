@@ -54,9 +54,20 @@ namespace Pizza_Project.Forms
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            this.DisplayCustomerList();
+        }
+
+        private void ViewCustomerInfoText_Click(object sender, EventArgs e)
+        {
+            this.DisplayCustomerList();
+        }
+
+        private void DisplayCustomerList()
+        {
             var customerListForm = new CustomerListPageForm(this);
             this.Hide();
-            customerListForm.Show();
+            customerListForm.ShowDialog();
+            this.Show();
         }
 
         private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
@@ -69,11 +80,5 @@ namespace Pizza_Project.Forms
   
         }
 
-        private void ViewCustomerInfoText_Click(object sender, EventArgs e)
-        {
-            var customerListForm = new CustomerListPageForm(this);
-            this.Hide();
-            customerListForm.Show();
-        }
     }
 }
