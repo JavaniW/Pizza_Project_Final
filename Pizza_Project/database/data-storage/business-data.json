@@ -2,7 +2,25 @@
   "people": {
     "customers": [
       {
-        "orders": [],
+        "orders": [
+          {
+            "orderNumber": 1,
+            "orderName": "",
+            "orderTotal": 2.5,
+            "items": [
+              {
+                "quantity": 1,
+                "ingredients": [
+                  "iurAVzkEuMDo2jKg42bw",
+                  "B1O4TRUTx0CXQX55ahrdfed"
+                ],
+                "itemTotal": 2.5,
+                "id": "vrAAPMJnz02tk2MO0cFEjw",
+                "name": "Beverage1"
+              }
+            ]
+          }
+        ],
         "paymentInfo": null,
         "email": "wyatt2@wyatt.com",
         "phoneNumber": "4236642964",
