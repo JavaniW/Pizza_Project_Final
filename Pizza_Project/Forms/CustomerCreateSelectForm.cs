@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Pizza_Project.database.controllers.data_controllers.person_controllers;
 using Pizza_Project.database.Models.customer_info;
 using Pizza_Project.database.Models.order_info;
+using Pizza_Project.helper_classes;
 
 namespace Pizza_Project.Forms
 {
@@ -28,6 +29,8 @@ namespace Pizza_Project.Forms
         public CustomerCreateSelectForm()
         {
             InitializeComponent();
+
+            FixWindowSize.FixLayout(this);
         }
 
         /// <summary>
@@ -188,5 +191,9 @@ namespace Pizza_Project.Forms
             orderCreationPage.Show();
         }
 
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

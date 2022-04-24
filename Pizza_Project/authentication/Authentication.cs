@@ -22,9 +22,8 @@ namespace Pizza_Project.authentication
             try
             {
                 var user = _userController.GetByEmail(email);
-                if (user.Password == password)
+                if (user != null && user.Password.Equals(password))
                 {
-                    Console.WriteLine("User logged in");
                     return true;
                 }
                 return false;

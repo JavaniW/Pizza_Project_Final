@@ -19,7 +19,9 @@ namespace Pizza_Project
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            var loginForm = new LoginForm();
+            loginForm.Show();
+            Application.Run();
         }
     }
 }

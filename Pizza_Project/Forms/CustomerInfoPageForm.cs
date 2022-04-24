@@ -11,39 +11,37 @@ using Pizza_Project.database.Models;
 using Pizza_Project.database.Models.customer_info;
 using Pizza_Project.database.controllers.data_controllers.person_controllers;
 using Pizza_Project.database.controllers.data_controllers.abstract_classes;
+using Pizza_Project.helper_classes;
 
 namespace Pizza_Project.Forms
 {
     public partial class CustomerInfoPageForm : Form
     {
         CustomerController c2 = new CustomerController();
-        CustomerListPageForm referenceForm;
+        //CustomerListPageForm referenceForm;
         Customer customerMain;
-        public CustomerInfoPageForm()
-        {
-            InitializeComponent();
-        }
 
         public CustomerInfoPageForm(string customerKey, CustomerListPageForm referenceForm)
         {
-            this.referenceForm = referenceForm;
-            this.Owner = referenceForm;
-            customerMain = c2.GetById(customerKey);
+            InitializeComponent();
+            //this.referenceForm = referenceForm;
+            //this.Owner = referenceForm;
+            FixWindowSize.FixLayout(this);
 
-            //InitializeComponent();
+            customerMain = c2.GetById(customerKey);
             //fillInLabel(customerKey);
             if (customerMain == null)
-            { 
-               referenceForm.Show();
-
+            {
+                //referenceForm.Show();
+                this.Close();
             } else
             {
             InitializeComponent();
-            fillInLabel(customerKey);
+                FillInLabel(customerKey);
             }
         }
 
-        public void fillInLabel(string customerKey)
+        private void FillInLabel(string customerKey)
         {
             NameReplaceLabel.Text = customerMain.Name;
             NumberReplaceLabel.Text = customerMain.PhoneNumber;
@@ -51,10 +49,10 @@ namespace Pizza_Project.Forms
             
             if (customerMain.PaymentInfo != null)
             {
-            CardholderNameReplaceLabel.Text = customerMain.PaymentInfo.NameOnCard;
-            CardNumberReplaceLabel.Text = customerMain.PaymentInfo.CardNumber;
-            ExpDateReplaceLabel.Text = customerMain.PaymentInfo.ExpDate;
-            CVCReplaceLabel.Text = customerMain.PaymentInfo.CVC;
+                CardholderNameReplaceLabel.Text = customerMain.PaymentInfo.NameOnCard;
+                CardNumberReplaceLabel.Text = customerMain.PaymentInfo.CardNumber;
+                ExpDateReplaceLabel.Text = customerMain.PaymentInfo.ExpDate;
+                CVCReplaceLabel.Text = customerMain.PaymentInfo.CVC;
             }
         }
         private void label5_Click(object sender, EventArgs e)
@@ -94,8 +92,7 @@ namespace Pizza_Project.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            referenceForm.Show();
+            this.Close();
         }
     }
 }

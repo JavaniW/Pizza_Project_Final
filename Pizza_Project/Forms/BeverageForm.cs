@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Pizza_Project.database.controllers.data_controllers.menu_controllers;
 using Pizza_Project.database.Models.menu_item;
 using Pizza_Project.kiosk;
+using Pizza_Project.helper_classes;
 
 namespace Pizza_Project.Forms
 {
@@ -29,6 +30,7 @@ namespace Pizza_Project.Forms
         public BeverageForm(Cart cart)
         {
             InitializeComponent();
+            FixWindowSize.FixLayout(this);
 
             this._menuIngredientController = new MenuIngredientController();
             this._cart = cart;

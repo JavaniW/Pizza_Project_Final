@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Pizza_Project.database.Models.order_info;
+using Pizza_Project.helper_classes;
 
 namespace Pizza_Project.Forms
 {
@@ -24,6 +25,8 @@ namespace Pizza_Project.Forms
         public RecieptPageForm(Order order, bool cashPayment, double changeDue)
         {
             InitializeComponent();
+
+            FixWindowSize.FixLayout(this);
 
             this.itemDataGridView.Columns.Add("itemName", "Item");
             this.itemDataGridView.Columns.Add("itemPrice", "Price");

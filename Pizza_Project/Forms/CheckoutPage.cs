@@ -13,6 +13,7 @@ using Pizza_Project.database.controllers.data_controllers.person_controllers;
 using Pizza_Project.kiosk;
 using Pizza_Project.database.Models.customer_info.payment;
 using Pizza_Project.database.Models.person_info;
+using Pizza_Project.helper_classes;
 
 namespace Pizza_Project.Forms
 {
@@ -46,6 +47,9 @@ namespace Pizza_Project.Forms
         public CheckoutPage(Kiosk kiosk)
         {
             InitializeComponent();
+
+            FixWindowSize.FixLayout(this);
+
             this._kiosk = kiosk;
             this._customerController = new CustomerController();
             this.Customer =this._customerController.GetById(this._kiosk.GetCustomerId());
@@ -245,7 +249,13 @@ namespace Pizza_Project.Forms
         {
             if (this.cashPayment)
             {
-                this.CashIn = double.Parse(this.nameOnCardInput.Text);                
+                if (this.nameOnCardInput.Text.Equals(""))
+                {
+                    this.CashIn = 0;
+                }else
+                {
+                    this.CashIn = double.Parse(this.nameOnCardInput.Text);                
+                }
             }
             this.nameOnCard = this.nameOnCardInput.Text;
         }

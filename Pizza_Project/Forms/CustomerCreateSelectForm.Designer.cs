@@ -48,6 +48,7 @@ namespace Pizza_Project.Forms
             this.label7 = new System.Windows.Forms.Label();
             this.phoneNumber2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -108,7 +109,8 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.11258F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.88742F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 236F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 237F));
+            this.tableLayoutPanel2.Controls.Add(this.backButton, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -123,7 +125,7 @@ namespace Pizza_Project.Forms
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(208, 12);
+            this.label1.Location = new System.Drawing.Point(207, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(301, 36);
             this.label1.TabIndex = 0;
@@ -329,6 +331,22 @@ namespace Pizza_Project.Forms
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // backButton
+            // 
+            this.backButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.backButton.BackColor = System.Drawing.Color.Orange;
+            this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.backButton.ForeColor = System.Drawing.Color.White;
+            this.backButton.Location = new System.Drawing.Point(3, 13);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(97, 34);
+            this.backButton.TabIndex = 2;
+            this.backButton.Text = "Back";
+            this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
             // CustomerCreateSelectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -382,5 +400,6 @@ namespace Pizza_Project.Forms
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox phoneNumber2;
         private System.Windows.Forms.TextBox phoneNumber1;
+        private System.Windows.Forms.Button backButton;
     }
 }

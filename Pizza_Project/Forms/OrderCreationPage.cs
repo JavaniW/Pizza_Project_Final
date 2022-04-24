@@ -22,6 +22,9 @@ namespace Pizza_Project.Forms
         public OrderCreationPage(string customerId)
         {
             InitializeComponent();
+
+            FixWindowSize.FixLayout(this);
+
             this.customerId = customerId;
             this._kiosk = new Kiosk(this.customerId);
             this.dataGridView1.Columns.Add("itemName", "Cart Item");

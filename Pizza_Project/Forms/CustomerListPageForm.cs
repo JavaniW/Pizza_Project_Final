@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Pizza_Project.database.controllers.data_controllers.person_controllers;
 using Pizza_Project.database.Models.customer_info;
 using Pizza_Project.database.Models.person_info;
+using Pizza_Project.helper_classes;
 
 namespace Pizza_Project.Forms
 {
@@ -17,7 +18,7 @@ namespace Pizza_Project.Forms
     {
         
         static CustomerController c1 = new CustomerController();
-        List<Customer> listOfCustomers = c1.Read();
+        List<Customer> listOfCustomers;
         string customerKey;
         MainSelectionPage referencedPage;
 
@@ -28,7 +29,11 @@ namespace Pizza_Project.Forms
         public CustomerListPageForm(MainSelectionPage referencedPage)
         {
             this.referencedPage = referencedPage;
+
             InitializeComponent();
+
+            FixWindowSize.FixLayout(this);
+
             listOfCustomers = c1.Read();
             CustomerListDataGrid.ColumnCount = 2;
             CustomerListDataGrid.Columns[0].HeaderText = "Name";
@@ -46,7 +51,7 @@ namespace Pizza_Project.Forms
             addButtonColumn();
         }
 
-        public void addButtonColumn()
+        private void addButtonColumn()
         {
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             btn.HeaderText = "";
@@ -56,7 +61,7 @@ namespace Pizza_Project.Forms
             btn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             CustomerListDataGrid.Columns.Add(btn);
         }
-        public void addToCustomerList(Customer customer)
+        private void addToCustomerList(Customer customer)
         {
 
             var item = new ListViewItem( new String [] {customer.Name, customer.PhoneNumber} );
@@ -79,8 +84,8 @@ namespace Pizza_Project.Forms
                 customerKey = (string)CustomerListDataGrid.Rows[e.RowIndex].HeaderCell.Value;
                 var customerInfoPage = new CustomerInfoPageForm(customerKey, this);
                 this.Hide();
-                customerInfoPage.Show();
-            
+                customerInfoPage.ShowDialog();
+                this.Show();
             }
         }
     }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Pizza_Project.authentication;
+using Pizza_Project.helper_classes;
 
 namespace Pizza_Project.Forms
 {
@@ -19,6 +20,7 @@ namespace Pizza_Project.Forms
         public LoginForm()
         {
             InitializeComponent();
+            FixWindowSize.FixLayout(this);
         }
         private void username_TextChanged(object sender, EventArgs e)
         {
@@ -35,11 +37,13 @@ namespace Pizza_Project.Forms
             var auth = new Authentication();
             if(auth.Login(this.Email, this.Password))
             {
-                // Load form 2 here.
-                System.Diagnostics.Debug.WriteLine("Logged in");
+                this.username.Text = "";
+                this.password.Text = "";
+                this.errorMsgLabel.Visible = false;
+
                 var mainSelectionForm = new MainSelectionPage();
                 mainSelectionForm.Show();
-                this.Hide();
+                this.Close();
             }
             else
             {
