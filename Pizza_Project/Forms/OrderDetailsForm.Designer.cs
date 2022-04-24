@@ -53,7 +53,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView2.BackgroundColor = System.Drawing.Color.DimGray;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -79,7 +79,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView2.EnableHeadersVisualStyles = false;
-            this.dataGridView2.Location = new System.Drawing.Point(116, 73);
+            this.dataGridView2.Location = new System.Drawing.Point(102, 55);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(1);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
@@ -106,7 +106,7 @@
             this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView2.RowTemplate.Height = 49;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(599, 339);
+            this.dataGridView2.Size = new System.Drawing.Size(524, 254);
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -115,10 +115,10 @@
             this.OrderLabel.AutoSize = true;
             this.OrderLabel.Font = new System.Drawing.Font("Calibri", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.OrderLabel.ForeColor = System.Drawing.Color.White;
-            this.OrderLabel.Location = new System.Drawing.Point(71, 31);
+            this.OrderLabel.Location = new System.Drawing.Point(62, 23);
             this.OrderLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.OrderLabel.Name = "OrderLabel";
-            this.OrderLabel.Size = new System.Drawing.Size(0, 29);
+            this.OrderLabel.Size = new System.Drawing.Size(0, 23);
             this.OrderLabel.TabIndex = 1;
             // 
             // label1
@@ -126,9 +126,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(330, 9);
+            this.label1.Location = new System.Drawing.Point(289, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 49);
+            this.label1.Size = new System.Drawing.Size(116, 39);
             this.label1.TabIndex = 2;
             this.label1.Text = "Order #";
             // 
@@ -139,9 +139,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(28, 20);
+            this.button1.Location = new System.Drawing.Point(24, 15);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 40);
+            this.button1.Size = new System.Drawing.Size(82, 35);
             this.button1.TabIndex = 3;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = false;
@@ -149,18 +150,18 @@
             // 
             // OrderDetailsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(800, 451);
+            this.ClientSize = new System.Drawing.Size(702, 344);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.OrderLabel);
             this.Controls.Add(this.dataGridView2);
             this.Margin = new System.Windows.Forms.Padding(1);
-            this.MinimumSize = new System.Drawing.Size(818, 498);
+            this.MinimumSize = new System.Drawing.Size(718, 383);
             this.Name = "OrderDetailsForm";
-            this.Text = "Form1";
+            this.Text = "Order Viewer";
             this.Load += new System.EventHandler(this.OrderDetailsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);

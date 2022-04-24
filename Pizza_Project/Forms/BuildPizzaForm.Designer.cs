@@ -439,7 +439,7 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel6.RowCount = 3;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.7037F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.2963F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 63F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(252, 117);
             this.tableLayoutPanel6.TabIndex = 14;
             // 
@@ -469,7 +469,7 @@ namespace Pizza_Project.Forms
             this.baseSauceCheckbox.ForeColor = System.Drawing.Color.White;
             this.baseSauceCheckbox.Location = new System.Drawing.Point(73, 31);
             this.baseSauceCheckbox.Name = "baseSauceCheckbox";
-            this.baseSauceCheckbox.Size = new System.Drawing.Size(106, 18);
+            this.baseSauceCheckbox.Size = new System.Drawing.Size(106, 19);
             this.baseSauceCheckbox.TabIndex = 3;
             this.baseSauceCheckbox.Text = "Sauce +0.50";
             this.baseSauceCheckbox.UseVisualStyleBackColor = true;

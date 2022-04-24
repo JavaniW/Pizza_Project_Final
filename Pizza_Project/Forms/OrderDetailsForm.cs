@@ -19,10 +19,10 @@ namespace Pizza_Project.Forms
     public partial class OrderDetailsForm : Form
     {
         
-        Order orddy;
+        Order Order;
         OrderListForm referencedPage;
-        CustomerController custyController = new CustomerController();
-        OrderController orddyController = new OrderController();
+        CustomerController _customerController = new CustomerController();
+        OrderController _orderController = new OrderController();
         public OrderDetailsForm()
         {
             InitializeComponent();
@@ -31,11 +31,11 @@ namespace Pizza_Project.Forms
         public OrderDetailsForm(string OrderNumber, OrderListForm referencePage)
         {
             this.referencedPage = referencePage;
-            orddy = orddyController.GetOrderByNumber(int.Parse(OrderNumber));
+            this.Order = _orderController.GetOrderByNumber(int.Parse(OrderNumber));
             InitializeComponent();
             FixWindowSize.FixLayout(this);
 
-            label1.Text = "Order #" + orddy.OrderNumber.ToString();
+            label1.Text = "Order #" + this.Order.OrderNumber.ToString();
             dataGridView2.ColumnCount = 3;
             dataGridView2.Columns[0].HeaderCell.Value = "Quantity";
             dataGridView2.Columns[1].HeaderCell.Value = "Ingredients";
@@ -44,11 +44,16 @@ namespace Pizza_Project.Forms
            FillupDataGrid();
            
         }
+        
         public void FillupDataGrid()
         {
-            foreach (OrderItems orderItem in orddy.Items)
+
+            foreach (OrderItems orderItem in this.Order.Items)
             {
-                dataGridView2.Rows.Add(new string[] { orderItem.Quantity.ToString(), orderItem.ingredientsWrite(), ("$" + orderItem.ItemTotal.ToString()) });
+                
+                
+                dataGridView2.Rows.Add(new string[] { orderItem.Quantity.ToString(), orderItem.Ingredients.Count.ToString(), ("$" + orderItem.ItemTotal.ToString()) });
+
 
             }
         }
