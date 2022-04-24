@@ -71,7 +71,8 @@ namespace Pizza_Project.Forms
                 orderNum = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 var orderInfo = new OrderDetailsForm(orderNum);
                 this.Hide();
-                orderInfo.Show();
+                orderInfo.ShowDialog();
+                this.Show();
             }
         }
     }

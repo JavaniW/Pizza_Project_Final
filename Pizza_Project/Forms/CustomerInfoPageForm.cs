@@ -29,19 +29,20 @@ namespace Pizza_Project.Forms
             FixWindowSize.FixLayout(this);
 
             customerMain = c2.GetById(customerKey);
-            //fillInLabel(customerKey);
+            System.Diagnostics.Debug.WriteLine(customerKey);
+            FillInLabel();
             if (customerMain == null)
             {
                 //referenceForm.Show();
                 this.Close();
             } else
             {
-            InitializeComponent();
-                FillInLabel(customerKey);
+                InitializeComponent();
+                FillInLabel();
             }
         }
 
-        private void FillInLabel(string customerKey)
+        private void FillInLabel()
         {
             NameReplaceLabel.Text = customerMain.Name;
             NumberReplaceLabel.Text = customerMain.PhoneNumber;

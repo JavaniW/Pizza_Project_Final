@@ -63,9 +63,8 @@ namespace Pizza_Project.Forms
         private void TakeOrderPage()
         {
             var customerCreateSelectForm = new CustomerCreateSelectForm();
-            this.Hide();
-            customerCreateSelectForm.ShowDialog();
-            this.Show();
+            this.Close();
+            customerCreateSelectForm.Show();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

@@ -52,6 +52,7 @@ namespace Pizza_Project.Forms
                 this.createCustomerTable.Visible = true;
                 this.findCustomerTable.Visible = false;
                 this.CurrentView = "Create Customer";
+                this.button1.Text = "Create Customer";
             }
 
 
@@ -187,12 +188,14 @@ namespace Pizza_Project.Forms
         private void ToOrderCreation()
         {
             var orderCreationPage = new OrderCreationPage(this.CustomerId);
-            this.Hide();
             orderCreationPage.Show();
+            this.Close();
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
+            var mainSelectionForm = new MainSelectionPage();
+            mainSelectionForm.Show();
             this.Close();
         }
     }

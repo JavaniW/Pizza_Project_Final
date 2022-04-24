@@ -21,6 +21,8 @@ namespace Pizza_Project.Forms
         {
             InitializeComponent();
             FixWindowSize.FixLayout(this);
+
+            password.PasswordChar = '\u25CF';
         }
         private void username_TextChanged(object sender, EventArgs e)
         {
