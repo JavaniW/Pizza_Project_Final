@@ -151,19 +151,26 @@ namespace Pizza_Project.Forms
         /// </summary>
         private void CreateCustomer()
         {
-            var cust = _customerController.Create(new Customer
+            try
             {
-                Orders = new List<Order>(),
-                Name = this.Name,
-                Email = this.Email,
-                PhoneNumber = this.PhoneNumber,
-                Id = Identifier.CreateIdentifier()
-            });;
 
-            this.CustomerId = cust.Id;
-            this.ErrorMsg = "Could not create customer.";
+                var cust = _customerController.Create(new Customer
+                {
+                    Orders = new List<Order>(),
+                    Name = this.Name,
+                    Email = this.Email,
+                    PhoneNumber = this.PhoneNumber,
+                    Id = Identifier.CreateIdentifier()
+                });;
 
-            this.ToOrderCreation();
+                this.CustomerId = cust.Id;
+                this.ErrorMsg = "Could not create customer.";
+
+                this.ToOrderCreation();
+            }catch (Exception e)
+            {
+                this.errorText.Text = "Could not create customer.";
+            }
         }
 
         
@@ -172,7 +179,9 @@ namespace Pizza_Project.Forms
         /// </summary>
         private void FindCustomer()
         {
-            System.Diagnostics.Debug.WriteLine(this.PhoneNumber);
+            try
+            {
+
                 var cust = _customerController.GetByPhone(this.PhoneNumber);
 
                 if (cust != null)
@@ -183,6 +192,10 @@ namespace Pizza_Project.Forms
 
                 this.ErrorMsg = "Could not find customer";
                 this.errorText.Text = this.ErrorMsg;
+            }catch(Exception e)
+            {
+                this.errorText.Text = "There was a problem finding the customer.";
+            }
         }
 
         private void ToOrderCreation()

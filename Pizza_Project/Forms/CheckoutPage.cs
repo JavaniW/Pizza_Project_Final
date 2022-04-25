@@ -180,59 +180,66 @@ namespace Pizza_Project.Forms
 
         private void payButton_Click(object sender, EventArgs e)
         {
-            // set payment type
-            CreditCardInfo cardInfo = null;
-            string paymentType = "";
-            if (this.cashPayment)
-            {
-                paymentType = "cash";
-            }else
+            try
             {
 
-                // create customer cc info
-                paymentType = "card";
-
-                if (this.cardCvcLabel.Visible == true)
+                // set payment type
+                CreditCardInfo cardInfo = null;
+                string paymentType = "";
+                if (this.cashPayment)
                 {
-                    cardInfo = new CreditCardInfo
+                    paymentType = "cash";
+                }else
+                {
+
+                    // create customer cc info
+                    paymentType = "card";
+
+                    if (this.cardCvcLabel.Visible == true)
                     {
-                        NameOnCard = this.nameOnCard,
-                        ExpDate = this.cardEXP,
-                        CVC = this.cardCVC,
-                        CardNumber = this.cardNumber
-                    };
+                        cardInfo = new CreditCardInfo
+                        {
+                            NameOnCard = this.nameOnCard,
+                            ExpDate = this.cardEXP,
+                            CVC = this.cardCVC,
+                            CardNumber = this.cardNumber
+                        };
+                    }
                 }
-            }
 
-            if (this.deliveryInputLayout.Visible == true)
-            {
-                // create customer address
-                var address = new PersonAddress
+                if (this.deliveryInputLayout.Visible == true)
                 {
-                        Address = this.address,
-                        City = this.city,
-                        State = this.state,
-                        ZipCode = this.zipCode
-                };
+                    // create customer address
+                    var address = new PersonAddress
+                    {
+                            Address = this.address,
+                            City = this.city,
+                            State = this.state,
+                            ZipCode = this.zipCode
+                    };
 
-                // add address to customer
-                this.Customer.UserAddresses = address;
-                this._customerController.UpdateById(Customer.Id, Customer);
-            }
+                    // add address to customer
+                    this.Customer.UserAddresses = address;
+                    this._customerController.UpdateById(Customer.Id, Customer);
+                }
 
-            if (this.cashPayment && this.CashIn < double.Parse(this.CartPrice))
+                if (this.cashPayment && this.CashIn < double.Parse(this.CartPrice))
+                {
+                    this.paymentText.Text = "Invalid Cash Amount";
+                    return;
+                }
+
+                // checkout cart
+                var (order, changeDue) = this._kiosk.Checkout(paymentType, this.CashIn, cardInfo);
+
+                var receiptForm = new RecieptPageForm(order, this.cashPayment, changeDue);
+                receiptForm.Show();
+                this.orderSuccess = true;
+                this.Close();
+            }catch (Exception error)
             {
-                this.paymentText.Text = "Invalid Cash Amount";
-                return;
+                this.errorText.Text = "Could not handle payment! Try again later.";
             }
-
-            // checkout cart
-            var (order, changeDue) = this._kiosk.Checkout(paymentType, this.CashIn, cardInfo);
-
-            var receiptForm = new RecieptPageForm(order, this.cashPayment, changeDue);
-            receiptForm.Show();
-            this.orderSuccess = true;
-            this.Close();
         }
 
         private void cardDetailsLayout_Paint(object sender, PaintEventArgs e)

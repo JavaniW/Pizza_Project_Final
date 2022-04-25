@@ -62,20 +62,23 @@ namespace Pizza_Project.Forms
             this.cardExpLabel = new System.Windows.Forms.Label();
             this.cardCvcLabel = new System.Windows.Forms.Label();
             this.cardNameLabel = new System.Windows.Forms.Label();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.itemDataGridView = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.itemDataGridView = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.errorText = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.deliveryInputLayout.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.paymentInputLayout.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemDataGridView)).BeginInit();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -148,12 +151,12 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel7, 0, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 63);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 90);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.92776F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.07224F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(676, 263);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(676, 242);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // label2
@@ -162,7 +165,7 @@ namespace Pizza_Project.Forms
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(500, 4);
+            this.label2.Location = new System.Drawing.Point(500, 2);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 26);
             this.label2.TabIndex = 3;
@@ -174,7 +177,7 @@ namespace Pizza_Project.Forms
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(83, 4);
+            this.label3.Location = new System.Drawing.Point(83, 2);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 26);
             this.label3.TabIndex = 0;
@@ -186,7 +189,7 @@ namespace Pizza_Project.Forms
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(271, 4);
+            this.label4.Location = new System.Drawing.Point(271, 2);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(133, 26);
             this.label4.TabIndex = 2;
@@ -199,14 +202,14 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel3.Controls.Add(this.deliveryComboBox, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.deliveryText, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.deliveryInputLayout, 0, 2);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(453, 37);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(453, 34);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 149F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 138F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(219, 223);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(219, 205);
             this.tableLayoutPanel3.TabIndex = 4;
             // 
             // deliveryComboBox
@@ -231,7 +234,7 @@ namespace Pizza_Project.Forms
             this.deliveryText.AutoSize = true;
             this.deliveryText.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.deliveryText.ForeColor = System.Drawing.Color.White;
-            this.deliveryText.Location = new System.Drawing.Point(60, 40);
+            this.deliveryText.Location = new System.Drawing.Point(60, 34);
             this.deliveryText.Name = "deliveryText";
             this.deliveryText.Size = new System.Drawing.Size(99, 19);
             this.deliveryText.TabIndex = 3;
@@ -250,7 +253,7 @@ namespace Pizza_Project.Forms
             this.deliveryInputLayout.Controls.Add(this.addressInput, 1, 0);
             this.deliveryInputLayout.Controls.Add(this.label7, 0, 2);
             this.deliveryInputLayout.Controls.Add(this.label8, 0, 3);
-            this.deliveryInputLayout.Location = new System.Drawing.Point(3, 69);
+            this.deliveryInputLayout.Location = new System.Drawing.Point(3, 61);
             this.deliveryInputLayout.Name = "deliveryInputLayout";
             this.deliveryInputLayout.RowCount = 5;
             this.deliveryInputLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -258,7 +261,7 @@ namespace Pizza_Project.Forms
             this.deliveryInputLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.deliveryInputLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.deliveryInputLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 0F));
-            this.deliveryInputLayout.Size = new System.Drawing.Size(213, 143);
+            this.deliveryInputLayout.Size = new System.Drawing.Size(213, 132);
             this.deliveryInputLayout.TabIndex = 4;
             this.deliveryInputLayout.Visible = false;
             this.deliveryInputLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.cardDetailsLayout_Paint);
@@ -266,7 +269,7 @@ namespace Pizza_Project.Forms
             // zipCodeInput
             // 
             this.zipCodeInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.zipCodeInput.Location = new System.Drawing.Point(79, 111);
+            this.zipCodeInput.Location = new System.Drawing.Point(79, 104);
             this.zipCodeInput.Name = "zipCodeInput";
             this.zipCodeInput.Size = new System.Drawing.Size(131, 23);
             this.zipCodeInput.TabIndex = 12;
@@ -275,7 +278,7 @@ namespace Pizza_Project.Forms
             // stateInput
             // 
             this.stateInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.stateInput.Location = new System.Drawing.Point(79, 76);
+            this.stateInput.Location = new System.Drawing.Point(79, 71);
             this.stateInput.Name = "stateInput";
             this.stateInput.Size = new System.Drawing.Size(131, 23);
             this.stateInput.TabIndex = 11;
@@ -284,7 +287,7 @@ namespace Pizza_Project.Forms
             // cityInput
             // 
             this.cityInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cityInput.Location = new System.Drawing.Point(79, 41);
+            this.cityInput.Location = new System.Drawing.Point(79, 38);
             this.cityInput.Name = "cityInput";
             this.cityInput.Size = new System.Drawing.Size(131, 23);
             this.cityInput.TabIndex = 10;
@@ -296,7 +299,7 @@ namespace Pizza_Project.Forms
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(39, 43);
+            this.label6.Location = new System.Drawing.Point(39, 40);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 19);
             this.label6.TabIndex = 7;
@@ -309,7 +312,7 @@ namespace Pizza_Project.Forms
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(12, 8);
+            this.label5.Location = new System.Drawing.Point(12, 7);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 19);
             this.label5.TabIndex = 5;
@@ -318,7 +321,7 @@ namespace Pizza_Project.Forms
             // addressInput
             // 
             this.addressInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.addressInput.Location = new System.Drawing.Point(79, 6);
+            this.addressInput.Location = new System.Drawing.Point(79, 5);
             this.addressInput.Name = "addressInput";
             this.addressInput.Size = new System.Drawing.Size(131, 23);
             this.addressInput.TabIndex = 6;
@@ -330,7 +333,7 @@ namespace Pizza_Project.Forms
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(31, 78);
+            this.label7.Location = new System.Drawing.Point(31, 73);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 19);
             this.label7.TabIndex = 8;
@@ -343,7 +346,7 @@ namespace Pizza_Project.Forms
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(13, 113);
+            this.label8.Location = new System.Drawing.Point(13, 106);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(60, 19);
             this.label8.TabIndex = 9;
@@ -356,14 +359,14 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel4.Controls.Add(this.paymentComboBox, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.paymentText, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.paymentInputLayout, 0, 2);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(228, 37);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(228, 34);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 4;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 149F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 139F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(219, 223);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(219, 205);
             this.tableLayoutPanel4.TabIndex = 5;
             // 
             // paymentComboBox
@@ -388,7 +391,7 @@ namespace Pizza_Project.Forms
             this.paymentText.AutoSize = true;
             this.paymentText.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.paymentText.ForeColor = System.Drawing.Color.White;
-            this.paymentText.Location = new System.Drawing.Point(46, 40);
+            this.paymentText.Location = new System.Drawing.Point(46, 34);
             this.paymentText.Name = "paymentText";
             this.paymentText.Size = new System.Drawing.Size(127, 19);
             this.paymentText.TabIndex = 3;
@@ -407,7 +410,7 @@ namespace Pizza_Project.Forms
             this.paymentInputLayout.Controls.Add(this.cardExpLabel, 0, 2);
             this.paymentInputLayout.Controls.Add(this.cardCvcLabel, 0, 3);
             this.paymentInputLayout.Controls.Add(this.cardNameLabel, 0, 0);
-            this.paymentInputLayout.Location = new System.Drawing.Point(3, 69);
+            this.paymentInputLayout.Location = new System.Drawing.Point(3, 61);
             this.paymentInputLayout.Name = "paymentInputLayout";
             this.paymentInputLayout.RowCount = 5;
             this.paymentInputLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -415,14 +418,14 @@ namespace Pizza_Project.Forms
             this.paymentInputLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.paymentInputLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.paymentInputLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 0F));
-            this.paymentInputLayout.Size = new System.Drawing.Size(213, 143);
+            this.paymentInputLayout.Size = new System.Drawing.Size(213, 133);
             this.paymentInputLayout.TabIndex = 4;
             this.paymentInputLayout.Visible = false;
             // 
             // cvcInput
             // 
             this.cvcInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cvcInput.Location = new System.Drawing.Point(103, 111);
+            this.cvcInput.Location = new System.Drawing.Point(103, 104);
             this.cvcInput.Name = "cvcInput";
             this.cvcInput.Size = new System.Drawing.Size(107, 23);
             this.cvcInput.TabIndex = 12;
@@ -431,7 +434,7 @@ namespace Pizza_Project.Forms
             // expInput
             // 
             this.expInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.expInput.Location = new System.Drawing.Point(103, 76);
+            this.expInput.Location = new System.Drawing.Point(103, 71);
             this.expInput.Name = "expInput";
             this.expInput.Size = new System.Drawing.Size(107, 23);
             this.expInput.TabIndex = 11;
@@ -440,7 +443,7 @@ namespace Pizza_Project.Forms
             // cardNumberInput
             // 
             this.cardNumberInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cardNumberInput.Location = new System.Drawing.Point(103, 41);
+            this.cardNumberInput.Location = new System.Drawing.Point(103, 38);
             this.cardNumberInput.Name = "cardNumberInput";
             this.cardNumberInput.Size = new System.Drawing.Size(107, 23);
             this.cardNumberInput.TabIndex = 10;
@@ -452,7 +455,7 @@ namespace Pizza_Project.Forms
             this.cardNumberLabel.AutoSize = true;
             this.cardNumberLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cardNumberLabel.ForeColor = System.Drawing.Color.White;
-            this.cardNumberLabel.Location = new System.Drawing.Point(46, 43);
+            this.cardNumberLabel.Location = new System.Drawing.Point(46, 40);
             this.cardNumberLabel.Name = "cardNumberLabel";
             this.cardNumberLabel.Size = new System.Drawing.Size(51, 19);
             this.cardNumberLabel.TabIndex = 7;
@@ -462,7 +465,7 @@ namespace Pizza_Project.Forms
             // nameOnCardInput
             // 
             this.nameOnCardInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nameOnCardInput.Location = new System.Drawing.Point(103, 6);
+            this.nameOnCardInput.Location = new System.Drawing.Point(103, 5);
             this.nameOnCardInput.Name = "nameOnCardInput";
             this.nameOnCardInput.Size = new System.Drawing.Size(107, 23);
             this.nameOnCardInput.TabIndex = 6;
@@ -474,7 +477,7 @@ namespace Pizza_Project.Forms
             this.cardExpLabel.AutoSize = true;
             this.cardExpLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cardExpLabel.ForeColor = System.Drawing.Color.White;
-            this.cardExpLabel.Location = new System.Drawing.Point(64, 78);
+            this.cardExpLabel.Location = new System.Drawing.Point(64, 73);
             this.cardExpLabel.Name = "cardExpLabel";
             this.cardExpLabel.Size = new System.Drawing.Size(33, 19);
             this.cardExpLabel.TabIndex = 8;
@@ -486,7 +489,7 @@ namespace Pizza_Project.Forms
             this.cardCvcLabel.AutoSize = true;
             this.cardCvcLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cardCvcLabel.ForeColor = System.Drawing.Color.White;
-            this.cardCvcLabel.Location = new System.Drawing.Point(61, 113);
+            this.cardCvcLabel.Location = new System.Drawing.Point(61, 106);
             this.cardCvcLabel.Name = "cardCvcLabel";
             this.cardCvcLabel.Size = new System.Drawing.Size(36, 19);
             this.cardCvcLabel.TabIndex = 9;
@@ -498,54 +501,22 @@ namespace Pizza_Project.Forms
             this.cardNameLabel.AutoSize = true;
             this.cardNameLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cardNameLabel.ForeColor = System.Drawing.Color.White;
-            this.cardNameLabel.Location = new System.Drawing.Point(50, 8);
+            this.cardNameLabel.Location = new System.Drawing.Point(50, 7);
             this.cardNameLabel.Name = "cardNameLabel";
             this.cardNameLabel.Size = new System.Drawing.Size(47, 19);
             this.cardNameLabel.TabIndex = 5;
             this.cardNameLabel.Text = "Name";
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tableLayoutPanel5.Controls.Add(this.textBox1, 1, 3);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 4;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(200, 100);
-            this.tableLayoutPanel5.TabIndex = 0;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(103, 68);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(94, 23);
-            this.textBox1.TabIndex = 12;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(103, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(94, 23);
-            this.textBox2.TabIndex = 11;
             // 
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.ColumnCount = 1;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel7.Controls.Add(this.itemDataGridView, 0, 0);
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 37);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 34);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(219, 223);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(219, 205);
             this.tableLayoutPanel7.TabIndex = 6;
             // 
             // itemDataGridView
@@ -589,8 +560,65 @@ namespace Pizza_Project.Forms
             this.itemDataGridView.ShowCellToolTips = false;
             this.itemDataGridView.ShowEditingIcon = false;
             this.itemDataGridView.ShowRowErrors = false;
-            this.itemDataGridView.Size = new System.Drawing.Size(213, 217);
+            this.itemDataGridView.Size = new System.Drawing.Size(213, 199);
             this.itemDataGridView.TabIndex = 6;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel5.Controls.Add(this.textBox1, 1, 3);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 4;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel5.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.Location = new System.Drawing.Point(103, 68);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(94, 23);
+            this.textBox1.TabIndex = 12;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox2.Location = new System.Drawing.Point(103, 3);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(94, 23);
+            this.textBox2.TabIndex = 11;
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 2;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.30178F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.69822F));
+            this.tableLayoutPanel8.Controls.Add(this.errorText, 1, 0);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(12, 55);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 1;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(676, 34);
+            this.tableLayoutPanel8.TabIndex = 2;
+            // 
+            // errorText
+            // 
+            this.errorText.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.errorText.AutoSize = true;
+            this.errorText.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.errorText.ForeColor = System.Drawing.Color.White;
+            this.errorText.Location = new System.Drawing.Point(673, 7);
+            this.errorText.Name = "errorText";
+            this.errorText.Size = new System.Drawing.Size(0, 19);
+            this.errorText.TabIndex = 0;
+            this.errorText.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // CheckoutPage
             // 
@@ -598,6 +626,7 @@ namespace Pizza_Project.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(700, 338);
+            this.Controls.Add(this.tableLayoutPanel8);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -618,10 +647,12 @@ namespace Pizza_Project.Forms
             this.tableLayoutPanel4.PerformLayout();
             this.paymentInputLayout.ResumeLayout(false);
             this.paymentInputLayout.PerformLayout();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.itemDataGridView)).EndInit();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -666,5 +697,7 @@ namespace Pizza_Project.Forms
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.Label errorText;
     }
 }
