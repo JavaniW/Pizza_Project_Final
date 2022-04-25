@@ -72,7 +72,7 @@ namespace Pizza_Project.Forms
                 return;
             }
 
-            this.errorMessageLabel.Text = "An item can only have a combination of 4 meats, vegetables, or fruits.";
+            this.errorMessageLabel.Text = "Could not add pizza to the cart. You may have too many toppings, crusts, or sizes selected.";
 
         }
 

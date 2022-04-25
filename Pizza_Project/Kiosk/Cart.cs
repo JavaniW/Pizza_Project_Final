@@ -30,7 +30,8 @@ namespace Pizza_Project.kiosk
         /// <returns>true if item added, false if item could not be added.</returns>
         public bool AddItem(List<string> ingredients, int quantity, string itemType)
         {
-            if (GetToppingAmount(ingredients) > 4) return false;
+            var (crustCount, sizeCount, toppingCount) = GetAmount(ingredients);
+            if (toppingCount > 4 || sizeCount > 1 || crustCount > 1) return false;
             var orderItem = this.CreateItem(ingredients, quantity, itemType);
             
             this._cartItems.Add(orderItem);
@@ -133,7 +134,39 @@ namespace Pizza_Project.kiosk
 
             return toppingCount;
         }
-        
+
+        private (int, int, int) GetAmount(List<string> ids)
+        {
+            var toppingCount = 0;
+            var crustCount = 0;
+            var sizeCount = 0;
+            var ingredients = this._menuIngredientController.Read();
+
+            foreach (var id in ids)
+            {
+                foreach (var ingredient in ingredients)
+                {
+                    if (ingredient.Id.Equals(id))
+                    {
+                        if (ingredient.Category.Equals("meat") ||
+                            ingredient.Category.Equals("vegetable") ||
+                            ingredient.Category.Equals("fruit"))
+                        {
+                            toppingCount++;
+                        }else if (ingredient.Category.Equals("crust"))
+                        {
+                            crustCount++;
+                        }else if (ingredient.Category.Equals("size"))
+                        {
+                            sizeCount++;
+                        }
+                    }
+                }
+            }
+
+            return (crustCount, sizeCount, toppingCount);
+        }
+
         /// <summary>
         /// Calculates total price of cart.
         /// </summary>

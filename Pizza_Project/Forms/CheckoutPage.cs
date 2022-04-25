@@ -238,7 +238,7 @@ namespace Pizza_Project.Forms
                 this.Close();
             }catch (Exception error)
             {
-                this.errorText.Text = "Could not handle payment! Try again later.";
+                this.errorText.Text = "There was a problem creating your order! Press Back and try again.";
             }
         }
 

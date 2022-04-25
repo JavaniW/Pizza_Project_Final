@@ -46,7 +46,7 @@
 
   <ItemGroup>
     <None Update="database\data-storage\business-data.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="images\beverage.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
